@@ -4,6 +4,7 @@ import { randomUUID } from 'crypto';
 import { FormDefinitionParser } from './FormDefinitionParser';
 import { Command } from 'commander';
 import  slugify from 'slugify';
+import archiver = require('archiver');
 
 const program = new Command();
 
@@ -11,6 +12,47 @@ program
   .command('convert <source> [destination]')
   .description('Convert a form.io form definition to an open forms export file')
   .action(convert);
+
+function createArchive(destination: string, filename) {
+  // create a file to stream archive data to.
+  const output = fs.createWriteStream(path.join(destination, `${filename}.zip`));
+  const archive = archiver('zip', {
+    zlib: { level: 9 } // Sets the compression level.
+  });
+
+  // listen for all archive data to be written
+  // 'close' event is fired only when a file descriptor is involved
+  output.on('close', function() {
+    console.log(archive.pointer() + ' total bytes');
+    console.log('archiver has been finalized and the output file descriptor has closed.');
+  });
+
+  // This event is fired when the data source is drained no matter what was the data source.
+  // It is not part of this library but rather from the NodeJS Stream API.
+  // @see: https://nodejs.org/api/stream.html#stream_event_end
+  output.on('end', function() {
+    console.log('Data has been drained');
+  });
+
+  // good practice to catch warnings (ie stat failures and other non-blocking errors)
+  archive.on('warning', function(err) {
+    if (err.code === 'ENOENT') {
+      // log warning
+    } else {
+      // throw error
+      throw err;
+    }
+  });
+
+  // good practice to catch this error explicitly
+  archive.on('error', function(err) {
+    throw err;
+  });
+
+  // pipe archive data to the file
+  archive.pipe(output);
+  return archive;
+}
 
 
 
@@ -108,7 +150,11 @@ function convert(source: string, destination?: string) {
       fs.writeFileSync(path.join(destination, 'forms.json'), formsString);
       fs.writeFileSync(path.join(destination, 'formDefinitions.json'), formDefinitionsString);
       fs.writeFileSync(path.join(destination, 'formSteps.json'), stepsString);
-      
+      const archive = createArchive(destination, parser.allMetadata.formName);
+      archive.append(fs.createReadStream(path.join(destination, 'forms.json')), { name: 'forms.json' });
+      archive.append(fs.createReadStream(path.join(destination, 'formDefinitions.json')), { name: 'formDefinitions.json' });
+      archive.append(fs.createReadStream(path.join(destination, 'formSteps.json')), { name: 'formSteps.json' });
+      archive.finalize();
     }
   } catch(error) {
     console.log('issue reading input file.');

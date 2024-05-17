@@ -9,6 +9,7 @@
     "slugify": "^1.6.6"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch"
   }
 }
