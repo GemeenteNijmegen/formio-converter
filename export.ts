@@ -4,7 +4,6 @@ import { randomUUID } from 'crypto';
 import { FormDefinitionParser } from './FormDefinitionParser';
 import { Command } from 'commander';
 import  slugify from 'slugify';
-import { JSONPath } from 'jsonpath-plus';
 
 const program = new Command();
 
