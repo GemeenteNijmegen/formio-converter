@@ -1,14 +1,9 @@
-# README
+## How to build?
+`npx projen build`
 
-## Install
-
-```npm install```
-```npm run build```
-
-## Use
-
-```node export.js convert <inputfile> <output-dir (optional)```
+## How to run?
+- First build
+- Then run like: `node lib/export.js convert <inputfile> <output-dir> (optional)`
 
 Example:
-
-```node export.js convert sampleformdefinition.json test-export```
+```node lib/export.js convert sampleformdefinition.json test-export```
