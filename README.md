@@ -3,7 +3,7 @@
 
 ## How to run?
 - First build
-- Then run like: `node dist/export.js convert <inputfile> <output-dir> (optional)`
+- Then run like: `node lib/export.js convert <inputfile> <output-dir> (optional)`
 
 Example:
-```node dist/export.js convert sampleformdefinition.json test-export```
+```node lib/export.js convert sampleformdefinition.json test-export```
