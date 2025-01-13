@@ -3,8 +3,8 @@ import * as path from 'path';
 import { randomUUID } from 'crypto';
 import { FormDefinitionParser } from './FormDefinitionParser';
 import { Command } from 'commander';
-import  slugify from 'slugify';
-import archiver = require('archiver');
+import slugify from 'slugify';
+import archiver from 'archiver';
 
 const program = new Command();
 
@@ -13,7 +13,7 @@ program
   .description('Convert a form.io form definition to an open forms export file')
   .action(convert);
 
-function createArchive(destination: string, filename) {
+function createArchive(destination: string, filename: string) {
   // create a file to stream archive data to.
   const output = fs.createWriteStream(path.join(destination, `${filename}.zip`));
   const archive = archiver('zip', {
@@ -56,7 +56,7 @@ function createArchive(destination: string, filename) {
 
 
 
-function removeDuplicateKeys(json: any, step) {
+function removeDuplicateKeys(json: any, step: number) {
   const parser = new FormDefinitionParser(json);
   const keys = parser.getAllFormDefinitionComponents().map(component => component.key);
   console.debug('removing duplicates');
@@ -65,7 +65,7 @@ function removeDuplicateKeys(json: any, step) {
     const key = keys[i];
     if (keys.includes(key, i + 1)) {
       const firstComponent = parser.getAllFormDefinitionComponents().find(component => component.key == key);
-      console.log('duplicate key', key, `$${firstComponent.keyPath}`);
+      console.log('duplicate key', key, `${firstComponent?.keyPath}`);
       replaceKeys.push(key);
     }
   }
@@ -80,11 +80,10 @@ function removeDuplicateKeys(json: any, step) {
 }
 
 function convert(source: string, destination?: string) {
-  const hideConditionals = true;
   console.log(source, destination);
   try { 
     let raw = fs.readFileSync(source).toString('utf-8');
-    raw = raw.replaceAll('_nijmegen', '');
+    raw = raw.replace(/_nijmegen/g, '');
     let json = JSON.parse(raw);
     const parser = new FormDefinitionParser(json);
     if(json.display == 'wizard') {
