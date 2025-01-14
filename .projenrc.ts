@@ -8,11 +8,13 @@ const project = new typescript.TypeScriptProject({
     'slugify',
     'archiver',
     '@types/archiver',
+    'object-hash',
+    '@types/object-hash',
   ],
   gitignore: [
-    'test/testoutputs/*',
+    'test/_outputs',
+    'testdata',
   ],
-
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */

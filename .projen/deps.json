@@ -76,11 +76,19 @@
       "type": "runtime"
     },
     {
+      "name": "@types/object-hash",
+      "type": "runtime"
+    },
+    {
       "name": "archiver",
       "type": "runtime"
     },
     {
       "name": "commander",
+      "type": "runtime"
+    },
+    {
+      "name": "object-hash",
       "type": "runtime"
     },
     {

@@ -40,8 +40,10 @@
   },
   "dependencies": {
     "@types/archiver": "^6.0.3",
+    "@types/object-hash": "^3.0.6",
     "archiver": "^7.0.1",
     "commander": "^13.0.0",
+    "object-hash": "^3.0.0",
     "slugify": "^1.6.6"
   },
   "main": "lib/index.js",

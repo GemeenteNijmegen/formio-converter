@@ -17,4 +17,5 @@ export const includedFormDataTypes = [
   'select_nijmegen',
   'datetime_nijmegen',
   'time_nijmegen',
+  'form', // Include nested forms for a post processing step
 ];
