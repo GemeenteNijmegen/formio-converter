@@ -20,14 +20,4 @@ describe('FormDefinitionTransformer', () => {
     expect(JSON.stringify(testform)).not.toMatch('htmlelement');
   });
 
-  test('Missing titles?', () => {
-    console.log();
-    for (const formName of Object.keys(formDefinitionsExport.forms)) {
-      const form = formDefinitionsExport.forms[formName];
-      if (!form.title) {
-        console.log(form.label);
-      }
-    }
-  });
-
 });

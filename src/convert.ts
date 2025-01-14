@@ -8,25 +8,11 @@ import { HaalCentraalMapping } from './HaalCentraalMapping';
 import { OpenFormulierenFormDefinition } from './OpenFormulierenFormDefinition';
 import { wrapInFieldSetComponent } from './wrapInContainerComponent';
 
-
 const emptyPrefill = {
   plugin: '',
   attribute: '',
   identifierRole: 'main',
 };
-
-export async function convert(source: string, destination?: string) {
-  console.log(source, destination);
-
-  const dest = destination ?? './output';
-  let raw = fs.readFileSync(source).toString('utf-8');
-  const json = JSON.parse(raw);
-
-  // Convert and save
-  const converted = convertFormDefinition(json);
-  converted.writeToFileSystem(dest);
-  await converted.writeZipToFileSystem(dest);
-}
 
 function removeDuplicateKeys(json: any, step: number) {
   const parser = new FormDefinitionParser(json);
@@ -47,14 +33,8 @@ function removeDuplicateKeys(json: any, step: number) {
   return json;
 }
 
-export function convertFormDefinition(input: any) {
+export function convertFormDefinition(formdefinition: any) {
   try {
-
-    // Remove all _nijmegen suffixes in the form definition
-    let raw = JSON.stringify(input);
-    raw = raw.replace(/_nijmegen/g, '');
-    raw = raw.replace(/checkboxnijmegen/g, 'checkbox'); // Special fix for checkboxes
-    let formdefinition = JSON.parse(raw);
 
     const parser = new FormDefinitionParser(formdefinition);
 
