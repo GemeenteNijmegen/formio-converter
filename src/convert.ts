@@ -130,6 +130,7 @@ export async function convertFullFormDefinition(source: string, destination?: st
 
   const context = {
     formDefinitionsExport: json,
+    output: [],
   };
 
   const subformTransformer = new FormDefinitionTransformer(replaceSubform, context);
@@ -169,6 +170,11 @@ export async function convertFullFormDefinition(source: string, destination?: st
       // Step 6. Remove all buttons (provided by OpenForms now)
       buttonTransformer.transform(form);
 
+      // Step 7. Collect logic
+      const logicScannerContext = { formDefinitionsExport: json, output: [] };
+      const logicScanner = new FormDefinitionTransformer(collectLogicRules, logicScannerContext);
+      logicScanner.transform(form);
+
       // Do the conversion
       const converted = convertFormDefinition(form);
 
@@ -180,8 +186,9 @@ export async function convertFullFormDefinition(source: string, destination?: st
       converted.writeToFileSystem(formDest);
       await converted.writeZipToFileSystem(formDest);
 
-      // DUMP halffabrikaat (to be removed)
+      // Write halffabrikaaten as well
       fs.writeFileSync(formDest + '/dump.json', JSON.stringify(form, null, 4));
+      fs.writeFileSync(formDest + '/logic-dump.json', logicScannerContext.output.join('\n'));
 
     } catch (error) {
       messages.push(`Failed form conversion: ${formName} (${error})`);
@@ -260,10 +267,13 @@ export function convertHtmlContent(input: any) {
 
     // Check if it is a heading (h1 or h2) if so drop the element.
     // In formio we manually supply the title and subtitle
-    if (input.content?.startsWith('<h1>') && input.content?.endsWith('</h1>')) {
+
+    const content = input.content?.trim();
+
+    if (content?.startsWith('<h1>') && content?.endsWith('</h1>')) {
       return [];
     }
-    if (input.content?.startsWith('<h2>') && input.content?.endsWith('</h2>')) {
+    if (content?.startsWith('<h2>') && content?.endsWith('</h2>')) {
       return [];
     }
 
@@ -292,5 +302,21 @@ export function addBrpPrefill(input: any) {
     // console.log('Adding actual prefill to former nonhiddenfields');
     return [{ ...input, components: newComponents }];
   };
+  return undefined;
+}
+
+export function collectLogicRules(input: any, context: FormDefinitionTransformerContext) {
+  if (input?.conditional?.show == true) {
+    const logic = JSON.stringify(input.conditional);
+    context.output.push(`${input.key} has conditional: ${logic}`);
+  }
+  if (input?.validate?.custom) {
+    const logic = JSON.stringify(input?.validate);
+    context.output.push(`${input.key} has custom validate: ${logic}`);
+  }
+  if (input?.customConditional) {
+    const logic = JSON.stringify(input?.customConditional);
+    context.output.push(`${input.key} as custom conditional: ${logic}`);
+  }
   return undefined;
 }

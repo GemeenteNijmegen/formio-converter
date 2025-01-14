@@ -10,13 +10,13 @@ describe('FormDefinitionTransformer', () => {
 
   test('Remove subforms', () => {
     const testform = formDefinitionsExport.forms.devops;
-    new FormDefinitionTransformer(replaceSubform, { formDefinitionsExport: formDefinitionsExport }).transform(testform);
+    new FormDefinitionTransformer(replaceSubform, { formDefinitionsExport: formDefinitionsExport, output: [] }).transform(testform);
     expect(JSON.stringify(formDefinitionsExport)).not.toMatch('"key": "nonhiddenfields');
   });
 
   test('Convert htmlelements', () => {
     const testform = formDefinitionsExport.forms.individueleInkomenstoeslagAanvragen2;
-    new FormDefinitionTransformer(convertHtmlContent, { formDefinitionsExport: formDefinitionsExport }).transform(testform);
+    new FormDefinitionTransformer(convertHtmlContent, { formDefinitionsExport: formDefinitionsExport, output: [] }).transform(testform);
     expect(JSON.stringify(testform)).not.toMatch('htmlelement');
   });
 

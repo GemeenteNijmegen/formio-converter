@@ -4,6 +4,7 @@ type Modifier = (input: any, context: FormDefinitionTransformerContext) => any[]
 
 export interface FormDefinitionTransformerContext {
   formDefinitionsExport: any;
+  output: any[];
 }
 
 export class FormDefinitionTransformer {
