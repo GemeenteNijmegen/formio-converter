@@ -1,12 +1,12 @@
 
 
-export function wrapInFieldSetComponent(components: any[], _label: string, _key: string, id: string) {
+export function wrapInFieldSetComponent(components: any[], label: string, key: string, id: string) {
   return {
     id: id,
     components: components,
-    key: 'fieldSet',
+    key: key,
     type: 'fieldset',
-    label: 'Field Set',
+    label: label,
     tree: false,
     input: false,
     hidden: false,
