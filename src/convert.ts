@@ -66,7 +66,7 @@ export function convertFormDefinition(formdefinition: any) {
         },
       };
       formDefinitions.push(formDefinition);
-      
+
       // Create a form step for export
       const step = {
         uuid: randomUUID(),
@@ -313,6 +313,7 @@ export function collectLogicRules(input: any, context: FormDefinitionTransformer
   if (input?.conditional?.show == true) {
     const logic = JSON.stringify(input.conditional);
     context.output.push(`${input.key} has conditional: ${logic}`);
+    return [{ ...input, conditional: undefined }]; // Remove the conditional
   }
   if (input?.validate?.custom) {
     const logic = JSON.stringify(input?.validate);
