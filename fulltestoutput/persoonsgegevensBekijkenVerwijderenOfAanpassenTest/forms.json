@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "ac1992ea-94ac-4dba-97bb-d5020e4a7345",
+        "name": "Persoonsgegevens bekijken verwijderen of aanpasse",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "persoonsgegevensbekijkenverwijderenofaanpassen",
+        "url": "http://localhost/api/v2/forms/ac1992ea-94ac-4dba-97bb-d5020e4a7345",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

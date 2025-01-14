@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "1a53d6ba-2db0-49c3-806a-e4e24d8fa509",
+        "name": "e2e",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "e2e",
+        "url": "http://localhost/api/v2/forms/1a53d6ba-2db0-49c3-806a-e4e24d8fa509",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "85efc2bc-f6e4-41b2-bf0e-c58ae5e7e528",
+        "index": "0",
+        "slug": "uw-contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/223f9a94-71ea-476f-a7e1-255a87fad6a5"
+    },
+    {
+        "uuid": "707beaf3-8f0b-4525-ad5d-453512822af2",
+        "index": "1",
+        "slug": "hond-aanmelden-of-afmelden",
+        "form_definition": "http://localhost/api/v2/form-definitions/592f967a-111b-4f57-a69f-4156b606e675"
+    },
+    {
+        "uuid": "71dcc71c-20b6-4864-9e39-3de4e9be425e",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/950da365-25a1-4dab-8d39-3e1e07eeadcc"
+    }
+]

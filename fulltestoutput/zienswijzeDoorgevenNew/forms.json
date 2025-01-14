@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "f0ac73c6-4ef8-438b-a2b1-6b57905868e1",
+        "name": "Zienswijze doorgeven",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "zienswijzedoorgeven",
+        "url": "http://localhost/api/v2/forms/f0ac73c6-4ef8-438b-a2b1-6b57905868e1",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

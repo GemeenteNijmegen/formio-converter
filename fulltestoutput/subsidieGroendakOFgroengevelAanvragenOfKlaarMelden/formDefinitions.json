@@ -1,0 +1,2265 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/77f61f16-ebcf-4bb0-b320-a8a5ff9c45a8",
+        "uuid": "77f61f16-ebcf-4bb0-b320-a8a5ff9c45a8",
+        "name": "Uw gegevens",
+        "slug": "uw-gegevens",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5-6-7-8-9",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "components": [
+                        {
+                            "label": "E-mailadres",
+                            "autocomplete": "email",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadres",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "autocomplete": "tel",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummer",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "html": "<p>U kunt namens uzelf of namens een organisatie subsidie aanvragen of een groendak of groengevel klaar melden. Kies 'namens een organisatie' als het gaat om bijvoorbeeld een vereniging of een stichting.</p>",
+                            "label": "Content",
+                            "refreshOnChange": false,
+                            "key": "content-1-2",
+                            "type": "content",
+                            "input": false,
+                            "tableView": false
+                        },
+                        {
+                            "label": "Vraagt u subsidie aan of meld u een groendak of groengevel klaar namens een organisatie?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "vraagtUSubsidieAanOfMeldUeenGroendakOfPlantenmuurKlaarNamensEenOrganisatie",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam organisatie",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naamOrganisatie",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "KvK inschrijfnummer",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "minLength": 8,
+                                        "maxLength": 8
+                                    },
+                                    "errorLabel": "Een inschrijfnummer Kamer van Koophandel bevat 8 cijfers.",
+                                    "key": "kvKInschrijfnummer",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Uw functie in de organisatie",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "uwFunctieInDeOrganisatie-1",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Bent u zelf de contactpersoon voor deze aanvraag?",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "ja",
+                                            "value": "ja",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "nee",
+                                            "value": "nee",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "bentUZelfDeContactpersoonVoorDezeAanvraag-1",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "label": "Naam contactpersoon",
+                                            "tableView": true,
+                                            "validate": {
+                                                "required": true
+                                            },
+                                            "key": "naamContactpersoon-1",
+                                            "type": "textfield",
+                                            "input": true,
+                                            "prefill": {
+                                                "plugin": "",
+                                                "attribute": "",
+                                                "identifierRole": "main"
+                                            }
+                                        },
+                                        {
+                                            "label": "E-mailadres contactpersoon",
+                                            "tableView": true,
+                                            "validateOn": "blur",
+                                            "validate": {
+                                                "required": true
+                                            },
+                                            "key": "eMailadresContactpersoon-1",
+                                            "type": "email",
+                                            "input": true
+                                        },
+                                        {
+                                            "label": "Telefoonnummer contactpersoon",
+                                            "tableView": true,
+                                            "validate": {
+                                                "required": true
+                                            },
+                                            "key": "telefoonnummerContactpersoon-1",
+                                            "type": "textfield",
+                                            "input": true,
+                                            "prefill": {
+                                                "plugin": "",
+                                                "attribute": "",
+                                                "identifierRole": "main"
+                                            }
+                                        }
+                                    ],
+                                    "key": "fieldSet-1-2-3-4-5-6-7-8",
+                                    "type": "fieldset",
+                                    "label": "Field Set",
+                                    "tree": false,
+                                    "input": false,
+                                    "hidden": false,
+                                    "legend": "",
+                                    "prefix": "",
+                                    "suffix": "",
+                                    "unique": false,
+                                    "widget": null,
+                                    "dbIndex": false,
+                                    "overlay": {
+                                        "top": "",
+                                        "left": "",
+                                        "style": "",
+                                        "width": "",
+                                        "height": ""
+                                    },
+                                    "tooltip": "",
+                                    "disabled": false,
+                                    "multiple": false,
+                                    "redrawOn": "",
+                                    "tabindex": "",
+                                    "validate": {
+                                        "custom": "",
+                                        "unique": false,
+                                        "multiple": false,
+                                        "required": false,
+                                        "customPrivate": false,
+                                        "strictDateValidation": false
+                                    },
+                                    "autofocus": false,
+                                    "encrypted": false,
+                                    "hideLabel": false,
+                                    "modalEdit": false,
+                                    "protected": false,
+                                    "refreshOn": "",
+                                    "tableView": false,
+                                    "attributes": {},
+                                    "errorLabel": "",
+                                    "hideHeader": false,
+                                    "persistent": false,
+                                    "properties": {},
+                                    "validateOn": "change",
+                                    "clearOnHide": true,
+                                    "conditional": {
+                                        "eq": "",
+                                        "show": null,
+                                        "when": null
+                                    },
+                                    "customClass": "",
+                                    "description": "",
+                                    "placeholder": "",
+                                    "defaultValue": null,
+                                    "dataGridLabel": false,
+                                    "labelPosition": "top",
+                                    "showCharCount": false,
+                                    "showWordCount": false,
+                                    "calculateValue": "",
+                                    "calculateServer": false,
+                                    "allowMultipleMasks": false,
+                                    "customDefaultValue": "",
+                                    "allowCalculateOverride": false
+                                }
+                            ],
+                            "key": "fieldSet-1-2-3-4-5-6-7",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5-6",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Uw naam",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "uwNaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Uw functie in de organisatie",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "uwFunctieInDeOrganisatie",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Bent u zelf de contactpersoon voor deze aanvraag?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "bentUZelfDeContactpersoonVoorDezeAanvraag",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "label": "Naam contactpersoon",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamContactpersoon",
+                            "conditional": {
+                                "show": true,
+                                "when": "eHerkenning.bentUZelfDeContactpersoonVoorDezeAanvraag",
+                                "eq": "nee"
+                            },
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadresContactpersoon",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummerContactpersoon",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/41b56e3f-92bf-45fb-b2f3-6915095454f3",
+        "uuid": "41b56e3f-92bf-45fb-b2f3-6915095454f3",
+        "name": "Aanvraag",
+        "slug": "aanvraag",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Wat wilt u doen?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "subsidie aanvragen voor een groendak",
+                            "value": "groendak",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "subsidie aanvragen voor een groengevel",
+                            "value": "plantenmuur",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "doorgeven dat een groendak of groengevel klaar is",
+                            "value": "aanlegMelden",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "watWiltUDoen",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "components": [
+                        {
+                            "label": "IBAN",
+                            "inputMask": "AA99AAAA9999999999",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "customMessage": "Vul een geldig IBAN in."
+                            },
+                            "key": "iban",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Op naam van",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "opNaamVan",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns1",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/5bad60bd-30f4-4fa5-b485-27433bad345c",
+        "uuid": "5bad60bd-30f4-4fa5-b485-27433bad345c",
+        "name": "Subsidie",
+        "slug": "subsidie",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Heeft u eerder subsidie aangevraagd voor het plaatsen van een groendak, groengevel of het afkoppelen van regenwater?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "heeftUEerderSubsidieAangevraagdVoorHetPlaatsenVanEenGroendakPlantenmuurOfHetAfkoppelenVanRegenwater",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Adres van de woning waarop het groendak of de groengevel komt",
+                    "disablestreetcity": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "tableView": true,
+                    "key": "adresVanDeWoningWaaropHetGroendakOfDePlantenmuurKomt",
+                    "type": "adres",
+                    "input": true
+                },
+                {
+                    "label": "Bent u de eigenaar van de woning?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "bentUDeEigenaarVanDeWoning",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Adres van de eigenaar",
+                    "disablestreetcity": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "tableView": true,
+                    "key": "adresVanDeEigenaar",
+                    "type": "adres",
+                    "input": true
+                },
+                {
+                    "html": "<p>Aan het einde van het formulier moet u bewijs uploaden waarop staat dat de eigenaar toestemming geeft voor plaatsen van een groendak of groengevel.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content-1",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Vraagt u alleen voor dit adres subsidie aan? Of vraagt u (samen met andere woning-eigenaren) voor meer adressen subsidie aan?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ik vraag subsidie aan voor alleen dit adres",
+                            "value": "ditAdres",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "ik vraag subsidie aan voor meerdere adressen",
+                            "value": "meerdereAdressen",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "ik vraag subsidie aan voor meerdere adressen, samen met andere woning-eigenaren",
+                            "value": "meerdereAdressenMetAndereWoningEigenaren",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "vraagtUAlleenVoorDitAdresSubsidieAan",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Voor welke adressen vraagt u nog meer subsidie aan? Beantwoord per adres deze vragen:",
+                    "reorder": false,
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "adres": {
+                                    "adres-streetname": "",
+                                    "adres-postalcode": "",
+                                    "adres-housenr": "",
+                                    "adres-city": ""
+                                }
+                            }
+                        }
+                    ],
+                    "key": "voorWelkeAdressenVraagtUNogMeerSubsidieAanBeantwoordPerAdresDezeVragen",
+                    "customConditional": "show = (data.vraagtUAlleenVoorDitAdresSubsidieAan == 'meerdereAdressen') || (data.vraagtUAlleenVoorDitAdresSubsidieAan == 'meerdereAdressenMetAndereWoningEigenaren');",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Adres",
+                                    "disablestreetcity": false,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "tableView": true,
+                                    "key": "adres",
+                                    "type": "adres",
+                                    "input": true
+                                }
+                            ],
+                            "key": "fieldSet-1-2-3",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Is er een Vereniging van Eigenaren?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "isErEenVerenigingVanEigenaren",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "html": "<p>&nbsp;Aan het einde van dit formulier moet u besluit van de Vereniging van Eigenaren uploaden waarop staat dat de vereniging toestemming geeft om de subsidie aan te vragen.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content1",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Beantwoord voor elk groendak of groengevel deze vragen",
+                    "reorder": false,
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "waar": "",
+                                "hoeGrootIsHetDakOfDeMuurInM2": "",
+                                "watGaatUPlantenOpHetGroendakOfDePlantenmuur": "",
+                                "wieGaatHetGroendakOfDePlantenmuurPlaatsen": "",
+                                "hoeveelM2GroendakOfPlantenmuurGaatUPlaatsen": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "beantwoordVoorElkGroendakOfPlantenmuurDezeVragen",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Waar komt het groendak of de groengevel?",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "op het dak of de muur van een woonhuis",
+                                            "value": "woonhuis",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "op het dak of de muur van een garage die vastzit aan de woning",
+                                            "value": "garage",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "op het dak of de muur van een schuur die vastzit aan de woning",
+                                            "value": "schuur",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "los bijgebouw. Bijvoorbeeld een tuinhuisje, schuur of garage",
+                                            "value": "losBijgebouw",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "op het dak of de muur van een woningbouwvereniging",
+                                            "value": "woningbouwvereniging",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "anders",
+                                            "value": "anders",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "key": "waar",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Waar dan?",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "waarDan",
+                                    "conditional": {
+                                        "show": true,
+                                        "when": "beantwoordVoorElkGroendakOfPlantenmuurDezeVragen.container.waar",
+                                        "eq": "anders"
+                                    },
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Soort dak",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "schuin dak",
+                                            "value": "schuinDak",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "plat houten dak",
+                                            "value": "platHoutenDak",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "plat betonnen dak",
+                                            "value": "platBetonnenDak",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "anders",
+                                            "value": "anders",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "soortDak",
+                                    "conditional": {
+                                        "show": true,
+                                        "when": "watWiltUDoen",
+                                        "eq": "groendak"
+                                    },
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Wat dan?",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "watDan",
+                                    "conditional": {
+                                        "show": true,
+                                        "when": "beantwoordVoorElkGroendakOfPlantenmuurDezeVragen.container.soortDak",
+                                        "eq": "anders"
+                                    },
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "html": "<p>Bij een bestaande woning mag u alleen op een plat dak van beton of hout een groendak plaatsen.</p><p>Bij een nieuwbouwwoning mag u ook op een schuin dak een groendak plaatsen als u hiervoor een vergunning heeft.</p>",
+                                    "label": "Content",
+                                    "refreshOnChange": false,
+                                    "key": "content",
+                                    "conditional": {
+                                        "show": true,
+                                        "when": "beantwoordVoorElkGroendakOfPlantenmuurDezeVragen.container.soortDak",
+                                        "eq": "schuinDak"
+                                    },
+                                    "type": "content",
+                                    "input": false,
+                                    "tableView": false
+                                },
+                                {
+                                    "label": "Hoe groot is het dak of de muur in m2",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                                        "customMessage": "Vul het aantal m2 in."
+                                    },
+                                    "key": "hoeGrootIsHetDakOfDeMuurInM2",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Wat gaat u planten op het groendak of de groengevel?",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "bloemen (gras of kruiden)",
+                                            "value": "bloemen",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "gras",
+                                            "value": "gras",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "kruiden",
+                                            "value": "kruiden",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "vetplanten (sedum) en kruiden",
+                                            "value": "vetplantenEnKruiden",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "vetplanten (sedum) en mos",
+                                            "value": "vetplantenEnMos",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "watGaatUPlantenOpHetGroendakOfDePlantenmuur",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Wie gaat het groendak of de groengevel plaatsen?",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "een hovenier of dakdekker",
+                                            "value": "hovenierOfDakdekker",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "ik doe het zelf met een kant-en-klaar systeem",
+                                            "value": "kantEnKlaarSysteem",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "ik doe het zelf met losse lagen",
+                                            "value": "losseLagen",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "wieGaatHetGroendakOfDePlantenmuurPlaatsen",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Hoeveel m2 groendak of groengevel gaat u plaatsen?",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                                        "customMessage": "Vul het aantal m2 in."
+                                    },
+                                    "key": "hoeveelM2GroendakOfPlantenmuurGaatUPlaatsen",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet-1-2",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns2",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/b35e0e10-65f0-49c2-bcdc-87c47dc159f9",
+        "uuid": "b35e0e10-65f0-49c2-bcdc-87c47dc159f9",
+        "name": "Regenwater",
+        "slug": "regenwater",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Deelt u de regenwaterafvoer (regenpijp, goot) met uw buren?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "deeltUDeRegenwaterafvoerRegenpijpGootMetUwBuren",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "html": "<p>Als de regenwaterafvoer deelt met uw buren dan moeten uw buren toestemming geven voor het plaatsen van een groendak of groengevel. U moet er daarna samen voor zorgen dat het regenwater goed weg kan. &nbsp;Aan het einde van dit formulier moet u een bewijs uploaden waarop staat dat uw buren toestemming geven voor het plaatsen van een groendak of groengevel.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content2",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Hoe gaat u het regenwater opvangen?",
+                    "optionsLabelPosition": "right",
+                    "description": "Een groendak houdt veel regenwater vast. De rest van het regenwater kunt u opvangen. Bijvoorbeeld in de tuin of in een regenton.",
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "het water gaat naar het riool",
+                            "value": "riool",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "het water stroomt weg over de grond",
+                            "value": "stroomtOverGrond",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "in een of meer regentonnen",
+                            "value": "regenton",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "het water wordt opgevangen onder de grond (ondergrondse bergingsreservoir)",
+                            "value": "ondergrondseReservoir",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "onlyAvailableItems": false
+                    },
+                    "key": "eenGroendakHoudtVeelRegenwaterVastDeRestVanHetRegenwaterKuntUOpvangen",
+                    "type": "selectboxes",
+                    "input": true,
+                    "inputType": "checkbox",
+                    "defaultValue": {
+                        "riool": false,
+                        "stroomtOverGrond": false,
+                        "regenton": false,
+                        "ondergrondseReservoir": false
+                    }
+                },
+                {
+                    "label": " Hoeveel m2 is er in uw tuin niet verhard (geen tegels, beton, stenen) waar het water de grond in kan stromen?",
+                    "description": "Dit moet minstens 30% van uw tuin zijn.",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true,
+                        "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                        "customMessage": "Vul het aantal m2 in."
+                    },
+                    "key": "hoeveelM2IsErInUwTuinNietVerhardGeenTegelsBetonStenenWaarHetWaterDeGrondInKanStromen",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Hoeveel liter water kan er in de regenton(nen)?",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true,
+                        "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                        "customMessage": "Vul het aantal liter in."
+                    },
+                    "key": "hoeveelM2IsErInUwTuinNietVerhardGeenTegelsBetonStenenWaarHetWaterDeGrondInKanStromen1",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "html": "<p>U kunt beter een systeem boven de grond gebruiken. Het water is dan beter schoon te maken.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content3",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Hoeveel liter kan er in de opvang onder de grond?",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true,
+                        "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                        "customMessage": "Vul het aantal liter in."
+                    },
+                    "key": "hoeveelM2IsErInUwTuinNietVerhardGeenTegelsBetonStenenWaarHetWaterDeGrondInKanStromen2",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns3",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/8082d37f-3e87-48cc-83f2-d967b4821460",
+        "uuid": "8082d37f-3e87-48cc-83f2-d967b4821460",
+        "name": "Planning",
+        "slug": "planning",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "components": [
+                        {
+                            "label": "Wanneer start het plaatsen van het groendak of de groengevel?",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "hourStep": "",
+                                "minuteStep": "",
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true,
+                                "custom": "var today = new Date();\n\nvar dateSplitted = input.split('-');\nvar ingevuldeDatum = new Date(dateSplitted[2], dateSplitted[1] - 1, dateSplitted[0]);\n\nif (ingevuldeDatum >= today){\n  valid = true;\n} else{\n  valid = 'Datum mag niet in het verleden liggen';\n}"
+                            },
+                            "key": "wanneerStartHetPlaatsenVanHetGroendakOfDePlantenmuur",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        },
+                        {
+                            "label": "Wanneer is het groendak of de groengevel klaar denkt u?",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "hourStep": "",
+                                "minuteStep": "",
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true,
+                                "custom": "var today = new Date();\n\nvar dateSplitted = input.split('-');\nvar ingevuldeDatum = new Date(dateSplitted[2], dateSplitted[1] - 1, dateSplitted[0]);\n\nif (ingevuldeDatum >= today){\n  valid = true;\n} else{\n  valid = 'Datum mag niet in het verleden liggen';\n}"
+                            },
+                            "key": "wanneerIsHetGroendakOfDePlantenmuurKlaarDenktU",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        },
+                        {
+                            "label": "Opmerkingen",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "key": "opmerkingen",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        }
+                    ],
+                    "key": "fieldSet-1",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Kenmerk van de brief van de gemeente waarin staat dat u subsidie krijgt voor het plaatsen van een groendak of groengevel.",
+                            "description": "U ziet dit kenmerk aan de rechterkant van de brief bij 'Ons kenmerk'.",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "kenmerkVanDeBriefVanDeGemeenteWaarinStaatDatUSubsidieKrijgtVoorHetPlaatsenVanEenGroendakOfPlantenmuur",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Datum van die brief",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "hourStep": "",
+                                "minuteStep": "",
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "datumVanDieBrief",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        },
+                        {
+                            "label": "Is het groendak of de groengevel geplaatst op het adres dat u bij de subsidieaanvraag heeft opgegeven?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "isHetGroendakOfDePlantenmuurGeplaatstOpHetAdresDatUBijDeSubsidieaanvraagHeeftOpgegeven",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "label": "Adres waar het groendak of de groengevel is geplaatst",
+                            "disablestreetcity": false,
+                            "validate": {
+                                "required": true
+                            },
+                            "tableView": true,
+                            "key": "adresWaarHetGroendakOfDePlantenmuurIsGeplaatst",
+                            "conditional": {
+                                "show": true,
+                                "when": "aanlegMelden.isHetGroendakOfDePlantenmuurGeplaatstOpHetAdresDatUBijDeSubsidieaanvraagHeeftOpgegeven",
+                                "eq": "nee"
+                            },
+                            "type": "adres",
+                            "input": true
+                        },
+                        {
+                            "label": "Wat heeft u geplaatst?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "een groendak",
+                                    "value": "groendak",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "een groengevel",
+                                    "value": "plantenmuur",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "watHeeftUGeplaatst",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "label": "Wanneer is het groendak of de groengevel geplaatst?",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "hourStep": "",
+                                "minuteStep": "",
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "wanneerIsHetGroendakOfDePlantenmuurGeplaatst",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        },
+                        {
+                            "label": "Hoeveel m2 groendak of groengevel is er geplaatst?",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                                "customMessage": "Vul het aantal m2 in."
+                            },
+                            "key": "hoeveelM2GroendakOfPlantenmuurIsErGeplaatst",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns4",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/f846cdc7-f802-4657-a66c-a86f3f812854",
+        "uuid": "f846cdc7-f802-4657-a66c-a86f3f812854",
+        "name": "Bijlage(n)",
+        "slug": "bijlagen",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Toevoegen",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePattern": ".jpg,.png,.jpeg,.pdf",
+                    "fileMinSize": "1KB",
+                    "fileMaxSize": "20MB",
+                    "multiple": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "toevoegen",
+                    "type": "file",
+                    "input": true,
+                    "url": "/cloud/s3"
+                },
+                {
+                    "html": "<p>Ik heb deze bijlage(n) toegevoegd:</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content4",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Plattegrond of tekening (schets) van het dak of de muur waarop staat waar het groendak of de groengevel komt en hoe het regenwater wordt opgevangen",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "plattegrondOfTekeningSchaal1100VanHetDakOfDeMuurWaaropStaatWaarHetGroendakOfDePlantenmuurKomtEnHoeHetRegenwaterWordtOpgevangen",
+                    "customConditional": "show = data.watWiltUDoen == 'groendak' || data.watWiltUDoen == 'plantenmuur'",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Bewijs waarop staat dat de eigenaar toestemming geeft voor het plaatsen van een groendak of groengevel",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "bewijsWaaropStaatDatDeEigenaarToestemmingGeeftVoorHetPlaatsenVanEenGroendakOfPlantenmuur",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Bewijs waarop staat dat uw buren toestemming geven voor het plaatsen van een groendak of groengevel",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "bewijsWaaropStaatDatUwBurenToestemmingGevenVoorHetPlaatsenVanEenGroendakOfPlantenmuur",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Een officieel besluit van de Vereniging van Eigenaren waarop staat dat de vereniging toestemming geeft om de subsidie aan te vragen",
+                    "tableView": false,
+                    "key": "eenOfficieelBesluitVanDeVerenigingVanEigenarenWaaropStaatDatDeVerenigingToestemmingGeeftOmDeSubsidieAanTeVragen",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Advies van een bouwkundig adviesbureau of het dak het gewicht van het groendak kan dragen (draagkrachtadvies)",
+                    "tableView": false,
+                    "key": "adviesVanEenBouwkundigAdviesbureauOfHetDakHetGewichtVanHetGroendakKanDragenDraagkrachtadvies",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Advies van een bouwkundig adviesbureau of de muur het gewicht van een groengevel kan dragen (draagkrachtadvies)",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "adviesVanEenBouwkundigAdviesbureauOfDeMuurHetGewichtVanEenPlantenmuurKanDragenDraagkrachtadvies",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Kopie van de bouwvergunning als u deze nodig heeft voor het plaatsen van het groendak of de groengevel",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "key": "kopieVanDeBouwvergunningAlsUDezeNodigHeeftVoorHetPlaatsenVanHetGroendakOfDePlantenmuur",
+                    "customConditional": "show = data.watWiltUDoen == 'groendak' || data.watWiltUDoen == 'plantenmuur'",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Eén of meer foto's van het groendak of de groengevel",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "eenOfMeerFotosVanHetGroendakOfDePlantenmuur",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Eén of meer foto's van de nieuwe manier waarop het regenwater wegstroomt of wordt opgevangen als dit is aangepast na het plaatsen van het groendak",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "eenOfMeerFotosVanDeNieuweManierWaaropHetRegenwaterWegstroomtOfWordtOpgevangenAlsDitIsAangepastNaHetPlaatsenVanHetGroendak",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Offerte van de leverancier, hovenier of dakdekker",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "offerteVanDeLeverancierOfHovenierOfDakdekker",
+                    "customConditional": "show = data.watWiltUDoen == 'groendak' || data.watWiltUDoen == 'plantenmuur'",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns5",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    }
+]

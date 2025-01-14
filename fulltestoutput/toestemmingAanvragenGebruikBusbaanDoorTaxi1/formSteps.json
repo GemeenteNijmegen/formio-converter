@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "3110150b-9e11-4a2d-bae9-7967cec051be",
+        "index": "0",
+        "slug": "toestemming",
+        "form_definition": "http://localhost/api/v2/form-definitions/8ed7f7cf-80c6-4267-8176-8dced00f3341"
+    },
+    {
+        "uuid": "7aa3acb2-7e99-40d1-8fc7-81240e3df20e",
+        "index": "1",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/8ceaf1e0-7cda-4535-a7a5-41b15cffabce"
+    },
+    {
+        "uuid": "29a77817-1f5d-42d9-a75f-90504a8b594d",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/b89cb61b-c338-4385-924d-c088322da72b"
+    }
+]

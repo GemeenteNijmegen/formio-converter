@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "4532e89a-33cb-4c85-86e6-8c81e216895a",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/852c533d-0f0b-4ab3-8593-2746af7676e3"
+    },
+    {
+        "uuid": "46858e9d-2f96-4e81-802d-5fc65b7d75a6",
+        "index": "1",
+        "slug": "informatiekraam-melden",
+        "form_definition": "http://localhost/api/v2/form-definitions/40976e81-78d3-4caa-825b-4fa118d3518b"
+    },
+    {
+        "uuid": "b4fa9b9f-1380-40d1-b2da-dae67e7bbce3",
+        "index": "2",
+        "slug": "gegevens-kraam",
+        "form_definition": "http://localhost/api/v2/form-definitions/bf3c6808-d911-4403-a37f-7ebd4e33191c"
+    }
+]

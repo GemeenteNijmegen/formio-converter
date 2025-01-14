@@ -1,0 +1,2042 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/74c9a15d-b0ac-4ae8-9e55-95893b02b0ef",
+        "uuid": "74c9a15d-b0ac-4ae8-9e55-95893b02b0ef",
+        "name": "Uw gegevens",
+        "slug": "uw-gegevens",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5-6-7-8-9-10-11",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "components": [
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadres",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummer",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Naam organisatie",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamOrganisatie",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "KvK inschrijfnummer",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "minLength": 8,
+                                "maxLength": 8,
+                                "pattern": "^[0-9]*$",
+                                "customMessage": "Een inschrijfnummer Kamer van Koophandel bevat 8 cijfers."
+                            },
+                            "key": "kvKInschrijfnummer",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Uw functie in de organisatie?",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "uwFunctieInDeOrganisatieDigid",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Bent u zelf de contactpersoon voor deze aanvraag?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "bentUZelfDeContactpersoonVoorDezeAanvraag",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam contactpersoon",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naamContactpersoon-1",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "E-mailadres contactpersoon",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "eMailadresContactpersoon",
+                                    "type": "email",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Telefoonnummer contactpersoon",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "telefoonnummerContactpersoon-1",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet-1-2-3-4-5-6-7-8-9-10",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5-6-7-8-9",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Uw naam",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "uwNaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Uw functie in de organisatie?",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "uwFunctieInDeOrganisatieEherkenning",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Bent u zelf de contactpersoon voor deze aanvraag?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "bentUZelfDeContactpersoonVoorDezeAanvraag1",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "label": "Naam contactpersoon",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamContactpersoon",
+                            "conditional": {
+                                "show": true,
+                                "when": "eherkenning.bentUZelfDeContactpersoonVoorDezeAanvraag1",
+                                "eq": "nee"
+                            },
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadres1",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer ",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummerContactpersoon",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5-6-7-8",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/4052a6eb-619b-44d8-a7c3-f53a2cffc7f6",
+        "uuid": "4052a6eb-619b-44d8-a7c3-f53a2cffc7f6",
+        "name": "IBAN",
+        "slug": "iban",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "IBAN waarop de subsidie mag komen",
+                    "inputMask": "AA99AAAA9999999999",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true,
+                        "customMessage": "Vul een geldige IBAN in."
+                    },
+                    "key": "ibanWaaropDeSubsidieMagKomen",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Op naam van",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "opNaamVan",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns9",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/6c0e516b-e41c-4238-8f94-4b2b4350072d",
+        "uuid": "6c0e516b-e41c-4238-8f94-4b2b4350072d",
+        "name": "Subsidie",
+        "slug": "subsidie",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Heeft u eerder subsidie voor amateurkunst aangevraagd bij de gemeente Nijmegen?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "heeftUEerderSubsidieVoorAmateurkunstAangevraagdBijDeGemeenteNijmegen",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "In welk jaar?",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true,
+                        "minLength": 4,
+                        "maxLength": 4,
+                        "pattern": "^[0-9]*$",
+                        "customMessage": "Vul een jaartal in."
+                    },
+                    "key": "inWelkJaar-1-2-3-4",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Naam artistieke leiding van de activiteit(en) waarvoor u subsidie aanvraagt",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "naamArtistiekeLeidingVanDeActiviteitEnWaarvoorUSubsidieAanvraagt",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Aantal actieve leden",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "aantalActieveLeden",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Vraagt u extra subsidie aan voor uw jeugdleden?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "vraagtUExtraSubsidieAanVoorUwJeugdleden",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Aantal actieve jeugdleden",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "aantalActieveLeden1",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Voor hoeveel jaar vraagt u subsidie aan?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "2 jaar",
+                            "value": "2Jaar",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "4 jaar",
+                            "value": "4Jaar",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "voorHoeveelJaarVraagtUSubsidieAan",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Wat is de waarde van uw organisatie/uw activiteiten voor de stad Nijmegen? Hoe is dat te zien?",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "watIsDeWaardeVanUwOrganisatieVoorDeStadNijmegen",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        },
+                        {
+                            "label": "Wat doet of gaat uw organisatie voor langere tijd (jaren) doen voor de stad Nijmegen?",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "watDoetUwOrganisatieVoorLangereTijdVoorDeStadNijmegen",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        },
+                        {
+                            "label": "Waarom wilt u subsidie voor 4 jaar en is subsidie voor 2 jaar niet genoeg?",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "waaromWiltUSubsidieVoor4Jaar",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5-6-7",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Beschrijf de activiteiten per jaar waarvoor u subsidie aanvraagt. Beantwoord voor elk jaar deze vragen:",
+                    "reorder": false,
+                    "addAnother": "toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "datum": "",
+                                "welkeActiviteitVindenOpDezeDagPlaatsMeerdereAntwoordenMogelijk": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "inWelkJaar": "",
+                                "eersteOpenbareActiviteit": "",
+                                "tweedeOpenbareActiviteit": "",
+                                "gaatUExtraOptreden": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "gaatUExtraOptreden1": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true,
+                        "minLength": "2"
+                    },
+                    "key": "beschrijfActiviteitenPerJaar2",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Jaar waarvoor u subsidie aanvraagt",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "minLength": 4,
+                                        "maxLength": 4,
+                                        "pattern": "^[0-9]*$",
+                                        "customMessage": "Vul een jaartal in."
+                                    },
+                                    "key": "inWelkJaar-1-2-3",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "1e openbare activiteit",
+                                    "tableView": true,
+                                    "inputFormat": "plain",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "eersteOpenbareActiviteit-1-2-3",
+                                    "type": "textarea",
+                                    "input": true,
+                                    "autoExpand": false
+                                },
+                                {
+                                    "label": "2e openbare activiteit",
+                                    "tableView": true,
+                                    "inputFormat": "plain",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "tweedeOpenbareActiviteit-1",
+                                    "type": "textarea",
+                                    "input": true,
+                                    "autoExpand": false
+                                },
+                                {
+                                    "label": "Gaat u extra optreden",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "ja",
+                                            "value": "ja",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "nee",
+                                            "value": "nee",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "gaatUExtraOptreden-1",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "label": "Hoeveel keer gaat u extra optreden?",
+                                            "tableView": true,
+                                            "validateOn": "blur",
+                                            "validate": {
+                                                "required": true,
+                                                "pattern": "^[0-9]*$",
+                                                "customMessage": "Vul het aantal in."
+                                            },
+                                            "key": "hoeveelKeerGaatUExtraOptreden-1",
+                                            "type": "textfield",
+                                            "input": true,
+                                            "prefill": {
+                                                "plugin": "",
+                                                "attribute": "",
+                                                "identifierRole": "main"
+                                            }
+                                        },
+                                        {
+                                            "label": "Omschrijving extra optredens",
+                                            "tableView": true,
+                                            "inputFormat": "plain",
+                                            "validate": {
+                                                "required": true
+                                            },
+                                            "key": "omschrijvingExtraOptredens-1",
+                                            "type": "textarea",
+                                            "input": true,
+                                            "autoExpand": false
+                                        }
+                                    ],
+                                    "key": "fieldSet-1-2-3-4-5-6",
+                                    "type": "fieldset",
+                                    "label": "Field Set",
+                                    "tree": false,
+                                    "input": false,
+                                    "hidden": false,
+                                    "legend": "",
+                                    "prefix": "",
+                                    "suffix": "",
+                                    "unique": false,
+                                    "widget": null,
+                                    "dbIndex": false,
+                                    "overlay": {
+                                        "top": "",
+                                        "left": "",
+                                        "style": "",
+                                        "width": "",
+                                        "height": ""
+                                    },
+                                    "tooltip": "",
+                                    "disabled": false,
+                                    "multiple": false,
+                                    "redrawOn": "",
+                                    "tabindex": "",
+                                    "validate": {
+                                        "custom": "",
+                                        "unique": false,
+                                        "multiple": false,
+                                        "required": false,
+                                        "customPrivate": false,
+                                        "strictDateValidation": false
+                                    },
+                                    "autofocus": false,
+                                    "encrypted": false,
+                                    "hideLabel": false,
+                                    "modalEdit": false,
+                                    "protected": false,
+                                    "refreshOn": "",
+                                    "tableView": false,
+                                    "attributes": {},
+                                    "errorLabel": "",
+                                    "hideHeader": false,
+                                    "persistent": false,
+                                    "properties": {},
+                                    "validateOn": "change",
+                                    "clearOnHide": true,
+                                    "conditional": {
+                                        "eq": "",
+                                        "show": null,
+                                        "when": null
+                                    },
+                                    "customClass": "",
+                                    "description": "",
+                                    "placeholder": "",
+                                    "defaultValue": null,
+                                    "dataGridLabel": false,
+                                    "labelPosition": "top",
+                                    "showCharCount": false,
+                                    "showWordCount": false,
+                                    "calculateValue": "",
+                                    "calculateServer": false,
+                                    "allowMultipleMasks": false,
+                                    "customDefaultValue": "",
+                                    "allowCalculateOverride": false
+                                }
+                            ],
+                            "key": "fieldSet-1-2-3-4-5",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Beschrijf de activiteiten per jaar waarvoor u subsidie aanvraagt. Beantwoord voor elk jaar deze vragen:",
+                    "reorder": false,
+                    "addAnother": "toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "datum": "",
+                                "welkeActiviteitVindenOpDezeDagPlaatsMeerdereAntwoordenMogelijk": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "inWelkJaar": "",
+                                "eersteOpenbareActiviteit": "",
+                                "tweedeOpenbareActiviteit": "",
+                                "gaatUExtraOptreden": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "gaatUExtraOptreden1": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true,
+                        "minLength": "4"
+                    },
+                    "key": "beschrijfActiviteitenPerJaar4",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Jaar waarvoor u subsidie aanvraagt",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "minLength": 4,
+                                        "maxLength": 4,
+                                        "pattern": "^[0-9]*$",
+                                        "customMessage": "Vul een jaartal in."
+                                    },
+                                    "key": "inWelkJaar-1-2",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "1e openbare activiteit",
+                                    "tableView": true,
+                                    "inputFormat": "plain",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "eersteOpenbareActiviteit-1-2",
+                                    "type": "textarea",
+                                    "input": true,
+                                    "autoExpand": false
+                                },
+                                {
+                                    "label": "2e openbare activiteit",
+                                    "tableView": true,
+                                    "inputFormat": "plain",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "tweedeOpenbareActiviteit",
+                                    "type": "textarea",
+                                    "input": true,
+                                    "autoExpand": false
+                                },
+                                {
+                                    "label": "Gaat u extra optreden",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "ja",
+                                            "value": "ja",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "nee",
+                                            "value": "nee",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "gaatUExtraOptreden",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "components": [
+                                        {
+                                            "label": "Hoeveel keer gaat u extra optreden?",
+                                            "tableView": true,
+                                            "validateOn": "blur",
+                                            "validate": {
+                                                "required": true,
+                                                "pattern": "^[0-9]*$",
+                                                "customMessage": "Vul het aantal in."
+                                            },
+                                            "key": "hoeveelKeerGaatUExtraOptreden",
+                                            "type": "textfield",
+                                            "input": true,
+                                            "prefill": {
+                                                "plugin": "",
+                                                "attribute": "",
+                                                "identifierRole": "main"
+                                            }
+                                        },
+                                        {
+                                            "label": "Omschrijving extra optredens",
+                                            "tableView": true,
+                                            "inputFormat": "plain",
+                                            "validate": {
+                                                "required": true
+                                            },
+                                            "key": "omschrijvingExtraOptredens",
+                                            "type": "textarea",
+                                            "input": true,
+                                            "autoExpand": false
+                                        }
+                                    ],
+                                    "key": "fieldSet-1-2-3-4",
+                                    "type": "fieldset",
+                                    "label": "Field Set",
+                                    "tree": false,
+                                    "input": false,
+                                    "hidden": false,
+                                    "legend": "",
+                                    "prefix": "",
+                                    "suffix": "",
+                                    "unique": false,
+                                    "widget": null,
+                                    "dbIndex": false,
+                                    "overlay": {
+                                        "top": "",
+                                        "left": "",
+                                        "style": "",
+                                        "width": "",
+                                        "height": ""
+                                    },
+                                    "tooltip": "",
+                                    "disabled": false,
+                                    "multiple": false,
+                                    "redrawOn": "",
+                                    "tabindex": "",
+                                    "validate": {
+                                        "custom": "",
+                                        "unique": false,
+                                        "multiple": false,
+                                        "required": false,
+                                        "customPrivate": false,
+                                        "strictDateValidation": false
+                                    },
+                                    "autofocus": false,
+                                    "encrypted": false,
+                                    "hideLabel": false,
+                                    "modalEdit": false,
+                                    "protected": false,
+                                    "refreshOn": "",
+                                    "tableView": false,
+                                    "attributes": {},
+                                    "errorLabel": "",
+                                    "hideHeader": false,
+                                    "persistent": false,
+                                    "properties": {},
+                                    "validateOn": "change",
+                                    "clearOnHide": true,
+                                    "conditional": {
+                                        "eq": "",
+                                        "show": null,
+                                        "when": null
+                                    },
+                                    "customClass": "",
+                                    "description": "",
+                                    "placeholder": "",
+                                    "defaultValue": null,
+                                    "dataGridLabel": false,
+                                    "labelPosition": "top",
+                                    "showCharCount": false,
+                                    "showWordCount": false,
+                                    "calculateValue": "",
+                                    "calculateServer": false,
+                                    "allowMultipleMasks": false,
+                                    "customDefaultValue": "",
+                                    "allowCalculateOverride": false
+                                }
+                            ],
+                            "key": "fieldSet-1-2-3",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Beschrijf de financiële gegevens per jaar waarvoor u subsidie aanvraagt. Beantwoord voor elk jaar deze vragen:",
+                    "reorder": false,
+                    "addAnother": "toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "datum": "",
+                                "welkeActiviteitVindenOpDezeDagPlaatsMeerdereAntwoordenMogelijk": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "inWelkJaar": "",
+                                "eersteOpenbareActiviteit": "",
+                                "tweedeOpenbareActiviteit": "",
+                                "gaatUExtraOptreden": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "gaatUExtraOptreden1": "",
+                                "hoeveelProcentIsDatVanDeBegroting": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true,
+                        "minLength": "2"
+                    },
+                    "key": "beschrijfFinancieleGegevensPerJaar2",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Jaar waarvoor u subsidie aanvraagt",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "minLength": 4,
+                                        "maxLength": 4,
+                                        "pattern": "^[0-9]*$",
+                                        "customMessage": "Vul een jaartal in."
+                                    },
+                                    "key": "inWelkJaar-1",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Hoeveel subsidie wilt u voor dit jaar ontvangen?",
+                                    "description": "U kunt maximaal voor 50% van de jaarlijkse kosten subsidie aanvragen.",
+                                    "tableView": true,
+                                    "inputFormat": "plain",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "eersteOpenbareActiviteit-1",
+                                    "type": "textarea",
+                                    "input": true,
+                                    "autoExpand": false
+                                },
+                                {
+                                    "label": "Hoeveel procent is dat van de begroting?",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "hoeveelProcentIsDatVanDeBegroting-1",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet-1-2",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Beschrijf de financiële gegevens per jaar waarvoor u subsidie aanvraagt. Beantwoord voor elk jaar deze vragen:",
+                    "reorder": false,
+                    "addAnother": "toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "datum": "",
+                                "welkeActiviteitVindenOpDezeDagPlaatsMeerdereAntwoordenMogelijk": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "inWelkJaar": "",
+                                "eersteOpenbareActiviteit": "",
+                                "tweedeOpenbareActiviteit": "",
+                                "gaatUExtraOptreden": {
+                                    "opbouwEvenement": false,
+                                    "evenement": false,
+                                    "afbrekenEvenement": false
+                                },
+                                "gaatUExtraOptreden1": "",
+                                "hoeveelProcentIsDatVanDeBegroting": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true,
+                        "minLength": "4"
+                    },
+                    "key": "beschrijfFinancieleGegevensPerJaar4",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Jaar waarvoor u subsidie aanvraagt",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "minLength": 4,
+                                        "maxLength": 4,
+                                        "pattern": "^[0-9]*$",
+                                        "customMessage": "Vul een jaartal in."
+                                    },
+                                    "key": "inWelkJaar",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Hoeveel subsidie wilt u voor dit jaar ontvangen?",
+                                    "description": "U kunt maximaal voor 50% van de jaarlijkse kosten subsidie aanvragen.",
+                                    "tableView": true,
+                                    "inputFormat": "plain",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "eersteOpenbareActiviteit",
+                                    "type": "textarea",
+                                    "input": true,
+                                    "autoExpand": false
+                                },
+                                {
+                                    "label": "Hoeveel procent is dat van de begroting?",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "hoeveelProcentIsDatVanDeBegroting",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet-1",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns7",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/2e024673-e70b-4c08-97d3-b8471d5513c8",
+        "uuid": "2e024673-e70b-4c08-97d3-b8471d5513c8",
+        "name": "Bijlagen",
+        "slug": "bijlagen",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Toevoegen",
+                    "description": "Toegestaan zijn .jpg, .png, .jpeg of .pdf documenten die niet groter zijn dan 20MB.",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePattern": ".pdf,.png,.jpg,.jpeg",
+                    "fileMinSize": "1KB",
+                    "fileMaxSize": "20MB",
+                    "multiple": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "toevoegen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                },
+                {
+                    "html": "<p>Ik heb deze bijlage(n) toegevoegd:</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content1",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Activiteitenplan voor de periode waarvoor u subsidie aanvraagt",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "activiteitenplanVoorDePeriodeWaarvoorUSubsidieAanvraagt",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Overzicht inkomsten en kosten (begroting) van de periode waarvoor u subsidie aanvraagt",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "overzichtInkomstenEnKostenBegrotingVanDePeriodeWaarvoorUSubsidieAanvraagt",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Jaarverslag, jaarrekening, balans van het voorgaande jaar",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "jaarverslagJaarrekeningBalansVanHetVoorgaandeJaar",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Diploma en/of CV artistiek leider",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "diplomaEnOfCvArtistiekLeider",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Ledenlijst. Noem per lid de voornaam, achternaam en bij jeugdleden ook het geboortejaar",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "ledenlijstNoemPerLidDeVoornaamAchternaamEnBijJeugdledenOokHetGeboortejaar",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Kopie bankafschrift van de vereniging of stichting",
+                            "tableView": false,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "kopieBankafschriftVanDeVerenigingOfStichting",
+                            "type": "checkbox",
+                            "input": true,
+                            "defaultValue": false
+                        },
+                        {
+                            "label": "Uittreksel inschrijving Kamer van Koophandel",
+                            "tableView": false,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "uittrekselInschrijvingKamerVanKoophandel",
+                            "type": "checkbox",
+                            "input": true,
+                            "defaultValue": false
+                        },
+                        {
+                            "label": "Laatste statuten",
+                            "tableView": false,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "laatsteStatuten",
+                            "type": "checkbox",
+                            "input": true,
+                            "defaultValue": false
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns8",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    }
+]

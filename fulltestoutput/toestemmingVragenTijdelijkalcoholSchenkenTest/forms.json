@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "36f626d5-8ead-4f82-aa98-04ef6eb07a56",
+        "name": "Toestemming vragen tijdelijk alcohol schenken",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "toestemmingvragentijdelijkalcoholschenken",
+        "url": "http://localhost/api/v2/forms/36f626d5-8ead-4f82-aa98-04ef6eb07a56",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

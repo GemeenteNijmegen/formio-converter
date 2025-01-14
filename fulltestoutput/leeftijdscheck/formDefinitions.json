@@ -1,0 +1,105 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/b5e981f1-bb25-4ccc-870a-b94b7aa633d8",
+        "uuid": "b5e981f1-bb25-4ccc-870a-b94b7aa633d8",
+        "name": "Leeftijd",
+        "slug": "leeftijd",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 16</h2>\n<p>Je mag bijvoorbeeld een scooterrijbewijs halen. Vergeet je helm niet!</p>",
+                    "refreshOnChange": false,
+                    "key": "html",
+                    "customConditional": "show = data.over16 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 16</h2>\n<p>Je mag bijvoorbeeld een scooterrijbewijs halen. Vergeet je helm niet!</p>"
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 18</h2>\n<p>Je mag je rijbewijs halen, of een biertje. Niet tegelijk hoor!</p>",
+                    "refreshOnChange": false,
+                    "key": "html1",
+                    "customConditional": "show = data.over18 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 18</h2>\n<p>Je mag je rijbewijs halen, of een biertje. Niet tegelijk hoor!</p>"
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 21</h2>\n<p>Er zijn vast dingen die pas vanaf je 21e mogen.</p>",
+                    "refreshOnChange": false,
+                    "key": "html2",
+                    "customConditional": "show = data.over21 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 21</h2>\n<p>Er zijn vast dingen die pas vanaf je 21e mogen.</p>"
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 65</h2>\n<p>Nog net niet aan je pensioen, maar een <a href=\"https://www.breng.nl/nl/shop/abonnement/nijmegen-65\">goedkoop buskaartje</a> kun je nu aanvragen!",
+                    "refreshOnChange": false,
+                    "key": "html3",
+                    "customConditional": "show = data.over65 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 65</h2>\n<p>Nog net niet aan je pensioen, maar een <a href=\"https://www.breng.nl/nl/shop/abonnement/nijmegen-65\">goedkoop buskaartje</a> kun je nu aanvragen!"
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/43d01f23-9487-4a23-9b70-cb4ca0157fa1",
+        "uuid": "43d01f23-9487-4a23-9b70-cb4ca0157fa1",
+        "name": "Gegevens",
+        "slug": "gegevens",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Postcode",
+                    "tableView": true,
+                    "calculateValue": "value = data.postcode",
+                    "key": "postcodeVisible",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                }
+            ]
+        }
+    }
+]

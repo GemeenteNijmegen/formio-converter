@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "34311b2c-791b-48f1-a5b1-d08392adfe03",
+        "name": "Opvragen overzicht organisaties die uw persoonsge",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "opvragenoverzichtorganisatiesdieuwpersoonsgegeven",
+        "url": "http://localhost/api/v2/forms/34311b2c-791b-48f1-a5b1-d08392adfe03",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

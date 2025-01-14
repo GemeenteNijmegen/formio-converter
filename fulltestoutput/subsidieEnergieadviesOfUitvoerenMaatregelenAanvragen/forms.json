@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "5ace0714-c016-4e30-b818-d84627833b7b",
+        "name": "Subsidie energieadvies of uitvoeren maatregelen a",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "subsidieenergieadviesofuitvoerenmaatregelenaanvra",
+        "url": "http://localhost/api/v2/forms/5ace0714-c016-4e30-b818-d84627833b7b",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

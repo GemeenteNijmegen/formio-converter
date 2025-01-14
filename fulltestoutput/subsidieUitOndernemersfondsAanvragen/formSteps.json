@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "f0510ebd-8b2a-4ab4-9d66-13feb2dc76ed",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/14927e70-f20d-44f8-86c9-1a88da755609"
+    },
+    {
+        "uuid": "f01e9841-bab9-4320-a27f-ca26c8e00bba",
+        "index": "1",
+        "slug": "iban",
+        "form_definition": "http://localhost/api/v2/form-definitions/ccb1a466-a7a1-4c75-8932-c0827778022d"
+    },
+    {
+        "uuid": "f01fce29-8deb-4346-8bed-ef4e5377eb2a",
+        "index": "2",
+        "slug": "subsidie-en-plan",
+        "form_definition": "http://localhost/api/v2/form-definitions/4ea81fd2-018b-4d11-bda8-2238f25d47f7"
+    },
+    {
+        "uuid": "930c100c-a81a-483a-82b1-067523698661",
+        "index": "3",
+        "slug": "planning",
+        "form_definition": "http://localhost/api/v2/form-definitions/1624eb77-d1c0-4090-b10f-d4d83292b52d"
+    },
+    {
+        "uuid": "d5d6588e-4f96-478e-857f-1050c1271993",
+        "index": "4",
+        "slug": "inkomsten-en-kosten",
+        "form_definition": "http://localhost/api/v2/form-definitions/f4b1d6d5-6e53-4a5e-aa17-69cecf4c24bc"
+    },
+    {
+        "uuid": "74c0a4e8-36ef-48a6-a60d-77478513da19",
+        "index": "5",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/40529712-f76b-4aa8-b7e1-c048c205a243"
+    }
+]

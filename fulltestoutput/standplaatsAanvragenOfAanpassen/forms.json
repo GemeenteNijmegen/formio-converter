@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "626866f6-86ca-4dfc-b5c7-858960bc99a3",
+        "name": "Standplaats aanvragen of aanpassen",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "standplaatsaanvragenofaanpassen",
+        "url": "http://localhost/api/v2/forms/626866f6-86ca-4dfc-b5c7-858960bc99a3",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

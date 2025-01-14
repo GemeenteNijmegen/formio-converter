@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "9dec3b6a-63ee-4bf2-9d60-44cfac43698c",
+        "index": "0",
+        "slug": "gegevens-van-de-persoon-die-zorg-krijgt",
+        "form_definition": "http://localhost/api/v2/form-definitions/3c6c9271-aee8-46ad-b1cf-455a0dd25670"
+    },
+    {
+        "uuid": "0638ab84-01b9-4afd-8467-2c22ceef78f9",
+        "index": "1",
+        "slug": "gegevens-mantelzorger",
+        "form_definition": "http://localhost/api/v2/form-definitions/ab4b7b75-7634-4525-aadf-8ea72fbc39eb"
+    },
+    {
+        "uuid": "9d1d07de-9748-48dd-bb9e-64a74a2c148e",
+        "index": "2",
+        "slug": "voorwaarden",
+        "form_definition": "http://localhost/api/v2/form-definitions/ac1e14fe-2e0d-49ba-9946-5890e2b722b9"
+    },
+    {
+        "uuid": "ea38e9fe-40bc-44db-bcbc-6029ab205634",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/f9d96449-ad40-4f06-83a2-72dd62b26758"
+    }
+]

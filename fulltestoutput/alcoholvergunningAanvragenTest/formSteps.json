@@ -1,0 +1,32 @@
+[
+    {
+        "uuid": "c9eef2d2-be64-49c5-a576-3439124a5b78",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/884e8da8-39f8-42e3-b4c9-e37947f171ff"
+    },
+    {
+        "uuid": "c8aca60d-6499-4b09-bb71-850d034e37ef",
+        "index": "1",
+        "slug": "gegevens-bedrijf",
+        "form_definition": "http://localhost/api/v2/form-definitions/68aa3735-5fe0-4e86-a91c-b547cc6a51c3"
+    },
+    {
+        "uuid": "0541e1a2-44c2-4bc9-9026-afc5214e3652",
+        "index": "2",
+        "slug": "inrichting-bedrijf",
+        "form_definition": "http://localhost/api/v2/form-definitions/c75c9f96-8cb9-4652-a38b-e8fc1059eca5"
+    },
+    {
+        "uuid": "4998821e-d3ec-4074-b0ad-dea24d815967",
+        "index": "3",
+        "slug": "openingstijden",
+        "form_definition": "http://localhost/api/v2/form-definitions/35761d3c-eef8-4a89-ad78-6ef26b5585f4"
+    },
+    {
+        "uuid": "84a8d916-0985-48a5-8b4a-6eb00753f58c",
+        "index": "4",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/23ecb9b1-a47a-47ad-86a4-add9e761e340"
+    }
+]

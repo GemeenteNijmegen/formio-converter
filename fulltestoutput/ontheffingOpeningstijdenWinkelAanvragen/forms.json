@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "607958e6-c03d-4c5c-9f16-3a25cca0543d",
+        "name": "Ontheffing openingstijden winkel aanvragen",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "ontheffingopeningstijdenwinkelaanvragen",
+        "url": "http://localhost/api/v2/forms/607958e6-c03d-4c5c-9f16-3a25cca0543d",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

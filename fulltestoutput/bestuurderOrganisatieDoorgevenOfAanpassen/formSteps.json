@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "d6dcc7e3-2871-45e8-b0b5-b51c4ebb9d37",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/8bef8559-17fd-4ad9-a498-5bce1e92dbe8"
+    },
+    {
+        "uuid": "081a1d56-58d3-4ff9-b46a-a79631f0fa2e",
+        "index": "1",
+        "slug": "bestuurders",
+        "form_definition": "http://localhost/api/v2/form-definitions/c66afc3d-4a49-4a64-9e17-b7ba3683f75d"
+    }
+]

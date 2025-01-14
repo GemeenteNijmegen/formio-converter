@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "13ad9efd-bbc0-4c45-9aaa-266b779ed0db",
+        "name": "Nijmegenaar van het jaar voorstellen",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "nijmegenaarvanhetjaarvoorstellen",
+        "url": "http://localhost/api/v2/forms/13ad9efd-bbc0-4c45-9aaa-266b779ed0db",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "740a664a-2356-48c6-a35d-0258795dc1d8",
+        "index": "0",
+        "slug": "page-1",
+        "form_definition": "http://localhost/api/v2/form-definitions/02edbbd5-d3e2-41e0-870c-6cfcff7190f0"
+    },
+    {
+        "uuid": "0a265bcf-eeba-42db-a745-c3ca1ede54c6",
+        "index": "1",
+        "slug": "page-2",
+        "form_definition": "http://localhost/api/v2/form-definitions/998be335-f7dd-4ef8-9503-e5e23eefb55e"
+    }
+]

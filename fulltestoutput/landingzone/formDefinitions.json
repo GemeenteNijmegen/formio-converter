@@ -1,0 +1,64 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/5d5dbec9-5c12-4c0a-ac2b-a061d59ea40d",
+        "uuid": "5d5dbec9-5c12-4c0a-ac2b-a061d59ea40d",
+        "name": "Page 1",
+        "slug": "page-1",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Adres nijmegen",
+                    "disablestreetcity": false,
+                    "tableView": true,
+                    "key": "adres",
+                    "type": "adres",
+                    "input": true
+                },
+                {
+                    "label": "Email Nijmegen",
+                    "autocomplete": "email",
+                    "tableView": true,
+                    "key": "eMailadres",
+                    "type": "email",
+                    "input": true
+                },
+                {
+                    "label": "Upload",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "multiple": true,
+                    "key": "fileNijmegen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/c46bc643-58f4-4249-9547-a5569df6041d",
+        "uuid": "c46bc643-58f4-4249-9547-a5569df6041d",
+        "name": "Page 2",
+        "slug": "page-2",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Samenvatting",
+                    "tableView": false,
+                    "key": "summary",
+                    "type": "summary",
+                    "input": true
+                }
+            ]
+        }
+    }
+]

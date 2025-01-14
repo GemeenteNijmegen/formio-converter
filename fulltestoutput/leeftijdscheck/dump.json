@@ -1,0 +1,231 @@
+{
+    "title": "Yivi Demo",
+    "type": "form",
+    "name": "yiviDemo",
+    "path": "yividemo",
+    "display": "wizard",
+    "tags": [],
+    "settings": {},
+    "components": [
+        {
+            "title": "Leeftijd",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": true,
+                "cancel": true,
+                "next": true
+            },
+            "navigateOnEnter": false,
+            "saveOnEnter": false,
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page1",
+            "type": "panel",
+            "label": "Page 1",
+            "components": [
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 16</h2>\n<p>Je mag bijvoorbeeld een scooterrijbewijs halen. Vergeet je helm niet!</p>",
+                    "refreshOnChange": false,
+                    "key": "html",
+                    "customConditional": "show = data.over16 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 16</h2>\n<p>Je mag bijvoorbeeld een scooterrijbewijs halen. Vergeet je helm niet!</p>"
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 18</h2>\n<p>Je mag je rijbewijs halen, of een biertje. Niet tegelijk hoor!</p>",
+                    "refreshOnChange": false,
+                    "key": "html1",
+                    "customConditional": "show = data.over18 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 18</h2>\n<p>Je mag je rijbewijs halen, of een biertje. Niet tegelijk hoor!</p>"
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 21</h2>\n<p>Er zijn vast dingen die pas vanaf je 21e mogen.</p>",
+                    "refreshOnChange": false,
+                    "key": "html2",
+                    "customConditional": "show = data.over21 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 21</h2>\n<p>Er zijn vast dingen die pas vanaf je 21e mogen.</p>"
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "<h2>Je bent ouder dan 65</h2>\n<p>Nog net niet aan je pensioen, maar een <a href=\"https://www.breng.nl/nl/shop/abonnement/nijmegen-65\">goedkoop buskaartje</a> kun je nu aanvragen!",
+                    "refreshOnChange": false,
+                    "key": "html3",
+                    "customConditional": "show = data.over65 == 'Yes'",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "<h2>Je bent ouder dan 65</h2>\n<p>Nog net niet aan je pensioen, maar een <a href=\"https://www.breng.nl/nl/shop/abonnement/nijmegen-65\">goedkoop buskaartje</a> kun je nu aanvragen!"
+                }
+            ],
+            "input": false,
+            "tableView": false
+        },
+        {
+            "title": "Gegevens",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": true,
+                "cancel": true,
+                "next": true
+            },
+            "navigateOnEnter": false,
+            "saveOnEnter": false,
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page2",
+            "type": "panel",
+            "label": "Page 2",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Postcode",
+                    "tableView": true,
+                    "calculateValue": "value = data.postcode",
+                    "key": "postcodeVisible",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                }
+            ]
+        }
+    ],
+    "access": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": [
+                "administrator",
+                "authenticated",
+                "anonymous"
+            ]
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "submissionAccess": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": []
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "properties": {},
+    "controller": "",
+    "submissionRevisions": ""
+}

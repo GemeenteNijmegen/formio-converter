@@ -1,0 +1,8 @@
+[
+    {
+        "uuid": "fd903ed4-304d-4f86-95db-343ef873a630",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/d26fb256-01c6-4e8f-ac04-4e2c8e5de193"
+    }
+]

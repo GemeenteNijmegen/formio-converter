@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "5bdacf69-b721-4194-9594-a4986de9c23c",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/77f61f16-ebcf-4bb0-b320-a8a5ff9c45a8"
+    },
+    {
+        "uuid": "da9b3116-41f9-40cf-972d-3b4184e0c83a",
+        "index": "1",
+        "slug": "aanvraag",
+        "form_definition": "http://localhost/api/v2/form-definitions/41b56e3f-92bf-45fb-b2f3-6915095454f3"
+    },
+    {
+        "uuid": "54f67210-a0b0-48d1-bccd-fa0620ba3330",
+        "index": "2",
+        "slug": "subsidie",
+        "form_definition": "http://localhost/api/v2/form-definitions/5bad60bd-30f4-4fa5-b485-27433bad345c"
+    },
+    {
+        "uuid": "b497a31a-31c1-4abc-9d49-3c6989ad4e9c",
+        "index": "3",
+        "slug": "regenwater",
+        "form_definition": "http://localhost/api/v2/form-definitions/b35e0e10-65f0-49c2-bcdc-87c47dc159f9"
+    },
+    {
+        "uuid": "ab22f518-5270-48d8-9588-137474e640d3",
+        "index": "4",
+        "slug": "planning",
+        "form_definition": "http://localhost/api/v2/form-definitions/8082d37f-3e87-48cc-83f2-d967b4821460"
+    },
+    {
+        "uuid": "f941b178-c31e-4259-b4a1-841c2852c5b9",
+        "index": "5",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/f846cdc7-f802-4657-a66c-a86f3f812854"
+    }
+]

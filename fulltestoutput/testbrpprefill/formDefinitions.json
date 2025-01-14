@@ -1,0 +1,300 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/edfe1fd9-0355-4e02-94e4-0bff7a5b7b65",
+        "uuid": "edfe1fd9-0355-4e02-94e4-0bff7a5b7b65",
+        "name": "Page 1",
+        "slug": "page-1",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "html": "<p>Er wordt gebruik gemaakt van login met BSN</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content1",
+                    "customConditional": "show = data.bsn && data.bsn.length > 0;",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "html": "<p>Er wordt gebruik gemaakt van login met KVK</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content",
+                    "customConditional": "show = data.kvk && data.kvk.length > 0;",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "label": "Adres nijmegen",
+                    "disablestreetcity": false,
+                    "tableView": true,
+                    "key": "adres",
+                    "type": "adres",
+                    "input": true
+                },
+                {
+                    "label": "Select",
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "data": {
+                        "values": [
+                            {
+                                "label": "test1",
+                                "value": "test1"
+                            },
+                            {
+                                "label": "test2",
+                                "value": "test2"
+                            }
+                        ]
+                    },
+                    "key": "select",
+                    "type": "select",
+                    "input": true
+                },
+                {
+                    "label": "Email Nijmegen",
+                    "autocomplete": "email",
+                    "tableView": true,
+                    "key": "eMailadres",
+                    "type": "email",
+                    "input": true
+                },
+                {
+                    "label": "Select Boxes Nijmegen",
+                    "optionsLabelPosition": "right",
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "test",
+                            "value": "test",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "tweede",
+                            "value": "tweede",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "derde",
+                            "value": "derde",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "onlyAvailableItems": false
+                    },
+                    "key": "selectBoxesNijmegen",
+                    "type": "selectboxes",
+                    "input": true,
+                    "inputType": "checkbox"
+                },
+                {
+                    "label": "test",
+                    "tableView": false,
+                    "key": "test",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Data Grid",
+                    "reorder": false,
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {}
+                    ],
+                    "key": "dataGrid",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "label": "Text Area Nijmegen",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "key": "textareaNijmegen",
+                            "type": "textarea",
+                            "input": true
+                        }
+                    ]
+                },
+                {
+                    "label": "Upload",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "multiple": true,
+                    "key": "fileNijmegen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/d94962ea-cd73-43ab-aac6-5631838c380f",
+        "uuid": "d94962ea-cd73-43ab-aac6-5631838c380f",
+        "name": "Page 2",
+        "slug": "page-2",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Samenvatting",
+                    "tableView": false,
+                    "key": "summary",
+                    "type": "summary",
+                    "input": true
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "uuid": "66c23690-c8b7-40f4-8b91-86c43a666308",
+        "index": "0",
+        "slug": "vergunning",
+        "form_definition": "http://localhost/api/v2/form-definitions/65689a1a-8344-4809-a6c5-cd6df9f96ec1"
+    }
+]

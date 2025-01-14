@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "6a841ed4-9bb1-42cf-9793-5f0b2bc7b5bf",
+        "name": "Klacht over de gemeente oud",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "klachtoverdegemeenteoud",
+        "url": "http://localhost/api/v2/forms/6a841ed4-9bb1-42cf-9793-5f0b2bc7b5bf",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

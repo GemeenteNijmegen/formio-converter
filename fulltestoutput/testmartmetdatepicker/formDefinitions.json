@@ -1,0 +1,71 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/1611741f-d65b-4408-9510-d7250a9456a6",
+        "uuid": "1611741f-d65b-4408-9510-d7250a9456a6",
+        "name": "Page 1",
+        "slug": "page-1",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Text field Nijmegen",
+                    "tableView": true,
+                    "key": "textfieldNijmegen",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Datepicker",
+                    "tableView": false,
+                    "enableMinDateInput": false,
+                    "datePicker": {
+                        "disableWeekends": false,
+                        "disableWeekdays": false
+                    },
+                    "enableMaxDateInput": false,
+                    "timePicker": {
+                        "hourStep": "",
+                        "minuteStep": "",
+                        "showMeridian": false
+                    },
+                    "key": "datetimeNijmegen",
+                    "type": "datetime",
+                    "input": true,
+                    "widget": {
+                        "type": "calendar",
+                        "displayInTimezone": "viewer",
+                        "locale": "nl",
+                        "useLocaleSettings": false,
+                        "allowInput": true,
+                        "mode": "single",
+                        "enableTime": false,
+                        "noCalendar": false,
+                        "format": "dd-MM-yyyy",
+                        "time_24hr": true,
+                        "minDate": null,
+                        "disableWeekends": false,
+                        "disableWeekdays": false,
+                        "maxDate": null
+                    }
+                },
+                {
+                    "label": "Text field Nijmegen",
+                    "tableView": true,
+                    "key": "textfieldNijmegen1",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                }
+            ]
+        }
+    }
+]

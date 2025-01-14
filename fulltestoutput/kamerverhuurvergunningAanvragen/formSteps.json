@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "9554ea6e-9e6e-4c72-80b7-b03378f6b789",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/ce942014-7638-44ba-a393-f1634f917b2e"
+    },
+    {
+        "uuid": "2ca69edd-fd68-4ad5-92b8-daea92534a3d",
+        "index": "1",
+        "slug": "vergunning",
+        "form_definition": "http://localhost/api/v2/form-definitions/86e977d7-7dd8-4f91-9988-6e3ce2855852"
+    },
+    {
+        "uuid": "cdd1e53d-ec76-415b-8450-ea1d1bc63665",
+        "index": "2",
+        "slug": "adresgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/4873ad02-5c84-46a0-a885-3517364d7ac7"
+    },
+    {
+        "uuid": "23bdcff2-d858-4fac-92ef-6011cefe81f8",
+        "index": "3",
+        "slug": "kamerverhuurvergunning-aanvragen",
+        "form_definition": "http://localhost/api/v2/form-definitions/e41fdcb6-d4ea-46d5-b333-6fd3c1fc629c"
+    },
+    {
+        "uuid": "d1934065-c76a-476c-9b08-7bd6f3b3ed11",
+        "index": "4",
+        "slug": "voorwaarden",
+        "form_definition": "http://localhost/api/v2/form-definitions/202af58e-d5a3-484a-ad24-0a1d94739a28"
+    },
+    {
+        "uuid": "9670e206-addd-4f8f-a49d-52a85c0dd6a3",
+        "index": "5",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/114daef7-c81b-4ffe-8857-f2700f4b64b4"
+    }
+]

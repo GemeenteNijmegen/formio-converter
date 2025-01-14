@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "befd40af-63f9-416e-8602-6fd9bf4ab830",
+        "index": "0",
+        "slug": "aanmelden",
+        "form_definition": "http://localhost/api/v2/form-definitions/a7418954-541b-4a15-ab81-a4ca0588cb9f"
+    },
+    {
+        "uuid": "7ebe067b-6070-4c1d-aa8f-cb9fe8d8d146",
+        "index": "1",
+        "slug": "gegevens-kind",
+        "form_definition": "http://localhost/api/v2/form-definitions/c27a856c-d6aa-46f0-be66-7b5500bf28ab"
+    },
+    {
+        "uuid": "008d10a3-69b7-4afb-b88a-4b3e80b16dbb",
+        "index": "2",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/e9ab0ca0-056a-46c0-bbb5-31b9c1e7b890"
+    },
+    {
+        "uuid": "b974d638-596d-44b9-a44f-f06f224418c3",
+        "index": "3",
+        "slug": "gegevens-2e-contactpersoon",
+        "form_definition": "http://localhost/api/v2/form-definitions/8c88eaa1-f521-4119-8090-c56e5aa3e785"
+    },
+    {
+        "uuid": "c1c17fde-515f-461f-9e69-668f7804d413",
+        "index": "4",
+        "slug": "sportactiviteiten",
+        "form_definition": "http://localhost/api/v2/form-definitions/7b5f16f7-998a-475a-b4c0-c974e5e9a458"
+    },
+    {
+        "uuid": "96b9be1f-7ee8-424d-afbd-4ba36e181c32",
+        "index": "5",
+        "slug": "toestemming",
+        "form_definition": "http://localhost/api/v2/form-definitions/b0a49944-4c12-4585-a367-bc3f5c4eae46"
+    }
+]

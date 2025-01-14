@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "091029b6-385b-4632-bc87-4ad655487fbc",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/f9a81b73-bb20-4473-a333-4283108f3209"
+    },
+    {
+        "uuid": "ec008271-2b2c-42c3-9318-60489f1dc98a",
+        "index": "1",
+        "slug": "bestemmingsplan",
+        "form_definition": "http://localhost/api/v2/form-definitions/8432534a-680c-48c4-b551-e21672112e4e"
+    },
+    {
+        "uuid": "e442e38d-8aae-4f77-809b-b34f17d85547",
+        "index": "2",
+        "slug": "gegevens-kadaster",
+        "form_definition": "http://localhost/api/v2/form-definitions/5ff7e5e5-08d7-4de5-bfa1-a4ab828911cb"
+    },
+    {
+        "uuid": "c963e0dc-0dfb-4b49-a5cb-06e31a7e70ce",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/289fd674-a1fb-450e-9931-9667f09c18f9"
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "7b23ac0d-c051-4ac3-b050-383f56a1e5a7",
+        "name": "Subsidie aanvragen Verleden Beleefd oud",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "subsidieaanvragenverledenbeleefdoud",
+        "url": "http://localhost/api/v2/forms/7b23ac0d-c051-4ac3-b050-383f56a1e5a7",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

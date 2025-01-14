@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "a79d5021-c244-4d78-8700-c92c039b32a0",
+        "index": "0",
+        "slug": "bouwmaterialen",
+        "form_definition": "http://localhost/api/v2/form-definitions/9b5ffbc9-c417-4815-a024-84ecbc38c752"
+    },
+    {
+        "uuid": "bd3a1cc5-3e0f-4e88-a438-d145a3c5d0cc",
+        "index": "1",
+        "slug": "regels",
+        "form_definition": "http://localhost/api/v2/form-definitions/a3459d45-10d6-4029-a0a1-365012d58940"
+    },
+    {
+        "uuid": "8aa6a35d-701a-4cb3-90af-50d1b794ed80",
+        "index": "2",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/9d044263-257a-47c9-bf28-07aaf997b2b9"
+    },
+    {
+        "uuid": "0b2fe8a6-4cf0-4873-8492-b493af176943",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/067eb19d-ba40-4def-8fd3-1ec3e30edc65"
+    }
+]

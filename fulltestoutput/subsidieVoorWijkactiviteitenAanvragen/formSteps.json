@@ -1,0 +1,44 @@
+[
+    {
+        "uuid": "deb20f2e-9958-49d3-bfc7-ca4661c8ebb5",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/2b9c3545-3139-4bd6-b5a6-8454ed1e3085"
+    },
+    {
+        "uuid": "82446c3c-c504-48e9-b40b-c7d037b92d78",
+        "index": "1",
+        "slug": "subsidie",
+        "form_definition": "http://localhost/api/v2/form-definitions/e5e25bf3-48e6-45d9-b229-4a17eda132a5"
+    },
+    {
+        "uuid": "3c9378c6-3b09-46e8-8878-275fa7fec09f",
+        "index": "2",
+        "slug": "wijkactiviteit-1",
+        "form_definition": "http://localhost/api/v2/form-definitions/ae9e6fa6-b571-4c0f-9f36-aaa0dcbc7c1e"
+    },
+    {
+        "uuid": "ee4296d2-6c8a-4204-be46-5674172add0d",
+        "index": "3",
+        "slug": "wijkactiviteit-2",
+        "form_definition": "http://localhost/api/v2/form-definitions/45919466-641a-4b3c-ab21-3cea1ddc7242"
+    },
+    {
+        "uuid": "d042bd30-cf99-400e-bbd5-f3341734e191",
+        "index": "4",
+        "slug": "wijkactiviteit-3",
+        "form_definition": "http://localhost/api/v2/form-definitions/0248f5a8-9b1e-41d8-b2b9-b3babd3233f6"
+    },
+    {
+        "uuid": "5c068e3f-f045-4cec-9fbe-901058e0cbb3",
+        "index": "5",
+        "slug": "wijkactiviteit-4",
+        "form_definition": "http://localhost/api/v2/form-definitions/c04c35d2-8901-4f5c-b0a9-435b2189c091"
+    },
+    {
+        "uuid": "bba97a5c-2444-409e-840d-d5ab74b4fe09",
+        "index": "6",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/d0d2cd20-12a9-44cb-897d-b02e8f173403"
+    }
+]

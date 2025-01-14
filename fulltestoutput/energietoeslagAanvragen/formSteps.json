@@ -1,0 +1,56 @@
+[
+    {
+        "uuid": "a40c3d8a-0bb8-459d-a413-54ac53e481d0",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/878661ff-bc3a-4848-a2bb-aa0233eade11"
+    },
+    {
+        "uuid": "967a0e3a-af1e-4c3f-b260-808eeeb3d309",
+        "index": "1",
+        "slug": "partner",
+        "form_definition": "http://localhost/api/v2/form-definitions/b5e0b357-9cd8-41cf-acb4-9069b7b0e75b"
+    },
+    {
+        "uuid": "abdd3423-bd6e-41f0-be95-5d685d22122c",
+        "index": "2",
+        "slug": "iban",
+        "form_definition": "http://localhost/api/v2/form-definitions/af56203f-7203-4aa4-956f-6d2afb4d4cf0"
+    },
+    {
+        "uuid": "2134fbd6-be60-413d-8ff0-34132d0ee1b2",
+        "index": "3",
+        "slug": "inkomen",
+        "form_definition": "http://localhost/api/v2/form-definitions/33c8d43f-b1ee-4a86-987e-bc13bf6effad"
+    },
+    {
+        "uuid": "f7e19c79-f3eb-47ca-920e-028d5cee7aeb",
+        "index": "4",
+        "slug": "inkomen-partner",
+        "form_definition": "http://localhost/api/v2/form-definitions/49a117b6-a541-4c74-83f2-1ff13c6044bc"
+    },
+    {
+        "uuid": "07482ef5-27b7-4705-bdac-1af3ac1ed5c4",
+        "index": "5",
+        "slug": "loonbeslag",
+        "form_definition": "http://localhost/api/v2/form-definitions/b2d72c0e-cb5a-406c-b17b-03da1302697e"
+    },
+    {
+        "uuid": "704be977-a99b-4fcf-9313-4c2e3bb7b487",
+        "index": "6",
+        "slug": "schulden",
+        "form_definition": "http://localhost/api/v2/form-definitions/0b03bad9-ac2f-4362-a2f7-36d17ca8af38"
+    },
+    {
+        "uuid": "939f326b-cb26-460d-80fb-6373902cff6f",
+        "index": "7",
+        "slug": "besluit",
+        "form_definition": "http://localhost/api/v2/form-definitions/167ab44d-7bdc-44d7-ab05-5d82f76a3765"
+    },
+    {
+        "uuid": "8b117a92-1ef2-41d3-8378-0e54b244ca93",
+        "index": "8",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/ef274a88-daf0-4699-95bf-e0410d15cf82"
+    }
+]

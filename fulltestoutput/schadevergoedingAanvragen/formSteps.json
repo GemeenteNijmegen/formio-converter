@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "fab3b602-d024-4096-81ae-013e54110e01",
+        "index": "0",
+        "slug": "aanvraag",
+        "form_definition": "http://localhost/api/v2/form-definitions/55fb8623-3f0b-4ccd-b16b-c3da54b2e138"
+    },
+    {
+        "uuid": "1b75d402-2436-4074-903c-4b69ac619fb0",
+        "index": "1",
+        "slug": "gegevens-gemachtigde",
+        "form_definition": "http://localhost/api/v2/form-definitions/f7e449d6-272f-4100-89f8-a20f679f3cab"
+    },
+    {
+        "uuid": "e2382ade-0b56-45a3-9d98-fe331312f105",
+        "index": "2",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/762f31df-0a69-41bd-85fa-72e207d7e20e"
+    },
+    {
+        "uuid": "9f438390-5c02-45d0-b5c0-d4c199494f62",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/1b2380ae-5879-486e-a178-28083fac815c"
+    }
+]

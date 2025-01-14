@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "fe8d4131-9083-4755-a4b8-9aeff08f7c39",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/fecb39af-30fc-4cd4-b95c-01e056bc9b33"
+    },
+    {
+        "uuid": "8927b365-61ba-407f-b92b-3f8dd5fb8775",
+        "index": "1",
+        "slug": "iban",
+        "form_definition": "http://localhost/api/v2/form-definitions/3fc9f66b-d9c0-4881-844b-72cfc8f3461f"
+    },
+    {
+        "uuid": "d1b6a031-d544-45ae-a7c9-fa72a7a418cd",
+        "index": "2",
+        "slug": "subsidie",
+        "form_definition": "http://localhost/api/v2/form-definitions/4506eaec-ad31-4e8b-9bdc-02837946ee68"
+    },
+    {
+        "uuid": "05d41f93-7b2b-4d0d-a33b-43c69240cf24",
+        "index": "3",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/fbc5454e-82c6-4372-93a3-d5fcedf5cca1"
+    }
+]

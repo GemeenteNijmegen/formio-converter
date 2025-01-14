@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "dbdc7485-27b9-4fe9-b77f-cc70e24b2a8f",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/9a3924ae-9733-4476-b8ab-5589b75e6d48"
+    },
+    {
+        "uuid": "bc42460d-3b66-4c1a-9db8-a684207547e1",
+        "index": "1",
+        "slug": "onderwerp-agenda",
+        "form_definition": "http://localhost/api/v2/form-definitions/8525c3f4-9784-497a-8d78-6f9c5a02b35c"
+    },
+    {
+        "uuid": "425c63bc-cffc-4290-bd93-ed66a805d1c3",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/0481aa48-09d0-4896-a07e-237968cb1c63"
+    }
+]

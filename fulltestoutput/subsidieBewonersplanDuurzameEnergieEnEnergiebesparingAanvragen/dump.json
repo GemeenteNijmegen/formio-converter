@@ -1,0 +1,615 @@
+{
+    "title": "Subsidie bewonersplan duurzame energie en energiebesparing aanvragen",
+    "type": "form",
+    "name": "subsidieBewonersplanDuurzameEnergieEnEnergiebesparingAanvragen",
+    "path": "subsidiebewonersplanduurzameenergieenenergiebesparingaanvragen",
+    "display": "wizard",
+    "tags": [
+        "Subsidies"
+    ],
+    "settings": {},
+    "components": [
+        {
+            "title": "Uw gegevens",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "navigateOnEnter": false,
+            "saveOnEnter": false,
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page1",
+            "type": "panel",
+            "label": "Page 1",
+            "components": [
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "conditional": {
+                        "eq": "",
+                        "show": null,
+                        "when": null
+                    },
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "label": "E-mailadres",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "eMailadres",
+                    "type": "email",
+                    "input": true
+                },
+                {
+                    "label": "Telefoonnummer",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "telefoonnummer",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Uw functie of rol",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "uwFunctieOfRol",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ],
+            "input": false,
+            "tableView": false
+        },
+        {
+            "title": "IBAN",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "navigateOnEnter": false,
+            "saveOnEnter": false,
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page2",
+            "type": "panel",
+            "label": "Page 2",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "IBAN waarop de subsidie mag komen",
+                    "inputMask": "AA99 AAAA 9999 9999 99",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true,
+                        "customMessage": "Vul een geldig IBAN in."
+                    },
+                    "key": "ibanWaaropDeSubsidieMagKomen",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Op naam van",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "opNaamVan",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns1",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        },
+        {
+            "title": "Subsidie",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "navigateOnEnter": false,
+            "saveOnEnter": false,
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page3",
+            "type": "panel",
+            "label": "Page 3",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Voor welke wijk, buurt of straat is uw plan?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "voorWelkeWijkBuurtOfStraatIsUwPlan",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Beschrijf uw plan",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "welkeOpleidingCursusOfTrainingGaatUDoen",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Hoe gaat uw plan Nijmegen helpen om in 2045 aardgasvrij en energieneutraal te zijn?",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "hoeGaatUwPlanNijmegenHelpenOmIn2045AardgasvrijEnEnergieneutraalTeZijn",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns2",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        },
+        {
+            "title": "Bijlage(n)",
+            "breadcrumbClickable": true,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "navigateOnEnter": false,
+            "saveOnEnter": false,
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page4",
+            "type": "panel",
+            "label": "Page 4",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Toevoegen",
+                    "description": "Toegestaan zijn .jpg, .png, .jpeg of .pdf documenten die niet groter zijn dan 20MB.",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePattern": ".jpg,.png,.jpeg,.pdf",
+                    "fileMinSize": "1KB",
+                    "fileMaxSize": "20MB",
+                    "multiple": true,
+                    "validate": {
+                        "required": true,
+                        "customMessage": "U moet een bijlage(n) meesturen"
+                    },
+                    "key": "toevoegen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                },
+                {
+                    "html": "<p>Ik heb deze bijlage(n) toegevoegd:</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Overzicht inkomsten en kosten (begroting) van uw plan",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "overzichtInkomstenEnKostenBegroting",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Lijst met minimaal 15 adressen met naam en handtekening van de eigenaren van de woningen die mee doen aan uw plan",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "lijstAdressen",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Planning van uw plan",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "uittrekselKamerVanKoophandelKvK",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns3",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    ],
+    "access": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": []
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "submissionAccess": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": []
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "properties": {},
+    "controller": "",
+    "submissionRevisions": ""
+}

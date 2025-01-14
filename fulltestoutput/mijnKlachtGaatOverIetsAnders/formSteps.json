@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "cb51f5c8-b3c7-430f-b940-b16e609c2fe7",
+        "index": "0",
+        "slug": "uw-klacht",
+        "form_definition": "http://localhost/api/v2/form-definitions/19741db4-2081-403c-a214-b8cad04ecd74"
+    },
+    {
+        "uuid": "8081697d-eeee-4bf2-abd4-34b3bb70ceb2",
+        "index": "1",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/81f4dfd3-9ec5-4731-bb2d-065d10470d91"
+    }
+]

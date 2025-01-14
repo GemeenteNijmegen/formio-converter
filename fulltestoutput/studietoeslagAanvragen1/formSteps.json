@@ -1,0 +1,68 @@
+[
+    {
+        "uuid": "a1d3681a-02a0-4d0f-a534-e726f3d060a0",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/f8ea20de-0af3-4360-87ad-9c0c08d77460"
+    },
+    {
+        "uuid": "7acbfc49-a5df-4a11-9833-95ca4dce1c24",
+        "index": "1",
+        "slug": "belangrijk",
+        "form_definition": "http://localhost/api/v2/form-definitions/b917053c-8709-4835-a394-dd9a9a8ccc54"
+    },
+    {
+        "uuid": "45203cfb-dad9-403e-ab77-20d21e099e12",
+        "index": "2",
+        "slug": "studietoeslag",
+        "form_definition": "http://localhost/api/v2/form-definitions/618a93ac-9937-4b46-b5f8-5acc1271d157"
+    },
+    {
+        "uuid": "60bf343e-41e7-49a7-b940-62b031034c77",
+        "index": "3",
+        "slug": "uitkering",
+        "form_definition": "http://localhost/api/v2/form-definitions/6d0fbbdd-b11f-4825-a5a8-c7aa5b38793a"
+    },
+    {
+        "uuid": "e80ceafd-7b67-48d9-a5c6-f1dc25f2ab37",
+        "index": "4",
+        "slug": "werken",
+        "form_definition": "http://localhost/api/v2/form-definitions/bd1595f6-7577-4448-8fac-719fb3d78c38"
+    },
+    {
+        "uuid": "9b0a7903-1b01-4023-81ab-2c6558de097d",
+        "index": "5",
+        "slug": "studie",
+        "form_definition": "http://localhost/api/v2/form-definitions/c3ac253a-c8af-48a8-8ba6-7d665b651425"
+    },
+    {
+        "uuid": "3e389654-b3c0-4cab-8cb5-36fb9aa6ee2e",
+        "index": "6",
+        "slug": "inkomen",
+        "form_definition": "http://localhost/api/v2/form-definitions/01d8c510-100b-4c83-944c-62a17c6db626"
+    },
+    {
+        "uuid": "1a45c3d5-fa39-4316-bfe1-d91cfdccd8f0",
+        "index": "7",
+        "slug": "bank-en-bewindvoering",
+        "form_definition": "http://localhost/api/v2/form-definitions/70362349-513c-4dbc-9249-60dad7d4492a"
+    },
+    {
+        "uuid": "27957116-cb04-4bbb-84d5-82fba570d8b0",
+        "index": "8",
+        "slug": "besluit",
+        "form_definition": "http://localhost/api/v2/form-definitions/a48ed857-ce11-481d-942b-41f67ef19713"
+    },
+    {
+        "uuid": "78720078-b6e6-42cc-9b70-6948374da1be",
+        "index": "9",
+        "slug": "opmerkingen",
+        "form_definition": "http://localhost/api/v2/form-definitions/0fcd5cf7-3f6a-4b41-a103-e0b1bf139fde"
+    },
+    {
+        "uuid": "3af371e1-4b90-481c-aaa5-6efe6ae51a78",
+        "index": "10",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/37881566-1e9f-453b-8163-55a1ae184e49"
+    }
+]

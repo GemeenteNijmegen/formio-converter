@@ -1,0 +1,8 @@
+[
+    {
+        "uuid": "d9013633-7562-442b-8f9b-6532584115e8",
+        "index": "0",
+        "slug": "application",
+        "form_definition": "http://localhost/api/v2/form-definitions/f5a795df-dec5-4a34-b505-4739727624a8"
+    }
+]

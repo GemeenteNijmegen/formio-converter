@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "87a97d1e-ab9a-491a-bc5c-cac58426dd82",
+        "index": "0",
+        "slug": "aanvraag",
+        "form_definition": "http://localhost/api/v2/form-definitions/c365d62a-6707-4864-bfd3-e89db153f7bf"
+    },
+    {
+        "uuid": "339275cb-52a2-4c07-a222-e3e4f69fe1d8",
+        "index": "1",
+        "slug": "bijzondere-inzet",
+        "form_definition": "http://localhost/api/v2/form-definitions/4f802dbd-3c30-42f1-8b0b-7d21644bd79b"
+    },
+    {
+        "uuid": "0ca371fa-36e8-4002-b536-19ee6026005f",
+        "index": "2",
+        "slug": "ondersteuners",
+        "form_definition": "http://localhost/api/v2/form-definitions/001b9909-69c8-486d-a26f-f5475d9f503c"
+    },
+    {
+        "uuid": "01ab6540-7f10-48e6-b360-f799b220e970",
+        "index": "3",
+        "slug": "uitreiking",
+        "form_definition": "http://localhost/api/v2/form-definitions/7d6e4873-374b-45de-8add-cb59afe0960c"
+    },
+    {
+        "uuid": "7f77e7a8-cb40-4367-9ffb-3ab43fb52975",
+        "index": "4",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/e3602f3d-e5c6-4fe7-8fff-48d8725ddc20"
+    },
+    {
+        "uuid": "7f3a668e-1077-4272-9207-705f305b390b",
+        "index": "5",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/3e173c3b-4286-47f5-9fa4-2fb93a6520b3"
+    }
+]

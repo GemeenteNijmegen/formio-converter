@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "d8149c0e-4e69-4b22-ad6d-8ebc190b56cc",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/4b8269d0-3591-4e25-9236-9f12c97b9362"
+    },
+    {
+        "uuid": "e1477f52-472f-414f-8a11-7dd675d10f6d",
+        "index": "1",
+        "slug": "gegevens-gebouw",
+        "form_definition": "http://localhost/api/v2/form-definitions/c8e42e08-1266-4dcd-85be-6ea57ff35fb1"
+    }
+]

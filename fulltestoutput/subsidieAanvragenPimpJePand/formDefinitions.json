@@ -1,0 +1,1298 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/1dd179d1-34d6-4baa-ba5f-6eaf13fa51b1",
+        "uuid": "1dd179d1-34d6-4baa-ba5f-6eaf13fa51b1",
+        "name": "Algemeen",
+        "slug": "algemeen",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "html": "<h2><span style=\"color:rgb(0,0,0);\">Subsidie aanvragen Pimp je pand</span></h2>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "html": "<h3>Uw gegevens</h3>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content1",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4-5",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "components": [
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadres",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummer",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Naam organisatie",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamOrganisatie",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Inschrijfnummer Kamer van Koophandel",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "pattern": "^[0-9]*$",
+                                "customMessage": "Het inschrijfnummer Kamer van Koophandel heeft 8 cijfers",
+                                "minLength": 8,
+                                "maxLength": 8
+                            },
+                            "key": "inschrijfnummerKamerVanKoophandel",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Bent u zelf de contactpersoon voor deze aanvraag?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "contactpersoon",
+                            "type": "radio",
+                            "input": true
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3-4",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Naam contactpersoon",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamContactpersoon",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "E -mailadres contactpersoon",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "key": "eMailadresCP",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer contactpersoon",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummerContactpersoon",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "IBAN waarop de subsidie mag komen",
+                    "inputMask": "AA99 AAAA 9999 9999 99",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "customMessage": "Vul een geldig IBAN in"
+                    },
+                    "key": "iban",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Op naam van",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "opNaamVan",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/05413148-7ed3-4a05-9754-6971fb01b4c1",
+        "uuid": "05413148-7ed3-4a05-9754-6971fb01b4c1",
+        "name": "Gegevens bedrijf",
+        "slug": "gegevens-bedrijf",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "html": "<h2><span style=\"color:rgb(0,0,0);\">Subsidie aanvragen Pimp je pand</span></h2>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content3",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Ik ben ",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "eigenaar van het gebouw waarvoor ik subsidie aanvraag",
+                            "value": "eigenaar",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "huurder van het gebouw waarvoor ik subsidie aanvraag",
+                            "value": "huurder",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "ikBen",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Heeft u uitstel van betaling of faillissement aangevraagd?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "heeftUUitstelVanBetalingOfFaillissementAangevraagd",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "html": "<p><span style=\"color:rgb(0,0,0);\">U heeft uitstel van betaling of faillissement aangevraagd. U kunt geen subsidie aanvragen.</span></p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content4",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Wat voor een bedrijf heeft u?",
+                            "description": "Beschrijf kort de activiteiten.",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "watVoorEenBedrijfHeeftU",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        },
+                        {
+                            "label": "Aantal medewerkers in loondienst",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "pattern": "^[0-9]*$",
+                                "customMessage": "Vul het aantal in"
+                            },
+                            "key": "aantalMedewerkersInLoondienst",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Hoort uw bedrijf bij een groep of keten?",
+                            "optionsLabelPosition": "right",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "hoortUwBedrijfBijEenGroepOfKeten",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "label": "Naam groep of keten",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamGroepOfKeten",
+                            "conditional": {
+                                "show": true,
+                                "when": "geenFaillissementAangevraagd.hoortUwBedrijfBijEenGroepOfKeten",
+                                "eq": "ja"
+                            },
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Adres gebouw waarvoor u subsidie aanvraagt",
+                            "disablestreetcity": false,
+                            "validate": {
+                                "required": true
+                            },
+                            "tableView": true,
+                            "key": "adresGebouwWaarvoorUSubsidieAanvraagt",
+                            "type": "adres",
+                            "input": true
+                        }
+                    ],
+                    "key": "fieldSet-1-2",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns1",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/962c48f9-2da3-499a-9c74-f58c18e7691a",
+        "uuid": "962c48f9-2da3-499a-9c74-f58c18e7691a",
+        "name": "Subsidie",
+        "slug": "subsidie",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "html": "<h2><span style=\"color:rgb(0,0,0);\">Subsidie aanvragen Pimp je pand</span></h2>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content5",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Totale kosten van de verbouwing",
+                            "prefix": "€",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                                "customMessage": "Vul het bedrag in."
+                            },
+                            "key": "totaleKostenVanDeVerbouwing",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Welk bedrag aan subsidie wilt u ontvangen?",
+                            "description": "U kunt voor maximaal 50% van de kosten subsidie aanvragen, maximaal 7.500 euro per aanvraag.",
+                            "prefix": "€",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true,
+                                "pattern": "^\\d{0,7}(\\,\\d{0,2})?$",
+                                "customMessage": "Vul het bedrag in."
+                            },
+                            "key": "welkBedragAanSubsidieWiltUOntvangen",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Is voor de verbouwing een vergunning nodig?",
+                            "optionsLabelPosition": "right",
+                            "description": "Bekijk&nbsp;<a href=\"https://olo.nl/\" target=\"_blank\">het omgevingsloket</a>.",
+                            "inline": false,
+                            "tableView": false,
+                            "values": [
+                                {
+                                    "label": "ja",
+                                    "value": "ja",
+                                    "shortcut": ""
+                                },
+                                {
+                                    "label": "nee",
+                                    "value": "nee",
+                                    "shortcut": ""
+                                }
+                            ],
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "isVoorDeVerbouwingEenVergunningNodig",
+                            "type": "radio",
+                            "input": true
+                        },
+                        {
+                            "components": [
+                                {
+                                    "label": "Welke?",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "welke",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Heeft u deze vergunning aangevraagd?",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "ja",
+                                            "value": "ja",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "nee",
+                                            "value": "nee",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "heeftUDezeVergunningAangevraagd",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Aanvraagdatum",
+                                    "placeholder": "dag-maand-jaar",
+                                    "tableView": false,
+                                    "enableMinDateInput": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false
+                                    },
+                                    "enableMaxDateInput": false,
+                                    "timePicker": {
+                                        "showMeridian": false
+                                    },
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "validateOn": "blur",
+                                    "key": "aanvraagdatum",
+                                    "conditional": {
+                                        "show": true,
+                                        "when": "geenFaillissementAangevraagd1.vergunningNodig.heeftUDezeVergunningAangevraagd",
+                                        "eq": "ja"
+                                    },
+                                    "type": "datetime",
+                                    "input": true,
+                                    "widget": {
+                                        "type": "calendar",
+                                        "displayInTimezone": "viewer",
+                                        "locale": "nl",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd-MM-yyyy",
+                                        "hourIncrement": 1,
+                                        "minuteIncrement": 5,
+                                        "time_24hr": true,
+                                        "minDate": null,
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet-1",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        },
+                        {
+                            "label": "Startdatum verbouwen",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true
+                            },
+                            "validateOn": "blur",
+                            "key": "startdatumVerbouwen",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "hourIncrement": 1,
+                                "minuteIncrement": 5,
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        },
+                        {
+                            "label": "Einddatum verbouwen",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true
+                            },
+                            "validateOn": "blur",
+                            "key": "einddatumVerbouwen",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "hourIncrement": 1,
+                                "minuteIncrement": 5,
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        },
+                        {
+                            "label": "Verwacht u met de verbouwing dat u hetzelfde aantal werknemers in dienst houdt of extra medewerkers kunt aannemen? Beschrijf dit kort.",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "verwachtUMetDeVerbouwingHetzelfdeAantalWerknemersInDienstHoudtOfExtraMedewerkersKuntAannemen",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns2",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/2ce5377b-f52b-45e7-a0b6-5de69cd89a89",
+        "uuid": "2ce5377b-f52b-45e7-a0b6-5de69cd89a89",
+        "name": "Bijlage(n)",
+        "slug": "bijlagen",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "html": "<h2><span style=\"color:rgb(0,0,0);\">Subsidie aanvragen Pimp je pand</span></h2>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content6",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Toevoegen",
+                    "description": "Toegestaan zijn .jpg, .png, .jpeg of .pdf documenten die niet groter zijn dan 20MB.",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePattern": ".pdf,.png,.jpg,.jpeg",
+                    "fileMinSize": "1KB",
+                    "fileMaxSize": "20MB",
+                    "multiple": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "toevoegen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                },
+                {
+                    "html": "<p>Ik heb deze bijlage(n) toegevoegd:</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content8",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "kopie eigendomsbewijs pand",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieEigendomsbewijsPand1",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "kopie huurcontract",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieHuurcontract",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "begroting verbouwing met de offertes die hier bij horen",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "begrotingVerbouwingMetDeOffertesDieHierBijHoren",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "plan hoe u de kosten van de verbouwing gaat betalen",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "planHoeUDeKostenVanDeVerbouwingGaatBetalen",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "een bouwtekening van de situatie nu en na de verbouwing",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "eenBouwtekeningVanDeSituatieNuEnNaDeVerbouwing",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "kopie van de (omgevings)vergunning",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieVanDeOmgevingsVergunning",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "toestemming van de eigenaar om het gebouw te verbouwen",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "toestemmingVanDeEigenaarOmHetGebouwTeVerbouwen",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns3",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false
+                }
+            ]
+        }
+    }
+]

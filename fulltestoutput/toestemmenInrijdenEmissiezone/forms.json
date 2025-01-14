@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "e0d2c67c-567b-403a-86f5-4168094284f6",
+        "name": "Subsidie aanvragen Verleden Beleefd",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "subsidieaanvragenverledenbeleefd",
+        "url": "http://localhost/api/v2/forms/e0d2c67c-567b-403a-86f5-4168094284f6",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

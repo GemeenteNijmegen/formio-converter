@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "6bd8da12-dacf-4271-b868-3bc3670c8b1c",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/10e87cf2-c74d-4742-9473-ce96be740ed2"
+    },
+    {
+        "uuid": "e7b93647-47e4-4217-82b0-fb3141b52565",
+        "index": "1",
+        "slug": "vergunning",
+        "form_definition": "http://localhost/api/v2/form-definitions/26d50fa4-321b-4e5e-883e-e3f6c52f0c4e"
+    },
+    {
+        "uuid": "dec51f06-3b35-4c68-9e06-e8887df0920e",
+        "index": "2",
+        "slug": "huurders",
+        "form_definition": "http://localhost/api/v2/form-definitions/c8fa07c7-ba4b-4f62-a88d-7b379d47f284"
+    }
+]

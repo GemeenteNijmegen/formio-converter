@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "e84b0821-a791-4662-a86c-eadfc6f8afeb",
+        "name": "Toestemming aanvragen inrijden gebied rond Tweede",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "toestemmingaanvrageninrijdengebiedrondtweedewalst",
+        "url": "http://localhost/api/v2/forms/e84b0821-a791-4662-a86c-eadfc6f8afeb",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

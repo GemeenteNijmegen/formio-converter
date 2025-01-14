@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "7a84348c-92b5-4dd2-a9bb-4edc51f593c7",
+        "name": "Klacht over iets anders",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "klachtoverietsanders",
+        "url": "http://localhost/api/v2/forms/7a84348c-92b5-4dd2-a9bb-4edc51f593c7",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

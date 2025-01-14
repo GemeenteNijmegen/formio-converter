@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "6fcf9b02-6c5f-4062-9efa-ad3606b35df8",
+        "index": "0",
+        "slug": "iban",
+        "form_definition": "http://localhost/api/v2/form-definitions/63ab82fa-ec0d-4a30-ac38-24c06ae71d28"
+    },
+    {
+        "uuid": "7301a1e0-dd12-48b5-80a3-798dae236a4f",
+        "index": "1",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/30a92afa-a624-4c88-a02b-6026f0970a19"
+    },
+    {
+        "uuid": "51145820-6750-499c-b311-aab07d62be9f",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/ea88c127-d0a7-41c0-9949-240bd0312844"
+    }
+]

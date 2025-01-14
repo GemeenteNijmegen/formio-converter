@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "974f552e-613d-4f88-b43e-291cd7c8303d",
+        "name": "conditional-checkbox",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "conditionalcheckbox",
+        "url": "http://localhost/api/v2/forms/974f552e-613d-4f88-b43e-291cd7c8303d",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

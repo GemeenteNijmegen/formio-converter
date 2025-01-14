@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "6cc74e29-a59f-40a7-8897-6be97acc5a31",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/56106fd6-13ee-4f3f-8c69-4581eccb19fa"
+    },
+    {
+        "uuid": "91177e0a-bf17-4baf-87a4-6d4d8fafcbc9",
+        "index": "1",
+        "slug": "adres-woonruimte-die-verhuurd-gaat-worden",
+        "form_definition": "http://localhost/api/v2/form-definitions/1679d621-0e1d-43fa-b8fb-7e03c97dc52a"
+    },
+    {
+        "uuid": "dfa55eb9-9f23-4c31-a46f-04a6c353b992",
+        "index": "2",
+        "slug": "vergunning",
+        "form_definition": "http://localhost/api/v2/form-definitions/84fc4569-b449-4c4c-8562-ce4be885c986"
+    },
+    {
+        "uuid": "91c38ea4-4118-41ab-b674-d5eeaea817b8",
+        "index": "3",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/e8a35af8-c567-46c5-b588-aff5840191d0"
+    }
+]

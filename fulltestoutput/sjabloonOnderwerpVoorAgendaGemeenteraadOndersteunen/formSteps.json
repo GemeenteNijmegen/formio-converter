@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "67908f55-b13b-48ca-9b6a-40b198678cd6",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/db169fd2-5646-4d9d-8d57-462dbe2e9b61"
+    },
+    {
+        "uuid": "ae6d4661-a704-4012-a49b-897586e12931",
+        "index": "1",
+        "slug": "ondersteunen-onderwerp-op-agenda",
+        "form_definition": "http://localhost/api/v2/form-definitions/ca53b191-ede7-492a-bdea-46bbb3260770"
+    }
+]

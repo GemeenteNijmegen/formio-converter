@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "582eef5f-9360-4856-a024-75b83c3063fe",
+        "index": "0",
+        "slug": "aanvraag-of-bezwaarschrift",
+        "form_definition": "http://localhost/api/v2/form-definitions/86e224a1-19d2-4f70-81bf-355bf85c0089"
+    },
+    {
+        "uuid": "dbbb74be-eec6-4a36-b5de-55b36d704d5f",
+        "index": "1",
+        "slug": "ingebrekestelling",
+        "form_definition": "http://localhost/api/v2/form-definitions/fa6fa7b8-fca9-4557-8b35-8916c87451dd"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "82e0d81f-7c26-4e7b-8967-d933a80a962c",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/474a04da-bae5-4f44-af7a-a31ee68a2b26"
+    },
+    {
+        "uuid": "6a5da65c-fa73-485f-b69c-3d88263a80b4",
+        "index": "1",
+        "slug": "schadegegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/bc759e96-22d6-4cfc-8637-06554ced3985"
+    },
+    {
+        "uuid": "e3cd52f6-e1f6-4a74-9928-407701716362",
+        "index": "2",
+        "slug": "eigen-verzekering",
+        "form_definition": "http://localhost/api/v2/form-definitions/52e1d07e-c156-4a86-bbc8-2f6af28121e5"
+    },
+    {
+        "uuid": "7f1fff38-cf26-493e-9f85-64f48f1d1877",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/4c9f0212-9a2f-45c8-b474-238f9f6da1ac"
+    }
+]

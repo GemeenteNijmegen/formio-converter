@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "f13e6810-84fa-406f-9d79-9a308debc3bc",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/6d526177-747c-441a-9f15-3a169968598a"
+    },
+    {
+        "uuid": "bd3e1026-8014-40ad-8452-825994aaadda",
+        "index": "1",
+        "slug": "grond",
+        "form_definition": "http://localhost/api/v2/form-definitions/46f8a891-8c0c-4a7c-a8f6-a0f76d1bd0d8"
+    },
+    {
+        "uuid": "2d2c2ab5-ed58-4b3b-a997-298a2501aec8",
+        "index": "2",
+        "slug": "gegevens-kadaster",
+        "form_definition": "http://localhost/api/v2/form-definitions/8dbf2c60-9490-4355-88db-d9ea9a6c9128"
+    },
+    {
+        "uuid": "4b747e88-9542-4cd8-ad7c-5ad09dc79d10",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/7870c091-a08e-4190-bf05-11eb7e884891"
+    }
+]

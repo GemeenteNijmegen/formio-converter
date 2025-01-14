@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "c5d16fad-deec-4ede-a106-726f6fd423bb",
+        "index": "0",
+        "slug": "locatie",
+        "form_definition": "http://localhost/api/v2/form-definitions/dd272807-8ae2-49a9-9f28-a408770f8af9"
+    },
+    {
+        "uuid": "06b55ea0-59ea-4d13-872c-ee6584cd7059",
+        "index": "1",
+        "slug": "nieuwbouw",
+        "form_definition": "http://localhost/api/v2/form-definitions/17d2805d-e020-4a7a-8340-72c484663bf9"
+    },
+    {
+        "uuid": "f97ea353-6299-4dca-8f8c-3ebcc7147d52",
+        "index": "2",
+        "slug": "maatregelen",
+        "form_definition": "http://localhost/api/v2/form-definitions/f59d582e-03ea-40ad-964e-9e8ab72ce054"
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "99f9b2ca-e16c-49c4-9d33-dcee40b4a1f8",
+        "name": "Sleutel aanvragen verkeerspaaltjes verwijderen",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "sleutelaanvragenverkeerspaaltjesverwijderen",
+        "url": "http://localhost/api/v2/forms/99f9b2ca-e16c-49c4-9d33-dcee40b4a1f8",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

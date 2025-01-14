@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "1918baec-db56-4858-b6be-a1af820e089b",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/20be69ef-4f92-43c5-8717-bec443de99e0"
+    },
+    {
+        "uuid": "82eaa898-0c1c-415c-b058-b978db0cad2e",
+        "index": "1",
+        "slug": "feest",
+        "form_definition": "http://localhost/api/v2/form-definitions/9a825bb9-a596-4060-ba54-22b817dab3eb"
+    },
+    {
+        "uuid": "c2bef34c-dea2-4f92-abf7-adec553324ca",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/c9efa8d9-7cf9-406f-9aac-9ba2c58ea707"
+    }
+]

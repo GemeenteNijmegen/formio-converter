@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "7ee71179-09eb-4b67-b67e-c5e628dfc40e",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/db923e95-a594-4ca0-ad80-a6e8d6e0c830"
+    },
+    {
+        "uuid": "b7a97456-f8cc-474e-9c1c-2381e42dc25e",
+        "index": "1",
+        "slug": "gegevens-reservering",
+        "form_definition": "http://localhost/api/v2/form-definitions/c55db9db-fdef-499d-ab3f-2b3e69a29e1f"
+    },
+    {
+        "uuid": "1a738c3a-7081-4537-8c46-ec921421448f",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/ef499041-16a3-4b25-bf86-c6eae2038aba"
+    }
+]

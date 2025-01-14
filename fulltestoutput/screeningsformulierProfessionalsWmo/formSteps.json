@@ -1,0 +1,44 @@
+[
+    {
+        "uuid": "e7968d65-10a3-4af4-be3a-1c6ebd420449",
+        "index": "0",
+        "slug": "gegevens-verwijzer",
+        "form_definition": "http://localhost/api/v2/form-definitions/2f71e550-6e5f-4a44-92f9-aa893f275eba"
+    },
+    {
+        "uuid": "f3fcfc40-4ebc-41e1-99fd-45cff5f3b6d2",
+        "index": "1",
+        "slug": "gegevens-inwoner",
+        "form_definition": "http://localhost/api/v2/form-definitions/c983946e-2867-4ac1-abd9-ab69d2d56449"
+    },
+    {
+        "uuid": "4a5560e0-43f2-436a-99e4-669d7bbf6784",
+        "index": "2",
+        "slug": "de-aanmelding",
+        "form_definition": "http://localhost/api/v2/form-definitions/0acbd675-f2df-452c-870e-d5bdf161a402"
+    },
+    {
+        "uuid": "62e83ff4-fdc6-4fa5-a3b5-d3b358b9793e",
+        "index": "3",
+        "slug": "gegevens-behandelaar-hulpverlening-of-overige-ondersteuning",
+        "form_definition": "http://localhost/api/v2/form-definitions/8ed94951-6413-43cf-8f8a-66e9362d7b7c"
+    },
+    {
+        "uuid": "49ff0ae1-2f6f-44ac-b43a-96fe3d73e702",
+        "index": "4",
+        "slug": "aanwezige-hulp-en-zorg",
+        "form_definition": "http://localhost/api/v2/form-definitions/e5813258-3b95-4068-8e39-9958bfa4458e"
+    },
+    {
+        "uuid": "6cf73c44-2b64-4a58-927f-186309acafc3",
+        "index": "5",
+        "slug": "hulpvraag",
+        "form_definition": "http://localhost/api/v2/form-definitions/4625e20d-44c7-4740-9097-08595064a50c"
+    },
+    {
+        "uuid": "81a558ed-270a-4fde-92ac-557692c9de56",
+        "index": "6",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/8bb6a950-83e3-4cf9-9365-a0aceaf74ccc"
+    }
+]

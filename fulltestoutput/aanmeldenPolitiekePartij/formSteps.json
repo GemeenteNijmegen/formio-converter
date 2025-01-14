@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "846f6d95-a2fe-4ed2-820b-0cb89d1c10c2",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/0dbea867-3105-4c27-a8ad-8379f11ce466"
+    },
+    {
+        "uuid": "4a3b03a9-c875-4338-989b-8e15e51423ce",
+        "index": "1",
+        "slug": "gegevens-politieke-partij",
+        "form_definition": "http://localhost/api/v2/form-definitions/1ecfe91d-c6a4-4f71-816a-b658cbd8aad1"
+    },
+    {
+        "uuid": "8ae86250-89ec-4868-a98a-3423912e5b75",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/0eaf8a27-1df2-4250-a2f1-963c8b5f9b36"
+    }
+]

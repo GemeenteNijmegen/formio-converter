@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "befd43cc-38a7-44fb-85c6-6ed3bbea95c4",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/6006f16f-cad3-4ebb-897a-dae71d200e2f"
+    },
+    {
+        "uuid": "48575d99-2d02-4f10-8871-3c003654d9ed",
+        "index": "1",
+        "slug": "ondersteunen-burgerinitiatief",
+        "form_definition": "http://localhost/api/v2/form-definitions/47fe1664-ae24-47da-a6cc-9ef9ca13dba7"
+    }
+]

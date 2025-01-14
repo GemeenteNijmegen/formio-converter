@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "9dcc5893-bf2b-42fc-a739-976d7072cd5e",
+        "index": "0",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/62a4f1c5-d107-4a48-94d5-3f7c549f9ea4"
+    },
+    {
+        "uuid": "643e8bef-9206-4bd6-a015-cf1d7ff75873",
+        "index": "1",
+        "slug": "samenvatting",
+        "form_definition": "http://localhost/api/v2/form-definitions/e8932991-c1bf-4cbe-90ca-313974809739"
+    }
+]

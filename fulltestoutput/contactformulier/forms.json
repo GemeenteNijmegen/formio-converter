@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "4c792225-7e7b-437f-ae85-c5c4d27929ec",
+        "name": "Contactformulier",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "contactformulier",
+        "url": "http://localhost/api/v2/forms/4c792225-7e7b-437f-ae85-c5c4d27929ec",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

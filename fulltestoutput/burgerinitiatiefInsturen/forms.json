@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "658e0494-fc84-4bb6-bac9-65d358e2683b",
+        "name": "Burgerinitiatief insturen",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "burgerinitiatiefinsturen",
+        "url": "http://localhost/api/v2/forms/658e0494-fc84-4bb6-bac9-65d358e2683b",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

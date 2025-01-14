@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "a7c3751f-f5ad-45b9-9be0-6eddfc9c940a",
+        "name": "Subsidie aanvragen De Basis",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "subsidieaanvragendebasis",
+        "url": "http://localhost/api/v2/forms/a7c3751f-f5ad-45b9-9be0-6eddfc9c940a",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

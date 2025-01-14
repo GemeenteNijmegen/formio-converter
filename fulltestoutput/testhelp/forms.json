@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "cc897637-e68e-44d6-86e5-b429bf297223",
+        "name": "testhelp",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "testhelp",
+        "url": "http://localhost/api/v2/forms/cc897637-e68e-44d6-86e5-b429bf297223",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "ee6583d5-9ab6-402c-bc76-440ee94f3589",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/e47829bb-57d9-4317-be8b-d6f5db630c4b"
+    },
+    {
+        "uuid": "cd477c31-4316-41f3-b49d-c567b4dc276f",
+        "index": "1",
+        "slug": "gegevens-ontheffing",
+        "form_definition": "http://localhost/api/v2/form-definitions/a2c371fb-6fd9-42f9-892b-9691a42fe6d4"
+    },
+    {
+        "uuid": "2177ecef-3a02-489e-b777-2b6df371cc70",
+        "index": "2",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/361086e6-43dd-415a-95a5-f72bd96f9d8c"
+    }
+]

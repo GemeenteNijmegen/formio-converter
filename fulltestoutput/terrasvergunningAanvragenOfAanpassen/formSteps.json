@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "0f76da42-8e49-421d-8f00-0e02dea45d8e",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/2ad11b6d-c11a-4570-9488-270e7302b9c6"
+    },
+    {
+        "uuid": "49333f32-bff4-4de1-9b7e-4abef9aa464b",
+        "index": "1",
+        "slug": "gegevens-terras",
+        "form_definition": "http://localhost/api/v2/form-definitions/048deb58-6286-4baf-b429-80eeba78721a"
+    },
+    {
+        "uuid": "9a987a7e-e87b-4f12-b228-6e49d0e40f91",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/7eea80c3-a544-44d9-a1b2-2393bd5e3d28"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "98047870-78d6-4b59-b7d8-0b205ca864d5",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/ea8aaa8e-0725-4cf7-ad53-c6a51fbef352"
+    },
+    {
+        "uuid": "b9db0ae0-9825-41d4-b201-95ea9d7afcde",
+        "index": "1",
+        "slug": "aanvraag",
+        "form_definition": "http://localhost/api/v2/form-definitions/9d905d0d-3ac7-452c-be8b-5c8ddbb16273"
+    }
+]

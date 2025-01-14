@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "65cf8bbb-cdf1-4fe3-a421-259369d5e847",
+        "index": "0",
+        "slug": "voorstel",
+        "form_definition": "http://localhost/api/v2/form-definitions/a69be7cf-64a1-433b-8b3e-f4ece90d2f05"
+    },
+    {
+        "uuid": "5a2b214d-91a5-4567-95d7-3b3ada3910d1",
+        "index": "1",
+        "slug": "oudersverzorgers",
+        "form_definition": "http://localhost/api/v2/form-definitions/e17cc1dd-1f10-4930-a284-11688aee4b28"
+    },
+    {
+        "uuid": "84180030-ed53-4f4f-a2e0-d916f8528a5c",
+        "index": "2",
+        "slug": "ondersteuning",
+        "form_definition": "http://localhost/api/v2/form-definitions/c8f1f394-9219-4f46-8a0e-5ed18deaa292"
+    },
+    {
+        "uuid": "37518c57-90fc-4190-a1c6-20067658c49a",
+        "index": "3",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/cc1d1b12-2bdd-43b9-8747-9700b836284d"
+    }
+]

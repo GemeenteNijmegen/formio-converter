@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "2dcb0fa8-5dbd-429d-97ac-5b64119eae9c",
+        "name": "Bijzondere bijstand beheer bewindvoering vervolg",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "bijzonderebijstandbeheerbewindvoeringvervolg",
+        "url": "http://localhost/api/v2/forms/2dcb0fa8-5dbd-429d-97ac-5b64119eae9c",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

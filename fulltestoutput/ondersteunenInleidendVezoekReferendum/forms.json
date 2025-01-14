@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "e336e51c-006a-4215-899e-4acae7aa003a",
+        "name": "Ondersteunen inleidend verzoek referendum",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "ondersteuneninleidendverzoekreferendum",
+        "url": "http://localhost/api/v2/forms/e336e51c-006a-4215-899e-4acae7aa003a",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

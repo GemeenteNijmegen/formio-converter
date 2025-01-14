@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "556dc6de-6d79-42ad-929f-af1455c83e70",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/749ec9ab-e899-4c6b-ae2a-1a5d2eb948a5"
+    },
+    {
+        "uuid": "54ebbdab-0f83-4efa-a069-a0e824cc1104",
+        "index": "1",
+        "slug": "aanpassing",
+        "form_definition": "http://localhost/api/v2/form-definitions/5ef3b4ef-136e-4c1a-8d56-940508dfb8c7"
+    },
+    {
+        "uuid": "4966d31c-4e40-4c0f-a57f-9aa1897ee3ff",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/991286ae-378a-4335-b6c7-5f45f13e6d12"
+    }
+]

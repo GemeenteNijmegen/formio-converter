@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "962913ed-2e3e-42a3-8b90-f5d2732d6e69",
+        "name": "Aanvragen persoonsgegevens RNI bekijken DigiD",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "aanvragenpersoonsgegevensrnibekijkendigid",
+        "url": "http://localhost/api/v2/forms/962913ed-2e3e-42a3-8b90-f5d2732d6e69",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

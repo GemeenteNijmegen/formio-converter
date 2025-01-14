@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "52ad004f-17c2-410d-b4f3-489009a71519",
+        "index": "0",
+        "slug": "woning",
+        "form_definition": "http://localhost/api/v2/form-definitions/492edcd7-48b1-4f1a-8193-ab9311d7e59a"
+    },
+    {
+        "uuid": "14b55c54-2477-4c6b-873e-d0b44dbb1751",
+        "index": "1",
+        "slug": "uit-te-voeren-maatregelen",
+        "form_definition": "http://localhost/api/v2/form-definitions/3edfb152-17ff-4361-aa88-f0d0cc8ce6f3"
+    },
+    {
+        "uuid": "78d6963a-c56a-40c4-9300-2d3ac15db0ac",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/19b74198-37c0-4925-af70-0b4befb5d5fc"
+    },
+    {
+        "uuid": "d55755fc-2350-4d18-b329-6b7c1246448e",
+        "index": "3",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/106bdfec-4c31-4976-ae37-745ed0758e16"
+    }
+]

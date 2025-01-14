@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "f8c40cc5-529e-4ee2-9875-5726fe9a9588",
+        "name": "testmartmetdatepicker",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "testmartmetdatepicker",
+        "url": "http://localhost/api/v2/forms/f8c40cc5-529e-4ee2-9875-5726fe9a9588",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

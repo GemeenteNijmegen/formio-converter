@@ -1,0 +1,8 @@
+[
+    {
+        "uuid": "3a786112-203b-4c75-adb7-5d4dc652462b",
+        "index": "0",
+        "slug": "aanmelden",
+        "form_definition": "http://localhost/api/v2/form-definitions/381e374a-6064-4e69-a396-b94d8a6f6dbc"
+    }
+]

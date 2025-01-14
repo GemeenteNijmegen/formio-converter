@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "847ee528-1747-40da-8571-9ee1d1e7b3a2",
+        "index": "0",
+        "slug": "bank",
+        "form_definition": "http://localhost/api/v2/form-definitions/2c1b89fd-2a6e-49f4-b167-da0605d1cad4"
+    },
+    {
+        "uuid": "24da21a5-9186-4545-83f2-4299a7f6d79b",
+        "index": "1",
+        "slug": "vergoeding",
+        "form_definition": "http://localhost/api/v2/form-definitions/49e74a8d-8540-4480-8a49-467f42ec8ac5"
+    },
+    {
+        "uuid": "78a52952-be7c-4ab6-826b-68e2864ab5af",
+        "index": "2",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/e84c6097-d9ee-4887-a99b-460ee9c04112"
+    },
+    {
+        "uuid": "64f2a2bb-3d90-4df2-83a7-607f9e7d91f9",
+        "index": "3",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/0b22c6a1-533e-404b-bd9f-aa32d032bed4"
+    }
+]

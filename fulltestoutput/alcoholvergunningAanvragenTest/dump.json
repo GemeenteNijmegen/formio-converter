@@ -1,0 +1,2117 @@
+{
+    "title": "Alcoholvergunning aanvragen",
+    "type": "form",
+    "name": "alcoholvergunningAanvragen",
+    "path": "alcoholvergunningaanvragen",
+    "display": "wizard",
+    "tags": [],
+    "settings": {},
+    "components": [
+        {
+            "title": "Algemeen",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "collapsible": false,
+            "key": "page1",
+            "type": "panel",
+            "label": "Algemeen",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "id": "eq6wapk",
+                    "components": [
+                        {
+                            "collapsible": false,
+                            "key": "page1",
+                            "type": "panel",
+                            "label": "Panel",
+                            "components": [
+                                {
+                                    "html": "<p>TEST: digid &amp; Yivi bsn</p>",
+                                    "label": "Content",
+                                    "refreshOnChange": false,
+                                    "key": "content",
+                                    "customConditional": "show = (data.bsn && data.bsn.length > 0) || (data.inlogmiddel == 'digid'); ",
+                                    "type": "content",
+                                    "input": false,
+                                    "tableView": false
+                                },
+                                {
+                                    "html": "<p>TEST: eherkenning</p>",
+                                    "label": "Content",
+                                    "refreshOnChange": false,
+                                    "key": "content1",
+                                    "conditional": {
+                                        "show": true,
+                                        "conjunction": "all",
+                                        "conditions": [
+                                            {
+                                                "component": "inlogmiddel",
+                                                "operator": "isEqual",
+                                                "value": "eherkenning"
+                                            }
+                                        ]
+                                    },
+                                    "type": "content",
+                                    "input": false,
+                                    "tableView": false
+                                },
+                                {
+                                    "label": "Naam organisatie of bedrijf",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true,
+                                        "custom": "show = false;\nif (data.inlogmiddel == 'digid') {\n  show = true;\n}"
+                                    },
+                                    "key": "naamOrganisatieOfBedrijf",
+                                    "properties": {
+                                        "dms_key": "initiator.niet_natuurlijk_persoon.statutaireNaam"
+                                    },
+                                    "conditional": {
+                                        "show": true,
+                                        "conjunction": "all",
+                                        "conditions": [
+                                            {
+                                                "component": "inlogmiddel",
+                                                "operator": "isEqual",
+                                                "value": "digid"
+                                            }
+                                        ]
+                                    },
+                                    "customConditional": "show = data.bsn && data.bsn.length > 0;",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Inschrijfnummer Kamer van Koophandel",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "minLength": 8,
+                                        "maxLength": 8,
+                                        "pattern": "^[0-9]*$",
+                                        "customMessage": "Het inschrijfnummer Kamer van Koophandel heeft 8 cijfers",
+                                        "custom": "show = false;\nif (data.inlogmiddel == 'digid') {\n  show = true;\n}"
+                                    },
+                                    "key": "inschrijfnummerKamerVanKoophandel",
+                                    "properties": {
+                                        "vip_key": "kvk"
+                                    },
+                                    "conditional": {
+                                        "show": true,
+                                        "conjunction": "all",
+                                        "conditions": [
+                                            {
+                                                "component": "inlogmiddel",
+                                                "operator": "isEqual",
+                                                "value": "digid"
+                                            }
+                                        ]
+                                    },
+                                    "customConditional": "show = data.bsn && data.bsn.length > 0;",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Adres bedrijf",
+                                    "disablestreetcity": false,
+                                    "tableView": true,
+                                    "key": "adresBedrijf",
+                                    "type": "adres",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Bent u zelf de contactpersoon voor deze aanvraag?",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "ja",
+                                            "value": "ja",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "nee",
+                                            "value": "nee",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "validate": {
+                                        "required": true,
+                                        "custom": "show = false;\nif (data.inlogmiddel == 'digid') {\n  show = true;\n}"
+                                    },
+                                    "key": "contactpersoon",
+                                    "properties": {
+                                        "vip_key": "initiator_is_contact"
+                                    },
+                                    "conditional": {
+                                        "show": true,
+                                        "conjunction": "all",
+                                        "conditions": [
+                                            {
+                                                "component": "inlogmiddel",
+                                                "operator": "isEqual",
+                                                "value": "digid"
+                                            }
+                                        ]
+                                    },
+                                    "customConditional": "show = data.bsn && data.bsn.length > 0;",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Naam contactpersoon",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naamContactpersoon",
+                                    "properties": {
+                                        "vip_key": "name"
+                                    },
+                                    "customConditional": "show = false;\n\nif(data.inlogmiddel && data.inlogmiddel == 'eherkenning') {\n  show = true;\n}else if(data.contactpersoon && data.contactpersoon == 'nee') {\n  show = true;\n}",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "E-mailadres",
+                                    "tableView": true,
+                                    "validateOn": "blur",
+                                    "validate": {
+                                        "required": true,
+                                        "customMessage": "Vul een geldig e-mailadres in."
+                                    },
+                                    "key": "eMailadres",
+                                    "properties": {
+                                        "vip_key": "email",
+                                        "oz_api": "zaakeigenschappen",
+                                        "oz_name": "email_adres"
+                                    },
+                                    "type": "email",
+                                    "input": true
+                                },
+                                {
+                                    "label": "De gemeente mag dit e-mailadres gebruiken om te reageren op mijn aanvraag.",
+                                    "optionsLabelPosition": "right",
+                                    "inline": false,
+                                    "tableView": false,
+                                    "values": [
+                                        {
+                                            "label": "ja",
+                                            "value": "ja",
+                                            "shortcut": ""
+                                        },
+                                        {
+                                            "label": "nee",
+                                            "value": "nee",
+                                            "shortcut": ""
+                                        }
+                                    ],
+                                    "key": "deGemeenteMagDitEMailadresGebruikenOmTeReagerenOpMijnAanvraag",
+                                    "customConditional": "show = false;\nif(data.eMailadres.length) {\n  var re = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\n  show = re.test(data.eMailadres);\n}",
+                                    "type": "radio",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Telefoonnummer",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "telefoonnummer",
+                                    "properties": {
+                                        "vip_key": "phone",
+                                        "oz_api": "zaakeigenschappen",
+                                        "oz_name": "telefoonnummer"
+                                    },
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "input": false,
+                            "tableView": false
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "conditional": {
+                        "eq": "",
+                        "show": null,
+                        "when": null
+                    },
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "apvBlok1A"
+                },
+                {
+                    "label": "vipZaaktype",
+                    "calculateValue": "value = '77275f3c-18f8-4756-b478-2f4d4289edc5';",
+                    "key": "vipZaaktype",
+                    "type": "hidden",
+                    "input": true,
+                    "tableView": false,
+                    "id": "eg5ni2i",
+                    "placeholder": "",
+                    "prefix": "",
+                    "customClass": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": null,
+                    "protected": false,
+                    "unique": false,
+                    "persistent": true,
+                    "hidden": false,
+                    "clearOnHide": true,
+                    "refreshOn": "",
+                    "redrawOn": "",
+                    "modalEdit": false,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "description": "",
+                    "errorLabel": "",
+                    "tooltip": "",
+                    "hideLabel": false,
+                    "tabindex": "",
+                    "disabled": false,
+                    "autofocus": false,
+                    "dbIndex": false,
+                    "customDefaultValue": "",
+                    "calculateServer": false,
+                    "widget": {
+                        "type": "input"
+                    },
+                    "attributes": {},
+                    "validateOn": "change",
+                    "validate": {
+                        "required": false,
+                        "custom": "",
+                        "customPrivate": false,
+                        "strictDateValidation": false,
+                        "multiple": false,
+                        "unique": false
+                    },
+                    "conditional": {
+                        "show": null,
+                        "when": null,
+                        "eq": ""
+                    },
+                    "overlay": {
+                        "style": "",
+                        "left": "",
+                        "top": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "allowCalculateOverride": false,
+                    "encrypted": false,
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "properties": {},
+                    "allowMultipleMasks": false,
+                    "addons": [],
+                    "inputType": "hidden"
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false,
+                    "id": "ec0o5dn",
+                    "placeholder": "",
+                    "prefix": "",
+                    "customClass": "",
+                    "suffix": "",
+                    "multiple": false,
+                    "defaultValue": null,
+                    "protected": false,
+                    "unique": false,
+                    "persistent": false,
+                    "hidden": false,
+                    "clearOnHide": false,
+                    "refreshOn": "",
+                    "redrawOn": "",
+                    "modalEdit": false,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "description": "",
+                    "errorLabel": "",
+                    "tooltip": "",
+                    "hideLabel": false,
+                    "tabindex": "",
+                    "disabled": false,
+                    "autofocus": false,
+                    "dbIndex": false,
+                    "customDefaultValue": "",
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "widget": null,
+                    "attributes": {},
+                    "validateOn": "change",
+                    "validate": {
+                        "required": false,
+                        "custom": "",
+                        "customPrivate": false,
+                        "strictDateValidation": false,
+                        "multiple": false,
+                        "unique": false
+                    },
+                    "conditional": {
+                        "show": null,
+                        "when": null,
+                        "eq": ""
+                    },
+                    "overlay": {
+                        "style": "",
+                        "left": "",
+                        "top": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "allowCalculateOverride": false,
+                    "encrypted": false,
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "properties": {},
+                    "allowMultipleMasks": false,
+                    "addons": [],
+                    "tree": false,
+                    "lazyLoad": false,
+                    "autoAdjust": false
+                }
+            ],
+            "allowPrevious": true,
+            "id": "eqpz2od",
+            "placeholder": "",
+            "prefix": "",
+            "customClass": "",
+            "suffix": "",
+            "multiple": false,
+            "defaultValue": null,
+            "protected": false,
+            "unique": false,
+            "persistent": false,
+            "hidden": false,
+            "clearOnHide": false,
+            "refreshOn": "",
+            "redrawOn": "",
+            "modalEdit": false,
+            "dataGridLabel": false,
+            "labelPosition": "top",
+            "description": "",
+            "errorLabel": "",
+            "tooltip": "",
+            "hideLabel": false,
+            "tabindex": "",
+            "disabled": false,
+            "autofocus": false,
+            "dbIndex": false,
+            "customDefaultValue": "",
+            "calculateValue": "",
+            "calculateServer": false,
+            "widget": null,
+            "attributes": {},
+            "validateOn": "change",
+            "validate": {
+                "required": false,
+                "custom": "",
+                "customPrivate": false,
+                "strictDateValidation": false,
+                "multiple": false,
+                "unique": false
+            },
+            "conditional": {
+                "show": null,
+                "when": null,
+                "eq": ""
+            },
+            "overlay": {
+                "style": "",
+                "left": "",
+                "top": "",
+                "width": "",
+                "height": ""
+            },
+            "allowCalculateOverride": false,
+            "encrypted": false,
+            "showCharCount": false,
+            "showWordCount": false,
+            "properties": {},
+            "allowMultipleMasks": false,
+            "addons": [],
+            "tree": false,
+            "lazyLoad": false,
+            "theme": "default",
+            "breadcrumb": "default"
+        },
+        {
+            "title": "Gegevens bedrijf",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page2",
+            "type": "panel",
+            "label": "Aanpassing",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Waar vraagt u een vergunning voor aan?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "horecabedrijf",
+                            "value": "horecabedrijf",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "slijterij",
+                            "value": "slijterij",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "aanvraagVoor",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Waarom vraagt u een vergunning aan?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "starten nieuw bedrijf",
+                            "value": "starten",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "overname bedrijf",
+                            "value": "overname",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "wijzigingondernemersvorm",
+                            "value": "wijziging",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "anders",
+                            "value": "anders",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "waaromVergunning",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Anders, namelijk:",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "andersNamelijk",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "waaromVergunning",
+                                "operator": "isEqual",
+                                "value": "anders"
+                            }
+                        ]
+                    },
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Is uw bedrijf een paracommercieel bedrijf?",
+                    "optionsLabelPosition": "right",
+                    "tooltip": "Paracommerciële bedrijven zijn verenigingen en stichtingen die naast hun hoofdtaken ook horeca-activiteiten uitvoeren. Bijvoorbeeld wijk- en buurthuizen en kantines van sportverenigingen.",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "paracommercieel",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Op welke datum heeft het bestuur het reglement over sociale hygiëne vastgesteld?",
+                    "placeholder": "dag-maand-jaar",
+                    "tableView": false,
+                    "enableMinDateInput": false,
+                    "datePicker": {
+                        "disableWeekends": false,
+                        "disableWeekdays": false
+                    },
+                    "enableMaxDateInput": false,
+                    "timePicker": {
+                        "showMeridian": false
+                    },
+                    "validate": {
+                        "required": true,
+                        "custom": "var eergisteren = new Date((new Date()).valueOf() - 1000*60*60*48);\nvar invulDatum = new Date(input.split('-')[2] + '-' + input.split('-')[1] + '-' + input.split('-')[0]).getTime();\nif(eergisteren >= invulDatum) {\n  valid = 'Deze datum mag maximaal 1 dag in het verleden liggen.';\n} else {\nvalid = true;\n}"
+                    },
+                    "validateOn": "blur",
+                    "key": "opWelkeDatumHeeftHetBestuurHetReglementOverSocialeHygieneVastgesteld",
+                    "conditional": {
+                        "show": true,
+                        "when": "paracommercieel",
+                        "eq": "ja"
+                    },
+                    "type": "datetime",
+                    "input": true,
+                    "widget": {
+                        "type": "calendar",
+                        "displayInTimezone": "viewer",
+                        "locale": "nl",
+                        "useLocaleSettings": false,
+                        "allowInput": true,
+                        "mode": "single",
+                        "enableTime": false,
+                        "noCalendar": false,
+                        "format": "dd-MM-yyyy",
+                        "hourIncrement": 1,
+                        "minuteIncrement": 5,
+                        "time_24hr": true,
+                        "minDate": null,
+                        "disableWeekends": false,
+                        "disableWeekdays": false,
+                        "maxDate": null
+                    }
+                },
+                {
+                    "label": "Het gaat om een",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "natuurlijk persoon (bijvoorbeeld een VOF of Eenmanszaak",
+                            "value": "natuurlijkPersoon",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "rechtspersoon (bijvoorbeeld een B.V. of een N.V.)",
+                            "value": "rechtspersoon",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "betreft",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Vul per ondernemer in",
+                    "reorder": false,
+                    "addAnother": "Toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "naam": "",
+                                "adresNijmegen": {
+                                    "adresNijmegen-streetname": "",
+                                    "adresNijmegen-postalcode": "",
+                                    "adresNijmegen-housenr": "",
+                                    "adresNijmegen-city": ""
+                                },
+                                "geboortedatum": "",
+                                "geboorteplaats": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "gegevensNieuweLeidinggevendeN",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "betreft",
+                                "operator": "isEqual",
+                                "value": "natuurlijkPersoon"
+                            }
+                        ]
+                    },
+                    "type": "datagrid",
+                    "defaultOpen": false,
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam en voornamen",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naamEnVoornamen",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Adres:",
+                                    "disablestreetcity": false,
+                                    "tableView": true,
+                                    "key": "adresNijmegenOndernemer",
+                                    "type": "adres",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Geboortedatum",
+                                    "placeholder": "dag-maand-jaar",
+                                    "tableView": false,
+                                    "enableMinDateInput": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false
+                                    },
+                                    "enableMaxDateInput": false,
+                                    "timePicker": {
+                                        "showMeridian": false
+                                    },
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "geboortedatum",
+                                    "type": "datetime",
+                                    "input": true,
+                                    "widget": {
+                                        "type": "calendar",
+                                        "displayInTimezone": "viewer",
+                                        "locale": "nl",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd-MM-yyyy",
+                                        "hourIncrement": 1,
+                                        "minuteIncrement": 5,
+                                        "time_24hr": true,
+                                        "minDate": null,
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    }
+                                },
+                                {
+                                    "label": "Geboorteplaats",
+                                    "tableView": true,
+                                    "key": "geboorteplaats",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Vul per ondernemer in",
+                    "reorder": false,
+                    "addAnother": "Toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "naam": "",
+                                "vestigingsplaats": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "vulPerRechtspersoonIn",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "betreft",
+                                "operator": "isEqual",
+                                "value": "rechtspersoon"
+                            }
+                        ]
+                    },
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naam",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Vestigingsplaats",
+                                    "tableView": true,
+                                    "key": "vestigingsplaats",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Vul per bestuurslid in",
+                    "reorder": false,
+                    "addAnother": "Toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "naam": "",
+                                "adresNijmegen": {
+                                    "adresNijmegen-streetname": "",
+                                    "adresNijmegen-postalcode": "",
+                                    "adresNijmegen-housenr": "",
+                                    "adresNijmegen-city": ""
+                                },
+                                "geboortedatum": "",
+                                "geboorteplaats": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "gegevensNieuweLeidinggevendeN1",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "betreft",
+                                "operator": "isEqual",
+                                "value": "rechtspersoon"
+                            }
+                        ]
+                    },
+                    "type": "datagrid",
+                    "defaultOpen": false,
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam en voornamen",
+                                    "tableView": true,
+                                    "key": "naamEnVoornamenBestuurlid",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Adres:",
+                                    "disablestreetcity": false,
+                                    "tableView": true,
+                                    "key": "adres_bestuurslid",
+                                    "type": "adres",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Geboortedatum",
+                                    "placeholder": "dag-maand-jaar",
+                                    "tableView": false,
+                                    "enableMinDateInput": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false
+                                    },
+                                    "enableMaxDateInput": false,
+                                    "timePicker": {
+                                        "showMeridian": false
+                                    },
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "geboortedatumBestuurslid",
+                                    "type": "datetime",
+                                    "input": true,
+                                    "widget": {
+                                        "type": "calendar",
+                                        "displayInTimezone": "viewer",
+                                        "locale": "nl",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd-MM-yyyy",
+                                        "hourIncrement": 1,
+                                        "minuteIncrement": 5,
+                                        "time_24hr": true,
+                                        "minDate": null,
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    }
+                                },
+                                {
+                                    "label": "Geboorteplaats",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "geboorteplaatsBestuurslid",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Zijn er binnen uw bedrijf leidinggevenden die géén ondernemer of bestuurslid zijn?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "zijnErInUwBedrijfLeidinggevendenDieGeenOndernemerOfBestuurslidZijn",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Vul per leidinggevende, die niet ondernemer of bestuurslid in:",
+                    "reorder": false,
+                    "addAnother": "Toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container": {
+                                "naam": "",
+                                "adresNijmegen": {
+                                    "adresNijmegen-streetname": "",
+                                    "adresNijmegen-postalcode": "",
+                                    "adresNijmegen-housenr": "",
+                                    "adresNijmegen-city": ""
+                                },
+                                "geboortedatum": "",
+                                "geboorteplaats": ""
+                            }
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "gegevensNieuweLeidinggevendeN2",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "zijnErInUwBedrijfLeidinggevendenDieGeenOndernemerOfBestuurslidZijn",
+                                "operator": "isEqual",
+                                "value": "ja"
+                            }
+                        ]
+                    },
+                    "type": "datagrid",
+                    "defaultOpen": false,
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam en voornamen",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naamEnVoornamenLeidinggevende",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Adres:",
+                                    "disablestreetcity": false,
+                                    "tableView": true,
+                                    "key": "adresLeidingevende",
+                                    "type": "adres",
+                                    "input": true
+                                },
+                                {
+                                    "label": "Geboortedatum",
+                                    "placeholder": "dag-maand-jaar",
+                                    "tableView": false,
+                                    "enableMinDateInput": false,
+                                    "datePicker": {
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false
+                                    },
+                                    "enableMaxDateInput": false,
+                                    "timePicker": {
+                                        "showMeridian": false
+                                    },
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "geboortedatumLeidinggevende",
+                                    "type": "datetime",
+                                    "input": true,
+                                    "widget": {
+                                        "type": "calendar",
+                                        "displayInTimezone": "viewer",
+                                        "locale": "nl",
+                                        "useLocaleSettings": false,
+                                        "allowInput": true,
+                                        "mode": "single",
+                                        "enableTime": false,
+                                        "noCalendar": false,
+                                        "format": "dd-MM-yyyy",
+                                        "hourIncrement": 1,
+                                        "minuteIncrement": 5,
+                                        "time_24hr": true,
+                                        "minDate": null,
+                                        "disableWeekends": false,
+                                        "disableWeekdays": false,
+                                        "maxDate": null
+                                    }
+                                },
+                                {
+                                    "label": "Geboorteplaats",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "geboorteplaatsLeidinggevende",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns1",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ],
+            "allowPrevious": true
+        },
+        {
+            "title": "Inrichting bedrijf",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page3",
+            "type": "panel",
+            "label": "Aanpassing",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "html": "<p>Een horeca-inrichting kan uit verschillende ruimten bestaan.</p><p>Let op: Tenminste 1 ruimte moet een oppervlakte hebben van minimaal 35 m2.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Vul de gegevens in per ruimte/terras",
+                    "reorder": false,
+                    "addAnother": "Ruimte toevoegen",
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {
+                            "container1": {
+                                "naamVanDeRuimte": "",
+                                "waarIsDeRuimteInDeHorecaInrichting": "",
+                                "oppervlakteInM2": ""
+                            }
+                        }
+                    ],
+                    "key": "vulDeGegevensInPerRuimteTerras",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Naam van de ruimte",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "naamVanDeRuimte",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Waar is de ruimte in de horeca-inrichting?",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "waarIsDeRuimteInDeHorecaInrichting",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                },
+                                {
+                                    "label": "Oppervlakte in m2",
+                                    "tableView": true,
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "oppervlakteInM2",
+                                    "type": "textfield",
+                                    "input": true,
+                                    "prefill": {
+                                        "plugin": "",
+                                        "attribute": "",
+                                        "identifierRole": "main"
+                                    }
+                                }
+                            ],
+                            "key": "fieldSet",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns3",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ],
+            "allowPrevious": true
+        },
+        {
+            "title": "Openingstijden",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page5",
+            "type": "panel",
+            "label": "Aanpassing",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Geef per dag aan welke tijden uw bedrijf open is voor publiek",
+                    "reorder": false,
+                    "addAnotherPosition": "bottom",
+                    "layoutFixed": false,
+                    "enableRowGroups": false,
+                    "initEmpty": false,
+                    "tableView": false,
+                    "defaultValue": [
+                        {}
+                    ],
+                    "key": "geefPerDagAanWelkeTijdenUwBedrijfOpenIsVoorPubliek",
+                    "type": "datagrid",
+                    "input": true,
+                    "components": [
+                        {
+                            "components": [
+                                {
+                                    "label": "Dag van de week",
+                                    "widget": "choicesjs",
+                                    "tableView": true,
+                                    "data": {
+                                        "values": [
+                                            {
+                                                "label": "maandag",
+                                                "value": "maandag"
+                                            },
+                                            {
+                                                "label": "dinsdag",
+                                                "value": "dinsdag"
+                                            },
+                                            {
+                                                "label": "woensdag",
+                                                "value": "woensdag"
+                                            },
+                                            {
+                                                "label": "donderdag",
+                                                "value": "donderdag"
+                                            },
+                                            {
+                                                "label": "vrijdag",
+                                                "value": "vrijdag"
+                                            },
+                                            {
+                                                "label": "zaterdag",
+                                                "value": "zaterdag"
+                                            },
+                                            {
+                                                "label": "zondag",
+                                                "value": "zondag"
+                                            }
+                                        ]
+                                    },
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "dagVanDeWeek",
+                                    "type": "select",
+                                    "input": true,
+                                    "searchThreshold": 0.3
+                                },
+                                {
+                                    "label": "Openingstijd",
+                                    "tableView": true,
+                                    "dataFormat": "HH:mm",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "openingstijd",
+                                    "type": "time",
+                                    "input": true,
+                                    "inputMask": "99:99"
+                                },
+                                {
+                                    "label": "Sluitingstijd",
+                                    "tableView": true,
+                                    "dataFormat": "HH:mm",
+                                    "validate": {
+                                        "required": true
+                                    },
+                                    "key": "sluitingstijd",
+                                    "type": "time",
+                                    "input": true,
+                                    "inputMask": "99:99"
+                                }
+                            ],
+                            "key": "fieldSet",
+                            "type": "fieldset",
+                            "label": "Field Set",
+                            "tree": false,
+                            "input": false,
+                            "hidden": false,
+                            "legend": "",
+                            "prefix": "",
+                            "suffix": "",
+                            "unique": false,
+                            "widget": null,
+                            "dbIndex": false,
+                            "overlay": {
+                                "top": "",
+                                "left": "",
+                                "style": "",
+                                "width": "",
+                                "height": ""
+                            },
+                            "tooltip": "",
+                            "disabled": false,
+                            "multiple": false,
+                            "redrawOn": "",
+                            "tabindex": "",
+                            "validate": {
+                                "custom": "",
+                                "unique": false,
+                                "multiple": false,
+                                "required": false,
+                                "customPrivate": false,
+                                "strictDateValidation": false
+                            },
+                            "autofocus": false,
+                            "encrypted": false,
+                            "hideLabel": false,
+                            "modalEdit": false,
+                            "protected": false,
+                            "refreshOn": "",
+                            "tableView": false,
+                            "attributes": {},
+                            "errorLabel": "",
+                            "hideHeader": false,
+                            "persistent": false,
+                            "properties": {},
+                            "validateOn": "change",
+                            "clearOnHide": true,
+                            "conditional": {
+                                "eq": "",
+                                "show": null,
+                                "when": null
+                            },
+                            "customClass": "",
+                            "description": "",
+                            "placeholder": "",
+                            "defaultValue": null,
+                            "dataGridLabel": false,
+                            "labelPosition": "top",
+                            "showCharCount": false,
+                            "showWordCount": false,
+                            "calculateValue": "",
+                            "calculateServer": false,
+                            "allowMultipleMasks": false,
+                            "customDefaultValue": "",
+                            "allowCalculateOverride": false
+                        }
+                    ]
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns4",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ],
+            "allowPrevious": true
+        },
+        {
+            "title": "Bijlagen",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page6",
+            "type": "panel",
+            "label": "Page 6",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Bijlagen",
+                    "description": "Toegestaan zijn .jpg, .png, .jpeg of .pdf documenten die niet groter zijn dan 20MB.",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePattern": ".jpg,.png,.jpeg,.pdf",
+                    "fileMinSize": "1KB",
+                    "fileMaxSize": "20MB",
+                    "multiple": true,
+                    "key": "bijlagen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                },
+                {
+                    "html": "<p>Ik heb deze bijlagen toegevoegd:</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content2",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Kopie identiteitskaart, paspoort of verblijfsvergunning van alle ondernemers en leidinggevenden ",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieIdentiteitskaartPaspoortOfVerblijfsvergunningVanAlleOndernemersEnLeidinggevenden",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Actueel uittreksel Kamer van Koophandel",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "actueelUittrekselKamerVanKoophandel",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Kopie arbeidsovereenkomst van alle leidinggevenden in loondienst",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieArbeidsovereenkomstVanAlleLeidinggevendenInLoondienst",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Verklaring Sociale Hygiëne (SVH)",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "verklaringSocialeHygieneSvh",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Huurovereenkomst of indeplaatsstelling",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "huurovereenkomstOfIndeplaatsstelling",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns5",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ],
+            "allowPrevious": true
+        }
+    ],
+    "access": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": [
+                "administrator",
+                "authenticated",
+                "anonymous"
+            ]
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "submissionAccess": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": []
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "properties": {},
+    "controller": "",
+    "submissionRevisions": ""
+}

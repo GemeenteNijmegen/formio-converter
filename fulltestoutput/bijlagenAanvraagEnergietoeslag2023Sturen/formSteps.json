@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "ec1284e6-02e0-4046-b11f-fd03378c7cca",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/d29dd2d6-50d1-4a30-a8db-24364ccbf2bf"
+    },
+    {
+        "uuid": "f2305caf-980d-4054-bee3-44e9a10498db",
+        "index": "1",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/4f361197-7702-46f2-8133-6ebdde99ab86"
+    }
+]

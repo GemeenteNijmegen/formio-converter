@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "d022015b-3fa7-4082-be3b-cabc7901460a",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/203a7de2-82ca-468a-b5a3-453a2e0c18e1"
+    },
+    {
+        "uuid": "01ed4376-8d41-4fea-9148-f63fbea8b61d",
+        "index": "1",
+        "slug": "subsidie-aanvraag",
+        "form_definition": "http://localhost/api/v2/form-definitions/a1db4a7e-8644-4e6d-ba22-a9a9e13c6c23"
+    },
+    {
+        "uuid": "e875bcf4-df8e-49af-b65e-9821ee59d2cb",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/bfe4b167-04af-4a3e-8d47-bde6e94fcf1d"
+    }
+]

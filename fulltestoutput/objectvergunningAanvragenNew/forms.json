@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "5c565a77-4fc6-4853-b566-fae5e34bcd3c",
+        "name": "Objectvergunning aanvragen",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "objectvergunningaanvragen",
+        "url": "http://localhost/api/v2/forms/5c565a77-4fc6-4853-b566-fae5e34bcd3c",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

@@ -1,0 +1,957 @@
+{
+    "title": "Aanpassing Wmo doorgeven",
+    "type": "form",
+    "name": "aanpassingWmoDoorgeven",
+    "path": "aanpassingwmodoorgeven",
+    "display": "wizard",
+    "tags": [
+        "ZenI"
+    ],
+    "settings": {},
+    "components": [
+        {
+            "title": "Uw gegevens",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page1",
+            "type": "panel",
+            "label": "Algemeen",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "conditional": {
+                        "eq": "",
+                        "show": null,
+                        "when": null
+                    },
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "label": "E-mailadres",
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "eMailadres",
+                    "type": "email",
+                    "input": true
+                },
+                {
+                    "label": "Telefoonnummer",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "telefoonnummer",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Is iemand anders de contactpersoon voor deze aanpassing?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "isIemandAndersDeContactpersoonVoorDezeAanpassing",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "components": [
+                        {
+                            "html": "<h3>Contactpersoon</h3>",
+                            "label": "Content",
+                            "refreshOnChange": false,
+                            "key": "content18",
+                            "type": "content",
+                            "input": false,
+                            "tableView": false
+                        },
+                        {
+                            "label": "Voornaam",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "voornaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Achternaam",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "achternaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummer1",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadresCP",
+                            "type": "email",
+                            "input": true
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "conditional": {
+                        "eq": "",
+                        "show": null,
+                        "when": null
+                    },
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ],
+            "allowPrevious": true
+        },
+        {
+            "title": "Aanpassen",
+            "breadcrumbClickable": false,
+            "buttonSettings": {
+                "previous": false,
+                "cancel": false,
+                "next": false
+            },
+            "scrollToTop": false,
+            "collapsible": false,
+            "key": "page2",
+            "type": "panel",
+            "label": "Gegevens ontheffing",
+            "input": false,
+            "tableView": false,
+            "components": [
+                {
+                    "label": "Wat wilt u doorgeven?",
+                    "optionsLabelPosition": "right",
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ik wil een andere aanbieder voor hulp bij het huishouden",
+                            "value": "aanbieder",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "ik wil mijn Persoonsgebonden Budget (PGB) voor hulp bij het huishouden aanpassen naar Zorg in Natura",
+                            "value": "PGBNaarZIN",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "ik wil de zorg stoppen",
+                            "value": "stoppen",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "ik gebruik een hulpmiddel niet meer",
+                            "value": "hulpmiddel",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true,
+                        "onlyAvailableItems": false,
+                        "minSelectedCount": 1
+                    },
+                    "key": "doorgeven",
+                    "type": "selectboxes",
+                    "input": true,
+                    "inputType": "checkbox"
+                },
+                {
+                    "label": "Van wie krijgt u nu hulp?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "vanWieKrijgtUNuHulp",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "doorgeven",
+                                "operator": "isEqual",
+                                "value": "aanbieder"
+                            }
+                        ]
+                    },
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Waarom wilt u hulp van een andere aanbieder?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ik krijg geen hulp van deze aanbieder",
+                            "value": "ikKrijgGeenHulpVanDezeAanbieder",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "de hulp is niet goed",
+                            "value": "deHulpIsNietGoed",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "anders",
+                            "value": "anders",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "waaromAndereAanbieder",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "doorgeven",
+                                "operator": "isEqual",
+                                "value": "aanbieder"
+                            }
+                        ]
+                    },
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Waarom wilt u dan hulp van een andere aanbieder?",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "key": "waaromWiltUDanHulpVanEenAndereAanbieder",
+                    "conditional": {
+                        "show": true,
+                        "when": "waaromAndereAanbieder",
+                        "eq": "anders"
+                    },
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Is er een aanbieder waar u het liefst hulp van krijgt?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "voorkeurAanbieder",
+                    "customConditional": "show = false;\n\nif (data.doorgeven && data.doorgeven.aanbieder || data.doorgeven && data.doorgeven.PGBNaarZIN){\n  show = true;\n}",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Welke aanbieder?",
+                    "tableView": true,
+                    "key": "welkeAanbieder",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "voorkeurAanbieder",
+                                "operator": "isEqual",
+                                "value": "ja"
+                            }
+                        ]
+                    },
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Vanaf wanneer wilt u dat de nieuwe aanbieder start?",
+                    "placeholder": "dag-maand-jaar",
+                    "tableView": false,
+                    "enableMinDateInput": false,
+                    "datePicker": {
+                        "disableWeekends": false,
+                        "disableWeekdays": false
+                    },
+                    "enableMaxDateInput": false,
+                    "timePicker": {
+                        "showMeridian": false
+                    },
+                    "validate": {
+                        "required": true
+                    },
+                    "validateOn": "blur",
+                    "key": "vanafWanneerWiltUDatDeNieuweAanbiederStart",
+                    "customConditional": "show = data.welkeAanbieder && datawelkeAanbieder.length >0;",
+                    "type": "datetime",
+                    "input": true,
+                    "widget": {
+                        "type": "calendar",
+                        "displayInTimezone": "viewer",
+                        "locale": "nl",
+                        "useLocaleSettings": false,
+                        "allowInput": true,
+                        "mode": "single",
+                        "enableTime": false,
+                        "noCalendar": false,
+                        "format": "dd-MM-yyyy",
+                        "hourIncrement": 1,
+                        "minuteIncrement": 5,
+                        "time_24hr": true,
+                        "minDate": null,
+                        "disableWeekends": false,
+                        "disableWeekdays": false,
+                        "maxDate": null
+                    }
+                },
+                {
+                    "label": "Welke zorg wilt u stoppen?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "welkeZorgWiltUStoppen",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "doorgeven",
+                                "operator": "isEqual",
+                                "value": "stoppen"
+                            }
+                        ]
+                    },
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Waarom wilt u stoppen met de zorg?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "waaromStoppen",
+                    "conditional": {
+                        "show": true,
+                        "conjunction": "all",
+                        "conditions": [
+                            {
+                                "component": "doorgeven",
+                                "operator": "isEqual",
+                                "value": "stoppen"
+                            }
+                        ]
+                    },
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Vanaf wanneer wilt u stoppen met de zorg?",
+                    "placeholder": "dag-maand-jaar",
+                    "tableView": false,
+                    "enableMinDateInput": false,
+                    "datePicker": {
+                        "disableWeekends": false,
+                        "disableWeekdays": false
+                    },
+                    "enableMaxDateInput": false,
+                    "timePicker": {
+                        "showMeridian": false
+                    },
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "vanafWanneerWiltUStoppenMetDeZorg",
+                    "conditional": {
+                        "show": true,
+                        "when": "doorgeven",
+                        "eq": "stoppen"
+                    },
+                    "type": "datetime",
+                    "input": true,
+                    "widget": {
+                        "type": "calendar",
+                        "displayInTimezone": "viewer",
+                        "locale": "nl",
+                        "useLocaleSettings": false,
+                        "allowInput": true,
+                        "mode": "single",
+                        "enableTime": false,
+                        "noCalendar": false,
+                        "format": "dd-MM-yyyy",
+                        "hourIncrement": 1,
+                        "minuteIncrement": 5,
+                        "time_24hr": true,
+                        "minDate": null,
+                        "disableWeekends": false,
+                        "disableWeekdays": false,
+                        "maxDate": null
+                    }
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Om welk hulpmiddel gaat het?",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "omWelkHulpmiddelGaatHet",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Waarom gebruikt u het hulpmiddel niet meer?",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "waaromGebruiktUHetHulpmiddelNietMeer",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        },
+                        {
+                            "label": "Vanaf wanneer gebruikt u het hulpmiddel niet meer?",
+                            "placeholder": "dag-maand-jaar",
+                            "tableView": false,
+                            "enableMinDateInput": false,
+                            "datePicker": {
+                                "disableWeekends": false,
+                                "disableWeekdays": false
+                            },
+                            "enableMaxDateInput": false,
+                            "timePicker": {
+                                "showMeridian": false
+                            },
+                            "validate": {
+                                "required": true
+                            },
+                            "validateOn": "blur",
+                            "key": "vanafWanneerGebruiktUHetHulpmiddelNietMeer",
+                            "type": "datetime",
+                            "input": true,
+                            "widget": {
+                                "type": "calendar",
+                                "displayInTimezone": "viewer",
+                                "locale": "nl",
+                                "useLocaleSettings": false,
+                                "allowInput": true,
+                                "mode": "single",
+                                "enableTime": false,
+                                "noCalendar": false,
+                                "format": "dd-MM-yyyy",
+                                "hourIncrement": 1,
+                                "minuteIncrement": 5,
+                                "time_24hr": true,
+                                "minDate": null,
+                                "disableWeekends": false,
+                                "disableWeekdays": false,
+                                "maxDate": null
+                            }
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "conditional": {
+                        "eq": "",
+                        "show": null,
+                        "when": null
+                    },
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns1",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ],
+            "allowPrevious": true
+        }
+    ],
+    "access": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": []
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "submissionAccess": [
+        {
+            "type": "create_own",
+            "roles": []
+        },
+        {
+            "type": "create_all",
+            "roles": []
+        },
+        {
+            "type": "read_own",
+            "roles": []
+        },
+        {
+            "type": "read_all",
+            "roles": []
+        },
+        {
+            "type": "update_own",
+            "roles": []
+        },
+        {
+            "type": "update_all",
+            "roles": []
+        },
+        {
+            "type": "delete_own",
+            "roles": []
+        },
+        {
+            "type": "delete_all",
+            "roles": []
+        },
+        {
+            "type": "team_read",
+            "roles": []
+        },
+        {
+            "type": "team_write",
+            "roles": []
+        },
+        {
+            "type": "team_admin",
+            "roles": []
+        }
+    ],
+    "properties": {},
+    "controller": "",
+    "submissionRevisions": ""
+}

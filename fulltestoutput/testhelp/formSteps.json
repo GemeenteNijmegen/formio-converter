@@ -1,0 +1,8 @@
+[
+    {
+        "uuid": "0e691ec3-a0f0-4506-9792-8eff7d356663",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/780a7e49-7458-4437-9a1e-f214f7a32ff1"
+    }
+]

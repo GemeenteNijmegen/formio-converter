@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "95ab49ca-21a1-459f-b459-46eb824afab5",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/f2e87fb8-7345-445a-af14-2329262925b2"
+    },
+    {
+        "uuid": "55398d2a-e557-422c-9cf8-1ee50d7c4725",
+        "index": "1",
+        "slug": "verklaring",
+        "form_definition": "http://localhost/api/v2/form-definitions/55cb38f3-18b0-4129-a6df-197e86e355f8"
+    },
+    {
+        "uuid": "e5a1a6e3-338a-421e-b5c1-a22cba886cab",
+        "index": "2",
+        "slug": "gegevens-werknemer",
+        "form_definition": "http://localhost/api/v2/form-definitions/0e84d371-b378-4bbf-940e-2352ff76e57f"
+    },
+    {
+        "uuid": "4b04af1a-e5fb-4cc0-9c9b-21d70caaa04b",
+        "index": "3",
+        "slug": "bijlage",
+        "form_definition": "http://localhost/api/v2/form-definitions/aaedc091-4495-46a2-8dc3-ed9b486a9cf4"
+    }
+]

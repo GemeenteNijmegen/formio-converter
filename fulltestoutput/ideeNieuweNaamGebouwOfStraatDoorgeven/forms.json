@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "7bdefa7d-14bc-41b0-93cf-f6fbab16eed2",
+        "name": "Idee nieuwe naam gebouw of straat doorgeven",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "ideenieuwenaamgebouwofstraatdoorgeven",
+        "url": "http://localhost/api/v2/forms/7bdefa7d-14bc-41b0-93cf-f6fbab16eed2",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "38f20e4a-5010-44ca-bdde-7358c6ad5ada",
+        "name": "Yivi Demo",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "yividemo",
+        "url": "http://localhost/api/v2/forms/38f20e4a-5010-44ca-bdde-7358c6ad5ada",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

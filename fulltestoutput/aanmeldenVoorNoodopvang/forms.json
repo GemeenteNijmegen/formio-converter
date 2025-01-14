@@ -1,0 +1,21 @@
+[
+    {
+        "uuid": "7a047d29-e4dc-4a1c-80bd-e94f3405da55",
+        "name": "Aanmelden voor noodopvang",
+        "internal_name": "",
+        "login_required": false,
+        "authentication_backends": [],
+        "slug": "aanmeldenvoornoodopvang",
+        "url": "http://localhost/api/v2/forms/7a047d29-e4dc-4a1c-80bd-e94f3405da55",
+        "show_progress_indicator": true,
+        "maintenance_mode": false,
+        "active": true,
+        "is_deleted": false,
+        "suspension_allowed": true,
+        "send_confirmation_email": true,
+        "display_main_website_link": true,
+        "required_fields_with_asterisk": true,
+        "resume_link_lifetime": 7,
+        "hide_non_applicable_steps": true
+    }
+]

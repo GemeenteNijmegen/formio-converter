@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "b7918f30-d479-484d-b94b-ad923d7503a2",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/761f5f5c-c15f-4131-b710-7b197d8b52cf"
+    },
+    {
+        "uuid": "7a40581d-a176-44f0-8e2d-2bcca8f25111",
+        "index": "1",
+        "slug": "plaats-en-datum",
+        "form_definition": "http://localhost/api/v2/form-definitions/718c4b7e-b7df-4c5e-b5b9-5b887e721436"
+    },
+    {
+        "uuid": "baeb4f7a-83d9-4b2c-8c83-4d09d88ad568",
+        "index": "2",
+        "slug": "gegevens-leidinggevenden",
+        "form_definition": "http://localhost/api/v2/form-definitions/7c830fdd-43dc-4173-b120-68cf5348f57b"
+    },
+    {
+        "uuid": "f43f42aa-beb5-4877-86ed-d66a42b0a4cc",
+        "index": "3",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/e5d22b07-719e-4cd8-be80-85366e2e5614"
+    }
+]

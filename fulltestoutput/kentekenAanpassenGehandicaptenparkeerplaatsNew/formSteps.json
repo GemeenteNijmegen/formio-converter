@@ -1,0 +1,14 @@
+[
+    {
+        "uuid": "6bed315b-541a-4dfc-87ea-e928597c1167",
+        "index": "0",
+        "slug": "gegevens-parkeerkaart",
+        "form_definition": "http://localhost/api/v2/form-definitions/c44d808a-0e1b-4812-8548-65b026c642c2"
+    },
+    {
+        "uuid": "25713564-9d34-4c47-9af3-269fd6575985",
+        "index": "1",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/4b9d4698-faa9-4477-8119-734ecf2000b5"
+    }
+]

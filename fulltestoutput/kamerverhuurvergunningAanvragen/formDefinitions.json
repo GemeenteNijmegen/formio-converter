@@ -1,0 +1,1221 @@
+[
+    {
+        "url": "http://localhost/api/v2/form-definitions/ce942014-7638-44ba-a393-f1634f917b2e",
+        "uuid": "ce942014-7638-44ba-a393-f1634f917b2e",
+        "name": "Uw gegevens",
+        "slug": "uw-gegevens",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "components": [
+                        {
+                            "label": "Naam",
+                            "customClass": "naamingelogdegebruikerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "naamIngelogdeGebruiker",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Straatnaam",
+                            "customClass": "straatnaamfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "straatnaam",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.woonplaats",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Huisnummer",
+                            "customClass": "huisnummerfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "huisnummerfield",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Postcode",
+                            "customClass": "postcodefieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "postcode",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Woonplaats",
+                            "customClass": "woonplaatsfieldnonhidden nonhiddenfield",
+                            "tableView": true,
+                            "persistent": false,
+                            "key": "woonplaats",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "haalcentraal",
+                                "attribute": "verblijfplaats.huisnummer",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2-3",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false,
+                    "originalFormName": "nonhiddenfieldsform1"
+                },
+                {
+                    "components": [
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadres-1",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummer-1",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1-2",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Naam contactpersoon",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamContactpersoon",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "E-mailadres",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailadres",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "label": "Telefoonnummer",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonnummer",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        }
+                    ],
+                    "key": "fieldSet-1",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "width": 6,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "md",
+                            "currentWidth": 6
+                        }
+                    ],
+                    "key": "columns",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/86e977d7-7dd8-4f91-9988-6e3ce2855852",
+        "uuid": "86e977d7-7dd8-4f91-9988-6e3ce2855852",
+        "name": "Vergunning",
+        "slug": "vergunning",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Bent u de eigenaar van de woning waarvoor u de vergunning aanvraagt?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "key": "bentUDeEigenaarVanDeWoningWaarvoorUDeVergunningAanvraagt",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "components": [
+                        {
+                            "label": "Naam eigenaar",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "naamEigenaar",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "Adres eigenaar",
+                            "tableView": true,
+                            "inputFormat": "plain",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "adresEigenaar",
+                            "type": "textarea",
+                            "input": true,
+                            "autoExpand": false
+                        },
+                        {
+                            "label": "Telefoon eigenaar",
+                            "tableView": true,
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "telefoonEigenaar",
+                            "type": "textfield",
+                            "input": true,
+                            "prefill": {
+                                "plugin": "",
+                                "attribute": "",
+                                "identifierRole": "main"
+                            }
+                        },
+                        {
+                            "label": "E-mailadres eigenaar",
+                            "tableView": true,
+                            "validateOn": "blur",
+                            "validate": {
+                                "required": true
+                            },
+                            "key": "eMailEigenaar",
+                            "type": "email",
+                            "input": true
+                        },
+                        {
+                            "html": "<p>Aan het einde van dit formulier moet u een machtiging uploaden van de eigenaar van de woning waarvoor u de vergunning aanvraagt.</p>",
+                            "label": "Content",
+                            "refreshOnChange": false,
+                            "key": "content-1",
+                            "type": "content",
+                            "input": false,
+                            "tableView": false
+                        }
+                    ],
+                    "key": "fieldSet",
+                    "type": "fieldset",
+                    "label": "Field Set",
+                    "tree": false,
+                    "input": false,
+                    "hidden": false,
+                    "legend": "",
+                    "prefix": "",
+                    "suffix": "",
+                    "unique": false,
+                    "widget": null,
+                    "dbIndex": false,
+                    "overlay": {
+                        "top": "",
+                        "left": "",
+                        "style": "",
+                        "width": "",
+                        "height": ""
+                    },
+                    "tooltip": "",
+                    "disabled": false,
+                    "multiple": false,
+                    "redrawOn": "",
+                    "tabindex": "",
+                    "validate": {
+                        "custom": "",
+                        "unique": false,
+                        "multiple": false,
+                        "required": false,
+                        "customPrivate": false,
+                        "strictDateValidation": false
+                    },
+                    "autofocus": false,
+                    "encrypted": false,
+                    "hideLabel": false,
+                    "modalEdit": false,
+                    "protected": false,
+                    "refreshOn": "",
+                    "tableView": false,
+                    "attributes": {},
+                    "errorLabel": "",
+                    "hideHeader": false,
+                    "persistent": false,
+                    "properties": {},
+                    "validateOn": "change",
+                    "clearOnHide": true,
+                    "customClass": "",
+                    "description": "",
+                    "placeholder": "",
+                    "defaultValue": null,
+                    "dataGridLabel": false,
+                    "labelPosition": "top",
+                    "showCharCount": false,
+                    "showWordCount": false,
+                    "calculateValue": "",
+                    "calculateServer": false,
+                    "allowMultipleMasks": false,
+                    "customDefaultValue": "",
+                    "allowCalculateOverride": false
+                },
+                {
+                    "html": "<p>Aan het einde van dit formulier moet een u kopie eigendomsbewijs of een voorlopige koopakte en een machtiging van de eigenaar op dit moment uploaden.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Ik vraag een vergunning aan",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "omdat ik kamers verhuur maar hiervoor nog geen vergunning heb aangevraagd",
+                            "value": "omdatIkKamersVerhuurMaarHiervoorNogGeenVergunningHebAangevraagd",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "om kamers te verhuren",
+                            "value": "omKamersTeVerhuren",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "om in een woning, naast een kantoor of bedrijf,  kamers te verhuren",
+                            "value": "omInEenWoningNaastEenKantoorOfBedrijfKamersTeVerhuren",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "om in een woning, naast een hotel, pension of bed & breakfast, kamers te verhuren",
+                            "value": "omInEenWoningNaastEenHotelPensionOfBedBreakfastKamersTeVerhuren",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "om boven een hotel, restaurant, café, toilet-, kantoor- of opslagruimte kamers te verhuren",
+                            "value": "omBovenEenHotelRestaurantCafeToiletKantoorOfOpslagruimteKamersTeVerhuren",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "voor het slopen van een deel van de  woning om kamers te verhuren",
+                            "value": "voorHetSlopenVanEenDeelVanDeWoningOmKamersTeVerhuren",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "ikVraagEenVergunningAan",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "Omschrijf uitgebreid waarom u een vergunning aanvraagt.",
+                    "description": "Aan het einde van dit formulier kunt u ook bijlagen uploaden dit uit te leggen.",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "omschrijfUitgebreidWaaromUEenVergunningAanvraagt",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns2",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/4873ad02-5c84-46a0-a885-3517364d7ac7",
+        "uuid": "4873ad02-5c84-46a0-a885-3517364d7ac7",
+        "name": "Adresgegevens",
+        "slug": "adresgegevens",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Adres van de woning waarvoor u een vergunning aanvraagt",
+                    "disablestreetcity": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "tableView": true,
+                    "key": "adresVanDeWoningWaarvoorUEenVergunningAanvraagt",
+                    "type": "adres",
+                    "input": true
+                },
+                {
+                    "label": "Hoe lang verhuurt u al kamers op dit adres?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "hoeLangVerhuurtUAlKamersOpDitAdres",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "label": "Hoe wordt de woning op dit moment gebruikt?",
+                    "description": "Bijvoorbeeld er woont een gezin (huishouden), het  staat leeg of het wordt gebruikt voor iets anders (bijvoorbeeld een kantoor of winkel).",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "hoeWordtDeWoningOpDitMomentGebruikt",
+                    "customConditional": "show = false;\n\nif ((data.ikVraagEenVergunningAan && data.ikVraagEenVergunningAan.length > 0) && (data.ikVraagEenVergunningAan != 'omdatIkKamersVerhuurMaarHiervoorNogGeenVergunningHebAangevraagd')){\n  show = true;\n} else{\n  show = false;\n}",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Hoeveel kamers verhuurt u nu?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true,
+                        "pattern": "^[0-9]*$"
+                    },
+                    "errorLabel": "Vul een getal in.",
+                    "key": "hoeveelKamersVerhuurtUNu",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "html": "<p>Aan het einde van dit formulier moet u een plattegrond van de woning uploaden waarop staat hoe de woning nu is ingedeeld. Noem bijvoorbeeld:&nbsp;</p><ul><li>kamers met nummers &nbsp;</li><li>toilet(ten) &nbsp;</li><li>douche(s), &nbsp;</li><li>keuken(s), &nbsp;</li><li>fietsenstalling &nbsp;</li><li>berging voor afval&nbsp;</li></ul>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content8",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns6",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/e41fdcb6-d4ea-46d5-b333-6fd3c1fc629c",
+        "uuid": "e41fdcb6-d4ea-46d5-b333-6fd3c1fc629c",
+        "name": "Kamerverhuurvergunning aanvragen",
+        "slug": "kamerverhuurvergunning-aanvragen",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Gaat u de woning verbouwen om het geschikt(er) te maken voor de nieuwe manier waarop het gebruikt gaat worden?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "gaatUDeWoningVerbouwenOmHetGeschiktErTeMakenVoorDeNieuweManierWaaropHetGebruiktGaatWorden",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": " U gaat verbouwen, misschien heeft u een omgevingsvergunning nodig. \n Doe de <a href=\"http://www.omgevingsloket.nl\" target=\"_blank\">vergunningencheck</a>.",
+                    "refreshOnChange": false,
+                    "key": "html4",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": " U gaat verbouwen, misschien heeft u een omgevingsvergunning nodig. \n Doe de <a href=\"http://www.omgevingsloket.nl\" target=\"_blank\">vergunningencheck</a>."
+                },
+                {
+                    "label": "Hoeveel kamers gaat u (na verbouwen) verhuren?",
+                    "tableView": true,
+                    "validate": {
+                        "required": true,
+                        "pattern": "^[0-9]*$",
+                        "customMessage": "Vul een getal in."
+                    },
+                    "key": "hoeveelKamersGaatUNaVerbouwenVerhuren",
+                    "type": "textfield",
+                    "input": true,
+                    "prefill": {
+                        "plugin": "",
+                        "attribute": "",
+                        "identifierRole": "main"
+                    }
+                },
+                {
+                    "html": "<p>Aan het einde van deze vragenlijst moet u een plattegrond van de woning meesturen waarop de indeling van de nieuwe situatie staat. Noem bijvoorbeeld:&nbsp;</p><ul><li>kamers met nummers &nbsp;</li><li>toilet(ten) &nbsp;</li><li>douche(s), &nbsp;</li><li>keuken(s), &nbsp;</li><li>fietsenstalling &nbsp;</li><li>berging voor afval&nbsp;</li></ul>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content2",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns4",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/202af58e-d5a3-484a-ad24-0a1d94739a28",
+        "uuid": "202af58e-d5a3-484a-ad24-0a1d94739a28",
+        "name": "Voorwaarden",
+        "slug": "voorwaarden",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "U gaat 5 of meer kamers verhuren. U moet u een \n<a href=\"https://www.nijmegen.nl/diensten/bouwen-en-wonen/brandveilig-gebruik-bouwwerk/\" target=\"_blank\">melding brandveiligheid</a> doen.",
+                    "refreshOnChange": false,
+                    "key": "html6",
+                    "customConditional": "show = false;\n\nif (data.hoeveelKamersGaatUNaVerbouwenVerhuren >= 5){\n  show = true;\n} else{\n  show = false;\n}",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "U gaat 5 of meer kamers verhuren. U moet u een \n<a href=\"https://www.nijmegen.nl/diensten/bouwen-en-wonen/brandveilig-gebruik-bouwwerk/\" target=\"_blank\">melding brandveiligheid</a> doen."
+                },
+                {
+                    "label": "U moet een fietsenparkeerplaats hebben per kamer. De parkeerplek mag in de tuin of in het huis zijn. In het huis moet het een aparte ruimte zijn, in de kelder of op de begane grond. Waar en hoe doet of gaat u dit doen?",
+                    "description": "Aan het einde van dit formulier moet u foto’s of tekeningen van de fietsenstalling uploaden.",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "waarEnHoeDoetOfGaatUDitDoen",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": "U moet een {{ data.calculatedValue }} parkeerplaats(en) van 2,5 bij 5 meter op het eigen terrein van de woning hebben.",
+                    "refreshOnChange": true,
+                    "key": "html8",
+                    "customConditional": "show = data.berekening > 0;",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": "U moet een {{ data.calculatedValue }} parkeerplaats(en) van 2,5 bij 5 meter op het eigen terrein van de woning hebben."
+                },
+                {
+                    "label": "Kunt u deze parkeerplaatsen op het eigen terrein maken?",
+                    "optionsLabelPosition": "right",
+                    "inline": false,
+                    "tableView": false,
+                    "values": [
+                        {
+                            "label": "ja",
+                            "value": "ja",
+                            "shortcut": ""
+                        },
+                        {
+                            "label": "nee",
+                            "value": "nee",
+                            "shortcut": ""
+                        }
+                    ],
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kuntUDezeParkeerplaatsenOpHetEigenTerreinMaken",
+                    "customConditional": "show = data.berekening > 0;",
+                    "type": "radio",
+                    "input": true
+                },
+                {
+                    "html": "<p>Aan het einde van dit formulier moet u een tekening op schaal 1:100 uploaden waarop de parkeerplaatsen staan.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content4",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "html": "<p>U moet een parkeerbalans rapport aanvragen bij een onderzoeksbureau om vast te stellen hoeveel nieuwe parkeerplaatsen er bij u in de buurt moeten komen. Aan het einde van dit formulier moet u dit rapport uploaden.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content5",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "HTML",
+                    "attrs": [
+                        {
+                            "attr": "",
+                            "value": ""
+                        }
+                    ],
+                    "content": " De directe buren mogen geen last hebben van geluid van de kamers, u moet voldoen aan het \n <a href=\"http://wetten.overheid.nl/BWBR0030461/2018-01-01#Hoofdstuk3_Afdeling3.2\" target=\"_blank\">bouwbesluit 2012</a>. \n Aan het einde  van dit formulier moet u een akoestisch onderzoek meesturen waarin u dit laat zien.",
+                    "refreshOnChange": false,
+                    "key": "html9",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false,
+                    "html": " De directe buren mogen geen last hebben van geluid van de kamers, u moet voldoen aan het \n <a href=\"http://wetten.overheid.nl/BWBR0030461/2018-01-01#Hoofdstuk3_Afdeling3.2\" target=\"_blank\">bouwbesluit 2012</a>. \n Aan het einde  van dit formulier moet u een akoestisch onderzoek meesturen waarin u dit laat zien."
+                },
+                {
+                    "label": "Voor huishoudelijk afval (bijvoorbeeld vuilniszakken) moet er een afgesloten berging in huis of in de tuin zijn. Waar en hoe slaat of gaat u huishoudelijk afval opslaan?",
+                    "description": "Aan het einde van deze vragenlijst moet u foto’s of tekeningen van de berging voor afval meesturen.",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "waarEnHoeSlaatOfGaatUHuishoudelijkAfvalOpslaan",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Wie is of wordt de beheerder van de woning waarin de kamers verhuurd worden?",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "wieIsOfWordtDeBeheerderVanDeWoningWaarinDeKamersVerhuurdWorden",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "E-mailadres of telefoonnummer van de beheerder",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "eMailadresOfTelefoonnummerVanDeBeheerder",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Opmerkingen",
+                    "tableView": true,
+                    "inputFormat": "plain",
+                    "key": "opmerkingen",
+                    "type": "textarea",
+                    "input": true,
+                    "autoExpand": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns5",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    },
+    {
+        "url": "http://localhost/api/v2/form-definitions/114daef7-c81b-4ffe-8857-f2700f4b64b4",
+        "uuid": "114daef7-c81b-4ffe-8857-f2700f4b64b4",
+        "name": "Bijlage",
+        "slug": "bijlage",
+        "configuration": {
+            "display": "form",
+            "components": [
+                {
+                    "label": "Toevoegen",
+                    "description": "Toegestaan zijn .jpg, .png, .jpeg of .pdf documenten die niet groter zijn dan 20MB.",
+                    "tableView": false,
+                    "storage": "url",
+                    "webcam": false,
+                    "fileTypes": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePattern": ".jpg,.png,.jpeg,.pdf",
+                    "fileMinSize": "1KB",
+                    "fileMaxSize": "20MB",
+                    "multiple": true,
+                    "validate": {
+                        "required": true,
+                        "customMessage": "U moet een bijlage toevoegen"
+                    },
+                    "key": "toevoegen",
+                    "type": "file",
+                    "url": "/cloud/s3",
+                    "input": true
+                },
+                {
+                    "html": "<p>Upload deze bijlagen. U kunt ook extra bijlagen meesturen om uw aanvraag nog duidelijker te maken.</p>",
+                    "label": "Content",
+                    "refreshOnChange": false,
+                    "key": "content7",
+                    "type": "content",
+                    "input": false,
+                    "tableView": false
+                },
+                {
+                    "label": "Kopie eigendomsbewijs of een voorlopige koopakte en een machtiging van de eigenaar op dit moment",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieEigendomsbewijsOfEenVoorlopigeKoopakteEnEenMachtigingVanDeEigenaarOpDitMoment",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Machtiging eigenaar van de woning waarvoor u de vergunning aanvraagt",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "machtigingEigenaarVanDeWoningWaarvoorUDeVergunningAanvraagt",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Plattegrond van de woning waarop staat hoe de woning <strong>nu</strong> is ingedeeld.",
+                    "description": "<p>Noem bijvoorbeeld:<ul><li>kamers met nummers</li><li>toilet(ten)</li><li>douche(s)</li><li>keuken(s)</li><li>fietsenstallingen</li><li>berging voor afval</li></ul></p>",
+                    "tableView": false,
+                    "defaultValue": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "plattegrondVanDeWoningWaaropStaatHoeDeWoningStrongNuStrongIsIngedeeld",
+                    "type": "checkbox",
+                    "input": true
+                },
+                {
+                    "label": "Plattegrond van de woning waarop de indeling van de nieuwe situatie staat",
+                    "description": "<p>Noem bijvoorbeeld:  \r\n<ul><li>kamers met nummers</li>\r\n<li>toilet(ten)</li> \r\n<li>douche(s)</li>  \r\n<li>keuken(s)keuken(s)</li>  \r\n<li>fietsenstalling</li>  \r\n<li>berging voor afval</li> \r\n</ul></p>",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "plattegrondVanDeWoningWaaropDeIndelingVanDeNieuweSituatieStaat",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Akoestisch onderzoek",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "akoestischOnderzoek",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Foto’s of tekeningen van de fietsenstalling",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "fotosOfTekeningenVanDeFietsenstalling",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Foto’s of tekeningen van de berging voor afval",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "fotosOfTekeningenVanDeBergingVoorAfval",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Tekeningen/doorsneden/berekeningen van genomen maatregelen om geluid tegen te houden",
+                    "tableView": false,
+                    "key": "tekeningenDoorsnedenBerekeningenVanGenomenMaatregelenOmGeluidTegenTeHouden",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Kopie huurovereenkomsten van de huurders, waarop de persoonsgegevens van de huurders, bijvoorbeeld de naam en het adres, niet zichtbaar zijn",
+                    "tableView": false,
+                    "key": "kopieHuurovereenkomstenVanDeHuurdersWaaropDePersoonsgegevensVanDeHuurdersBijvoorbeeldDeNaamEnHetAdresNietZichtbaarZijn",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Kopie huishoudelijke regelement",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "kopieHuishoudelijkeRegelement",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Tekening op schaal 1:100 parkeerplaatsen op eigen terrein",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "tekeningOpSchaal1100ParkeerplaatsenOpEigenTerrein",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Parkeerbalans rapport",
+                    "tableView": false,
+                    "validate": {
+                        "required": true
+                    },
+                    "key": "parkeerbalansRapport",
+                    "type": "checkbox",
+                    "input": true,
+                    "defaultValue": false
+                },
+                {
+                    "label": "Columns",
+                    "columns": [
+                        {
+                            "components": [],
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "size": "sm",
+                            "currentWidth": 3
+                        },
+                        {
+                            "components": [],
+                            "size": "sm",
+                            "width": 3,
+                            "offset": 0,
+                            "push": 0,
+                            "pull": 0,
+                            "currentWidth": 3
+                        }
+                    ],
+                    "key": "columns1",
+                    "type": "columns",
+                    "input": false,
+                    "tableView": false,
+                    "hideOnChildrenHidden": false
+                }
+            ]
+        }
+    }
+]

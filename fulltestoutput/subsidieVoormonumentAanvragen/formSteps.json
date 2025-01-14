@@ -1,0 +1,32 @@
+[
+    {
+        "uuid": "cf2bf09a-d048-4da5-b5c5-716cc9f64cd6",
+        "index": "0",
+        "slug": "subsidie",
+        "form_definition": "http://localhost/api/v2/form-definitions/a4e3cc79-9891-4a58-b632-cc103e1b7559"
+    },
+    {
+        "uuid": "6b23f1d9-6cc0-4c45-a8b3-91d9bc777009",
+        "index": "1",
+        "slug": "gegevens-monument",
+        "form_definition": "http://localhost/api/v2/form-definitions/97af36ab-fdae-41ef-8a2b-8ff95c06ae68"
+    },
+    {
+        "uuid": "fd31b01e-0663-4129-8cb2-c320014f8c98",
+        "index": "2",
+        "slug": "iban",
+        "form_definition": "http://localhost/api/v2/form-definitions/29ea1cb2-8b20-4175-97ee-4d087c07c5f6"
+    },
+    {
+        "uuid": "6975896f-3bf4-4a51-99c2-95f4d1e839c5",
+        "index": "3",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/5e64b31e-d3f9-4f6f-a665-be4f25fd67ad"
+    },
+    {
+        "uuid": "7b250ef5-8aa5-41a7-bb43-c35382fc8906",
+        "index": "4",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/4eac15d5-e3f9-4414-96d5-e2280f0117fb"
+    }
+]

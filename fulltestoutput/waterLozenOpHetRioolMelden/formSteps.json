@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "7da1f2b9-1eb5-4f2d-8d3a-bb9bab9e90bf",
+        "index": "0",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/ce2075db-ef04-4136-a011-aefe4c27282d"
+    },
+    {
+        "uuid": "13b05cbd-b704-4662-9290-e158dab1ca60",
+        "index": "1",
+        "slug": "lozing",
+        "form_definition": "http://localhost/api/v2/form-definitions/e5f93f16-c821-4e39-84d4-5d1ca5d25d7b"
+    },
+    {
+        "uuid": "215c1e67-0571-4d09-8dde-bfca87c4d17f",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/12da3de7-d523-4505-b606-a13cb659c502"
+    }
+]

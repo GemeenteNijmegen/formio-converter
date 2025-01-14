@@ -1,0 +1,38 @@
+[
+    {
+        "uuid": "7788d957-eb4a-4c76-8eaa-560122d934ec",
+        "index": "0",
+        "slug": "algemeen",
+        "form_definition": "http://localhost/api/v2/form-definitions/e8d51c21-997d-481d-9117-8ecf30bad467"
+    },
+    {
+        "uuid": "9d95416d-6a5c-4007-8a64-ffc8a11e16dc",
+        "index": "1",
+        "slug": "markt",
+        "form_definition": "http://localhost/api/v2/form-definitions/e0649d87-4fe9-4d48-bd56-6d19e6481cd9"
+    },
+    {
+        "uuid": "6db99c5e-1d22-4d49-a2c5-09ff1f45f096",
+        "index": "2",
+        "slug": "dagen-en-tijden-markt",
+        "form_definition": "http://localhost/api/v2/form-definitions/bd787a03-56bb-4463-988a-dfd802e6175b"
+    },
+    {
+        "uuid": "8615cd3e-4703-4dd9-be31-7e15c106e392",
+        "index": "3",
+        "slug": "plaats",
+        "form_definition": "http://localhost/api/v2/form-definitions/b3320237-bc82-4bdd-8a5f-818dbada739c"
+    },
+    {
+        "uuid": "c1773a11-581c-4334-83ef-23fae56ec1a4",
+        "index": "4",
+        "slug": "terrein",
+        "form_definition": "http://localhost/api/v2/form-definitions/0fcd4f67-9ec0-44e9-9e71-ce2a66f9a301"
+    },
+    {
+        "uuid": "eb9213ae-e70d-4ecb-a169-824a1a13a7cd",
+        "index": "5",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/56528ef8-2efc-45ba-b73b-08927d6b6aea"
+    }
+]

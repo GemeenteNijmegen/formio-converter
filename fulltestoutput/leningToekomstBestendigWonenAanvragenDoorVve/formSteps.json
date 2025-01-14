@@ -1,0 +1,26 @@
+[
+    {
+        "uuid": "c541f00b-a81a-48cb-9903-2e8978c5a7e3",
+        "index": "0",
+        "slug": "woning",
+        "form_definition": "http://localhost/api/v2/form-definitions/6676a882-6364-4b5a-9709-281dff85dc76"
+    },
+    {
+        "uuid": "3466d171-33a5-4c80-b828-83384518a228",
+        "index": "1",
+        "slug": "maatregelen",
+        "form_definition": "http://localhost/api/v2/form-definitions/716f18fb-0a19-43f9-aea1-3bb165da9d06"
+    },
+    {
+        "uuid": "177b1d8d-2633-4031-a767-dc6616aa8d2c",
+        "index": "2",
+        "slug": "bijlagen",
+        "form_definition": "http://localhost/api/v2/form-definitions/60ccff19-7d97-418d-b522-ff9ea6ead2de"
+    },
+    {
+        "uuid": "abf37991-9c0a-4440-b9a2-5433be3daa31",
+        "index": "3",
+        "slug": "uw-gegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/267138ae-8eb3-4b5c-8f74-59149b87a832"
+    }
+]

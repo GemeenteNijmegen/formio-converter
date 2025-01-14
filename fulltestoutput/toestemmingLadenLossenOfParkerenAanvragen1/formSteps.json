@@ -1,0 +1,32 @@
+[
+    {
+        "uuid": "74b15639-1622-4c90-b26b-01712a8b4b26",
+        "index": "0",
+        "slug": "toestemming",
+        "form_definition": "http://localhost/api/v2/form-definitions/11d5e17e-a6b7-4e1d-a5e5-42ad63bc93a7"
+    },
+    {
+        "uuid": "71fdc7da-b597-4fcc-a827-481d4806ddef",
+        "index": "1",
+        "slug": "laden-en-lossen",
+        "form_definition": "http://localhost/api/v2/form-definitions/9aa0f62f-9397-405c-9461-fd1db1cfed4a"
+    },
+    {
+        "uuid": "7d5abebc-0dec-4436-a72e-17366f93a48f",
+        "index": "2",
+        "slug": "parkeren-vergunninghoudersplaats",
+        "form_definition": "http://localhost/api/v2/form-definitions/f83f28ef-2bd1-46e1-92bf-57be387e149c"
+    },
+    {
+        "uuid": "4228cbb2-fe0d-4068-a81b-ced8861e57b0",
+        "index": "3",
+        "slug": "anders",
+        "form_definition": "http://localhost/api/v2/form-definitions/df279c06-2682-4e95-bca2-08a6d2ee81c7"
+    },
+    {
+        "uuid": "7ddad6db-1f31-4f54-aa4f-d7be39beef50",
+        "index": "4",
+        "slug": "contactgegevens",
+        "form_definition": "http://localhost/api/v2/form-definitions/e6c0aed4-e247-4fe6-afcb-de803d5bf1cd"
+    }
+]

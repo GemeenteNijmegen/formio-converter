@@ -1,0 +1,20 @@
+[
+    {
+        "uuid": "24a56a67-7b14-49fb-a6e2-d2c52988a583",
+        "index": "0",
+        "slug": "page-1",
+        "form_definition": "http://localhost/api/v2/form-definitions/cb7d7237-2eed-4788-b40c-b9ae6dbaa99b"
+    },
+    {
+        "uuid": "cc9b8f3b-7b3b-44fd-b6b9-ec122c00c8d8",
+        "index": "1",
+        "slug": "page-2",
+        "form_definition": "http://localhost/api/v2/form-definitions/5c32bef0-1ee1-4946-b06d-e4b016c7c1b2"
+    },
+    {
+        "uuid": "19c41fd9-3f2b-4094-9905-a336fd26bd29",
+        "index": "2",
+        "slug": "page-3",
+        "form_definition": "http://localhost/api/v2/form-definitions/efe8d001-d1bb-473b-a14a-e2a719f6900a"
+    }
+]
