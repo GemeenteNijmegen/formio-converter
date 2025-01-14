@@ -53,6 +53,7 @@ export function convertFormDefinition(formdefinition: any) {
     // Note: Here we make the assumption that the wizzard form always exists from panels on the root level!
     for (const [i, component] of Object.entries(formdefinition.components as any[])) {
 
+      // Create a form definition for export
       const uuid = randomUUID();
       const formDefinition = {
         url: `http://localhost/api/v2/form-definitions/${uuid}`,
@@ -64,15 +65,18 @@ export function convertFormDefinition(formdefinition: any) {
           components: component.components.map((element: any) => { return { ...element, conditional: undefined }; }),
         },
       };
+      formDefinitions.push(formDefinition);
+      
+      // Create a form step for export
       const step = {
         uuid: randomUUID(),
         index: i,
         slug: slugify(component.title, { strict: true, lower: true }),
         form_definition: `http://localhost/api/v2/form-definitions/${uuid}`,
       };
-      formDefinitions.push(formDefinition);
       steps.push(step);
-    };
+
+    }
 
     // Create a form to wrap the steps and definitions in
     const formUuid = randomUUID();
