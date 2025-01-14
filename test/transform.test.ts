@@ -1,22 +1,33 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { convertHtmlContent, removeSubform } from '../src/convert';
+import { convertHtmlContent, replaceSubform } from '../src/convert';
 import { FormDefinitionTransformer } from '../src/FromDefinitionTransformer';
 
 describe('FormDefinitionTransformer', () => {
 
+  const exportFile = readFileSync(join(__dirname, '../', 'testdata', '2024-10-05-ontwikkel.json'), { encoding: 'utf-8' });
+  const formDefinitionsExport = JSON.parse(exportFile);
+
   test('Remove subforms', () => {
-    const form = readFileSync(join(__dirname, 'sampleformdefinition.json'), { encoding: 'utf-8' });
-    const jsonForm = JSON.parse(form);
-    new FormDefinitionTransformer(removeSubform).transform(jsonForm);
-    expect(JSON.stringify(jsonForm)).not.toMatch('"key": "nonhiddenfields');
+    const testform = formDefinitionsExport.forms.devops;
+    new FormDefinitionTransformer(replaceSubform, { formDefinitionsExport: formDefinitionsExport }).transform(testform);
+    expect(JSON.stringify(formDefinitionsExport)).not.toMatch('"key": "nonhiddenfields');
   });
 
   test('Convert htmlelements', () => {
-    const form = readFileSync(join(__dirname, 'sampleformdefinition.json'), { encoding: 'utf-8' });
-    const jsonForm = JSON.parse(form);
-    new FormDefinitionTransformer(convertHtmlContent).transform(jsonForm);
-    expect(JSON.stringify(jsonForm)).not.toMatch('htmlelement');
+    const testform = formDefinitionsExport.forms.individueleInkomenstoeslagAanvragen2;
+    new FormDefinitionTransformer(convertHtmlContent, { formDefinitionsExport: formDefinitionsExport }).transform(testform);
+    expect(JSON.stringify(testform)).not.toMatch('htmlelement');
+  });
+
+  test('Missing titles?', () => {
+    console.log();
+    for (const formName of Object.keys(formDefinitionsExport.forms)) {
+      const form = formDefinitionsExport.forms[formName];
+      if (!form.title) {
+        console.log(form.label);
+      }
+    }
   });
 
 });

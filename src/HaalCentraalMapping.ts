@@ -2,7 +2,10 @@ export class HaalCentraalMapping {
 
   static readonly map: Record<string, string> = {
     straatnaam: 'verblijfplaats.woonplaats',
-    naamingelogdegebruikerfieldnonhidden: '?',
+    naam: 'verblijfplaats.huisnummer',
+    huisnummer: 'verblijfplaats.huisnummer',
+    postcode: 'verblijfplaats.huisnummer',
+    woonplaats: 'verblijfplaats.huisnummer',
     // TODO check and finish mapping
   };
 

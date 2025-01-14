@@ -103,21 +103,22 @@ export class FormDefinitionParser {
    * and throws an error if any are missing.
    */
   setFormMetaData() {
-    const REQUIRED_METADATA_KEYS = ['name', 'title', 'created', 'modified', 'type'];
+    const REQUIRED_METADATA_KEYS = ['name', 'title', 'type'];
     const missingKeys = REQUIRED_METADATA_KEYS.filter(
       key => !this.formDefinitionObject.hasOwnProperty(key) || this.formDefinitionObject[key] === undefined,
     );
+
     if (missingKeys.length > 0) {
       throw new Error(
         `Parsing Form Definition failed. Missing required metadata keys: ${missingKeys.join(', ')}`,
       );
     }
-    const { name, title, created, modified, type } = this.formDefinitionObject;
 
+    const { name, title, created, modified, type } = this.formDefinitionObject;
     this.formName = name;
     this.formTitle = title;
-    this.createdDate = created;
-    this.modifiedDate = modified;
+    this.createdDate = created ?? new Date().toISOString();
+    this.modifiedDate = modified ?? new Date().toISOString();
     this.formType = type;
   };
 

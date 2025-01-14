@@ -1,6 +1,10 @@
 import objectHash from 'object-hash';
 
-type Modifier = (input: any) => any[] | undefined
+type Modifier = (input: any, context: FormDefinitionTransformerContext) => any[] | undefined
+
+export interface FormDefinitionTransformerContext {
+  formDefinitionsExport: any;
+}
 
 export class FormDefinitionTransformer {
 
@@ -8,9 +12,11 @@ export class FormDefinitionTransformer {
   private parentKey: string | undefined = undefined;
   private parent: any[] = [];
   private modifier: Modifier;
+  private context: FormDefinitionTransformerContext;
 
-  constructor(modifier: Modifier) {
+  constructor(modifier: Modifier, context: FormDefinitionTransformerContext) {
     this.modifier = modifier;
+    this.context = context;
   }
 
   /**
@@ -53,7 +59,7 @@ export class FormDefinitionTransformer {
     }
 
     // Check if we want to modify the object, (e.g. items is not undefined)
-    const items = this.modifier(definitionObject);
+    const items = this.modifier(definitionObject, this.context);
 
     // Replace this item with the new item(s)
     if (items) {
@@ -65,7 +71,7 @@ export class FormDefinitionTransformer {
 
       // Find the index of the object currently under consideration
       const listIndex = parentObject.findIndex((x:any) => objectHash(x) == listItemId);
-      console.log('Items returned modifying current list', parentObject.length, listItemId, listIndex, items.length);
+      // console.log('Items returned modifying current list', parentObject.length, listItemId, listIndex, items.length);
       if (items.length == 0) {
         parentObject.splice(listIndex, 1);
       } else {

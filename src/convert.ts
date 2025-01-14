@@ -1,11 +1,19 @@
 import { randomUUID } from 'crypto';
 import * as fs from 'fs';
+import { join } from 'path';
 import slugify from 'slugify';
 import { FormDefinitionParser } from './FormDefinitionParser';
-import { FormDefinitionTransformer } from './FromDefinitionTransformer';
+import { FormDefinitionTransformer, FormDefinitionTransformerContext } from './FromDefinitionTransformer';
 import { HaalCentraalMapping } from './HaalCentraalMapping';
 import { OpenFormulierenFormDefinition } from './OpenFormulierenFormDefinition';
+import { wrapInFieldSetComponent } from './wrapInContainerComponent';
 
+
+const emptyPrefill = {
+  plugin: '',
+  attribute: '',
+  identifierRole: 'main',
+};
 
 export async function convert(source: string, destination?: string) {
   console.log(source, destination);
@@ -23,18 +31,14 @@ export async function convert(source: string, destination?: string) {
 function removeDuplicateKeys(json: any, step: number) {
   const parser = new FormDefinitionParser(json);
   const keys = parser.getAllFormDefinitionComponents().map(component => component.key);
-  console.debug('removing duplicates');
   let replaceKeys = [];
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i];
     if (keys.includes(key, i + 1)) {
-      const firstComponent = parser.getAllFormDefinitionComponents().find(component => component.key == key);
-      console.log('duplicate key', key, `${firstComponent?.keyPath}`);
       replaceKeys.push(key);
     }
   }
   for (let key of replaceKeys) {
-    console.debug('replacing key', key);
     json = JSON.parse(JSON.stringify(json).replace(`"key":"${key}"`, `"key":"${key}-${step}"`)); // I'm very sorry
   }
   if (replaceKeys.length > 0) {
@@ -49,6 +53,7 @@ export function convertFormDefinition(input: any) {
     // Remove all _nijmegen suffixes in the form definition
     let raw = JSON.stringify(input);
     raw = raw.replace(/_nijmegen/g, '');
+    raw = raw.replace(/checkboxnijmegen/g, 'checkbox'); // Special fix for checkboxes
     let formdefinition = JSON.parse(raw);
 
     const parser = new FormDefinitionParser(formdefinition);
@@ -59,27 +64,30 @@ export function convertFormDefinition(input: any) {
     }
     console.log('Form is a wizard 🧙, create multistep export');
 
-    // Loop through the form and create a new step & definition for each pannel in the form definition
-    const panels = parser.getAllFormDefinitionComponents().filter(component => component.type == 'panel');
+    // The form might contain duplicate keys? I dont know
     formdefinition = removeDuplicateKeys(formdefinition, 1);
     let steps = [];
     let formDefinitions = [];
-    for (let i = 0; i < panels.length; i++) {
+
+    // Loop through the form and create a new step & definition for each pannel in the form definition
+    // Note: Here we make the assumption that the wizzard form always exists from panels on the root level!
+    for (const [i, component] of Object.entries(formdefinition.components as any[])) {
+
       const uuid = randomUUID();
       const formDefinition = {
         url: `http://localhost/api/v2/form-definitions/${uuid}`,
         uuid,
-        name: formdefinition.components[i].title.slice(0, 49),
-        slug: slugify(formdefinition.components[i].title, { strict: true, lower: true }),
+        name: component.title.slice(0, 49),
+        slug: slugify(component.title, { strict: true, lower: true }),
         configuration: {
           display: 'form',
-          components: formdefinition.components[i].components.map((component: any) => { return { ...component, conditional: undefined }; }),
+          components: component.components.map((element: any) => { return { ...element, conditional: undefined }; }),
         },
       };
       const step = {
         uuid: randomUUID(),
         index: i,
-        slug: slugify(formdefinition.components[i].title, { strict: true, lower: true }),
+        slug: slugify(component.title, { strict: true, lower: true }),
         form_definition: `http://localhost/api/v2/form-definitions/${uuid}`,
       };
       formDefinitions.push(formDefinition);
@@ -120,7 +128,7 @@ export function convertFormDefinition(input: any) {
 
   } catch (error) {
     console.error(error);
-    throw Error('issue converting formdefinition');
+    throw Error(`issue converting formdefinition: ${error}`);
   }
 }
 
@@ -128,54 +136,115 @@ export function convertFormDefinition(input: any) {
 export async function convertFullFormDefinition(source: string, destination?: string) {
   console.log('Converting:', source, destination);
 
+  const start = Date.now();
+
   const dest = destination ?? './output';
   let raw = fs.readFileSync(source).toString('utf-8');
-  const form = JSON.parse(raw);
+  raw = raw.replace(/_nijmegen/g, ''); // Convert all fields to normal fields (without _nijmegen suffix)
+  raw = raw.replace(/checkboxnijmegen/g, 'checkbox'); // Special fix for checkboxes
+  const json = JSON.parse(raw);
 
-  // const subformTransformer = new FormDefinitionTransformer(removeSubform);
-  // const prefillTransformer = new FormDefinitionTransformer(addBrpPrefillConfiguration);
-  const contentTransformer = new FormDefinitionTransformer(convertHtmlContent);
-  const hiddenfieldsTransformer = new FormDefinitionTransformer(removeHiddenFields);
-  const overzichtsTransformer = new FormDefinitionTransformer(removeOverzichtsPannels);
+  if (!json?.forms) {
+    throw Error('Cannot find form definitions in this export, is this a full export?');
+  }
+
+  const context = {
+    formDefinitionsExport: json,
+  };
+
+  const subformTransformer = new FormDefinitionTransformer(replaceSubform, context);
+  const prefillTransformer = new FormDefinitionTransformer(addBrpPrefill, context);
+  const contentTransformer = new FormDefinitionTransformer(convertHtmlContent, context);
+  const hiddenfieldsTransformer = new FormDefinitionTransformer(removeHiddenFields, context);
+  const overzichtsTransformer = new FormDefinitionTransformer(removeOverzichtsPannels, context);
+  const buttonTransformer = new FormDefinitionTransformer(removeButtons, context);
+  const containerTransformer = new FormDefinitionTransformer(convertContainers, context);
 
   // For each form do a couple of steps
+  const messages: string[] = [];
+  for (const formName of Object.keys(json.forms)) {
 
-  // console.log('Processing form: ', formName);
-  // const form = json.forms[formName];
+    try {
+      console.log('Processing form: ', formName);
+      const form = json.forms[formName];
 
-  // Step 1. Remove hiddenfields (not important in OpenForms)
-  hiddenfieldsTransformer.transform(form);  // Tested
+      // Step 0. Replace all subforms in the form definition tree
+      subformTransformer.transform(form);
 
-  // Step 2. Remove overzichts pages
-  overzichtsTransformer.transform(form); // Tested
+      // Step 1. Replace all containers with fieldsets
+      containerTransformer.transform(form);
 
-  // Step 3. Fix HTML elements (as they do not work in OpenForms in the same way)
-  contentTransformer.transform(form); // Tested
+      // Step 2. Remove hiddenfields (not important in OpenForms)
+      hiddenfieldsTransformer.transform(form);
 
-  // Step 3. Replace all subforms in the form definition tree
-  // subformTransformer.transform(form); // TODO do lookup and on the fly conversion here
+      // Step 3. Remove overzichts pages
+      overzichtsTransformer.transform(form);
 
-  // Step 4. Add BRP prefill to form fields that need it.
-  // prefillTransformer.transform(form); // TODO make the mapping and test if we can actually use this
+      // Step 4. Fix HTML elements (as they do not work in OpenForms in the same way)
+      contentTransformer.transform(form);
 
+      // Step 5. Add BRP prefill to form fields that need it.
+      prefillTransformer.transform(form);
 
-  // DUMP halffabrikaat (to be removed)
-  if (!fs.existsSync(dest)) {
-    fs.mkdirSync(dest, { recursive: true });
+      // Step 6. Remove all buttons (provided by OpenForms now)
+      buttonTransformer.transform(form);
+
+      // Do the conversion
+      const converted = convertFormDefinition(form);
+
+      // When conversion succedded (no error thrown) write the result to output dir
+      const formDest = join(dest, formName);
+      if (!fs.existsSync(formDest)) {
+        fs.mkdirSync(formDest, { recursive: true });
+      }
+      converted.writeToFileSystem(formDest);
+      await converted.writeZipToFileSystem(formDest);
+
+      // DUMP halffabrikaat (to be removed)
+      fs.writeFileSync(formDest + '/dump.json', JSON.stringify(form, null, 4));
+
+    } catch (error) {
+      messages.push(`Failed form conversion: ${formName} (${error})`);
+      console.log(error);
+    }
+
   }
-  fs.writeFileSync(dest+'/dump.json', JSON.stringify(form, null, 4));
 
-  // Convert and save
-  const converted = convertFormDefinition(form);
-  converted.writeToFileSystem(dest);
-  await converted.writeZipToFileSystem(dest);
+  messages.forEach(x => console.log(x));
+  console.log('Failed: ', messages.length);
+
+  const time = Date.now() - start;
+  console.log('Conversion took ', time/1000, 's');
 }
 
-export function removeSubform(input: any) {
-  if (input?.type == 'form' && input?.key) {
-    console.log('Replacing subform with form contents', input.key);
-    return [] as any[];
+//////////////////////////////////////////////////////////
+// BELOW ARE FUNCTIONS TO APPLY TO THE FORM DEFINITIONS //
+//////////////////////////////////////////////////////////
+
+export function replaceSubform(input: any, context: FormDefinitionTransformerContext) {
+  if (input?.type == 'form' && input?.form) {
+    const key = input.form;
+    const form = context.formDefinitionsExport?.forms?.[key];
+    const components = form?.components;
+    if (!form || !components) {
+      throw Error(`Cannot find subform or components in subform for ${key}`);
+    }
+    const component = wrapInFieldSetComponent(components, input.label, input.key, input.id);
+    return [{ ...component, originalFormName: key }];
   };
+  // Do not modify this object
+  return undefined;
+}
+
+export function convertContainers(input: any) {
+  if (input?.type == 'container') {
+    const components = input.components;
+    if (!components) {
+      throw Error(`Cannot replace container without components in ${input.key}`);
+    }
+    return [wrapInFieldSetComponent(components, input.label, input.key, input.id)];
+  };
+  // Do not modify this object
   return undefined;
 }
 
@@ -184,7 +253,7 @@ export function removeHiddenFields(input: any) {
     && input.customClass.includes('hiddenfield')
     && !input.customClass.includes('nonhiddenfield')
   ) {
-    console.log('Found a hiddenfield, removing it', input.key);
+    // console.log('Found a hiddenfield, removing it', input.key);
     return [] as any[];
   };
   return undefined;
@@ -192,28 +261,56 @@ export function removeHiddenFields(input: any) {
 
 export function removeOverzichtsPannels(input: any) {
   if (input?.type == 'panel' && input?.title == 'Overzicht') {
-    console.log('Found a overzichts page, removing it', input.key);
+    // console.log('Found a overzichts page, removing it', input.key);
     return [] as any[];
   };
   return undefined;
 }
 
-export function addBrpPrefillConfiguration(input: any) {
-  if (input?.label && (input?.type == 'textfield' || input?.type == 'textfield_nijmegen')) {
-    const prefill = HaalCentraalMapping.getPrefillConfiguration(input);
-    if (prefill) {
-      return [{ ...input, prefill }];
-    }
-  }
+export function removeButtons(input: any) {
+  if (input?.type == 'button') {
+    // console.log('Found a button, removing it...');
+    return [] as any[];
+  };
   return undefined;
 }
 
 export function convertHtmlContent(input: any) {
   if (input?.label && input?.type == 'htmlelement') {
-    console.log('Found htmlelement', input.label);
+
+    // Check if it is a heading (h1 or h2) if so drop the element.
+    // In formio we manually supply the title and subtitle
+    if (input.content?.startsWith('<h1>') && input.content?.endsWith('</h1>')) {
+      return [];
+    }
+    if (input.content?.startsWith('<h2>') && input.content?.endsWith('</h2>')) {
+      return [];
+    }
+
+    // console.log('Found htmlelement', input.label);
     const html = input.content;
     const type = 'content';
     return [{ ...input, html, type }];
   }
+  return undefined;
+}
+
+export function addBrpPrefill(input: any) {
+
+  // If field does not yet have prefill add it (otherwise openforms interface breaks)
+  if (input?.type == 'textfield' && !input.prefill) {
+    // console.log('Adding empty prefill');
+    return [{ ...input, prefill: emptyPrefill }];
+  }
+
+  // For all Nonhiddenfields prefill add the corresponding BRP prefill config to its elements
+  if (input?.type == 'fieldset' && input?.originalFormName?.includes('nonhiddenfields')) {
+    const newComponents = input.components.map((component: any) => {
+      const prefill = HaalCentraalMapping.getPrefillConfiguration(component);
+      return { ...component, prefill };
+    });
+    // console.log('Adding actual prefill to former nonhiddenfields');
+    return [{ ...input, components: newComponents }];
+  };
   return undefined;
 }
