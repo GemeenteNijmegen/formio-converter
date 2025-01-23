@@ -1,6 +1,6 @@
 
 
-export function wrapInFieldSetComponent(components: any[], label: string, key: string, id: string) {
+export function wrapInFieldSetComponent(components: any[], label: string, key: string, id: string, hideHeader: boolean = true) {
   return {
     id: id,
     components: components,
@@ -46,7 +46,7 @@ export function wrapInFieldSetComponent(components: any[], label: string, key: s
     attributes: {},
 
     errorLabel: '',
-    hideHeader: false,
+    hideHeader: hideHeader,
     persistent: false,
     properties: {},
     validateOn: 'change',
