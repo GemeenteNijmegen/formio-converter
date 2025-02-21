@@ -5,8 +5,10 @@
 - First build
 - Then run like: `node lib/export.js convert <inputfile> <output-dir> (optional)`
 
+Note: the input file must be a full fromio export containing all form definitions. This is required the tool replaces nested forms with the form definition of the references form.
+
 Example:
-```node lib/export.js convert sampleformdefinition.json test-export```
+```node lib/export.js convert sampleformiofullexport.json test-export```
 
 
 ## What does the conversion do?
