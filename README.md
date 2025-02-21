@@ -38,7 +38,7 @@ This feature needs to be extended with:
 - Variable creation that will be prefilled with the KVK or BRP values.
 - Logic rule that maps those variables (when available) to the specific field.
 
-<detail>
+<details>
 <summary>Technical details on how to do this</summary>
 Variables can be added to the import set of files by creating a formVariables.json file like below. Note this includes prefill configuration.
 
@@ -100,4 +100,4 @@ Logic rules to fill the field can be added to the import set of files by creatin
 ]
 ```
 
-</detail>
+</details>
