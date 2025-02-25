@@ -4,7 +4,7 @@ type Modifier = (input: any, context: FormDefinitionTransformerContext) => any[]
 
 export interface FormDefinitionTransformerContext {
   formDefinitionsExport: any;
-  output: any[];
+  output: string[];
 }
 
 export class FormDefinitionTransformer {
@@ -65,13 +65,13 @@ export class FormDefinitionTransformer {
     // Replace this item with the new item(s)
     if (items) {
 
-      const parentObject = this.parent[this.parent.length-1];
+      const parentObject = this.parent[this.parent.length - 1];
       if (listItemId == undefined) {
         throw Error('Expected parent element of a form component to be an array');
       }
 
       // Find the index of the object currently under consideration
-      const listIndex = parentObject.findIndex((x:any) => objectHash(x) == listItemId);
+      const listIndex = parentObject.findIndex((x: any) => objectHash(x) == listItemId);
       // console.log('Items returned modifying current list', parentObject.length, listItemId, listIndex, items.length);
       if (items.length == 0) {
         parentObject.splice(listIndex, 1);

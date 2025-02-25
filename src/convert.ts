@@ -117,8 +117,8 @@ export function convertFormDefinition(formdefinition: any) {
 }
 
 
-export async function convertFullFormDefinition(source: string, destination?: string) {
-  console.log('Converting:', source, destination);
+export async function convertFullFormDefinition(source: string, destination?: string, options?: any) {
+  console.log('Converting:', source, destination, options);
 
   const start = Date.now();
 
@@ -140,7 +140,6 @@ export async function convertFullFormDefinition(source: string, destination?: st
   const subformTransformer = new FormDefinitionTransformer(replaceSubform, context);
   const prefillTransformer = new FormDefinitionTransformer(addBrpPrefill, context);
   const contentTransformer = new FormDefinitionTransformer(convertHtmlContent, context);
-  const hiddenfieldsTransformer = new FormDefinitionTransformer(removeHiddenFields, context);
   const overzichtsTransformer = new FormDefinitionTransformer(removeOverzichtsPannels, context);
   const buttonTransformer = new FormDefinitionTransformer(removeButtons, context);
   const containerTransformer = new FormDefinitionTransformer(convertContainers, context);
@@ -160,6 +159,8 @@ export async function convertFullFormDefinition(source: string, destination?: st
       containerTransformer.transform(form);
 
       // Step 2. Remove hiddenfields (not important in OpenForms)
+      const hiddenFieldsContext = { formDefinitionsExport: json, output: [] };
+      const hiddenfieldsTransformer = new FormDefinitionTransformer(removeHiddenFields, hiddenFieldsContext);
       hiddenfieldsTransformer.transform(form);
 
       // Step 3. Remove overzichts pages
@@ -169,7 +170,10 @@ export async function convertFullFormDefinition(source: string, destination?: st
       contentTransformer.transform(form);
 
       // Step 5. Add BRP prefill to form fields that need it.
-      prefillTransformer.transform(form);
+      if (options.convertPrefill) {
+        console.log('Experimental convert prefill enabled!');
+        prefillTransformer.transform(form);
+      }
 
       // Step 6. Remove all buttons (provided by OpenForms now)
       buttonTransformer.transform(form);
@@ -193,6 +197,7 @@ export async function convertFullFormDefinition(source: string, destination?: st
       // Write halffabrikaaten as well
       fs.writeFileSync(formDest + '/dump.json', JSON.stringify(form, null, 4));
       fs.writeFileSync(formDest + '/logic-dump.json', logicScannerContext.output.join('\n'));
+      fs.writeFileSync(formDest + '/prefill-dump.json', hiddenFieldsContext.output.join('\n'));
 
     } catch (error) {
       messages.push(`Failed form conversion: ${formName} (${error})`);
@@ -205,7 +210,7 @@ export async function convertFullFormDefinition(source: string, destination?: st
   console.log('Failed: ', messages.length);
 
   const time = Date.now() - start;
-  console.log('Conversion took ', time/1000, 's');
+  console.log('Conversion took ', time / 1000, 's');
 }
 
 //////////////////////////////////////////////////////////
@@ -239,12 +244,13 @@ export function convertContainers(input: any) {
   return undefined;
 }
 
-export function removeHiddenFields(input: any) {
+export function removeHiddenFields(input: any, context: FormDefinitionTransformerContext) {
   if (input?.customClass
     && input.customClass.includes('hiddenfield')
     && !input.customClass.includes('nonhiddenfield')
   ) {
     // console.log('Found a hiddenfield, removing it', input.key);
+    context.output.push(`${input.key} has classes: ${input.customClass}`);
     return [] as any[];
   };
   return undefined;
