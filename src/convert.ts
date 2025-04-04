@@ -4,15 +4,8 @@ import { join } from 'path';
 import slugify from 'slugify';
 import { FormDefinitionParser } from './FormDefinitionParser';
 import { FormDefinitionTransformer, FormDefinitionTransformerContext } from './FromDefinitionTransformer';
-import { HaalCentraalMapping } from './HaalCentraalMapping';
 import { OpenFormulierenFormDefinition } from './OpenFormulierenFormDefinition';
 import { wrapInFieldSetComponent } from './wrapInContainerComponent';
-
-const emptyPrefill = {
-  plugin: '',
-  attribute: '',
-  identifierRole: 'main',
-};
 
 function removeDuplicateKeys(json: any, step: number) {
   const parser = new FormDefinitionParser(json);
@@ -64,15 +57,23 @@ export function convertFormDefinition(formdefinition: any) {
           display: 'form',
           components: component.components.map((element: any) => { return { ...element, conditional: undefined }; }),
         },
+        translations: { // Not in original conversion but over time the prop seems to be have moved to here
+          nl: {
+            name: component.title,
+          },
+        },
       };
       formDefinitions.push(formDefinition);
 
       // Create a form step for export
+      const stepuuid = randomUUID();
       const step = {
-        uuid: randomUUID(),
-        index: i,
+        name: component.title,
+        uuid: stepuuid,
+        index: parseInt(i),
         slug: slugify(component.title, { strict: true, lower: true }),
         form_definition: `http://localhost/api/v2/form-definitions/${uuid}`,
+        url: `http://localhost/api/v2/forms/${uuid}/steps/${stepuuid}`,
       };
       steps.push(step);
 
@@ -103,10 +104,7 @@ export function convertFormDefinition(formdefinition: any) {
     ];
 
     // Create the export object
-    const formsString = JSON.stringify(forms, null, 4);
-    const formDefinitionsString = JSON.stringify(formDefinitions, null, 4);
-    const stepsString = JSON.stringify(steps, null, 4);
-    const openFormsDefinition = new OpenFormulierenFormDefinition(formDefinitionsString, formsString, stepsString, parser.allMetadata);
+    const openFormsDefinition = new OpenFormulierenFormDefinition(formDefinitions, forms, steps, parser.allMetadata);
 
     return openFormsDefinition;
 
@@ -137,8 +135,6 @@ export async function convertFullFormDefinition(source: string, destination?: st
     output: [],
   };
 
-  const subformTransformer = new FormDefinitionTransformer(replaceSubform, context);
-  const prefillTransformer = new FormDefinitionTransformer(addBrpPrefill, context);
   const contentTransformer = new FormDefinitionTransformer(convertHtmlContent, context);
   const overzichtsTransformer = new FormDefinitionTransformer(removeOverzichtsPannels, context);
   const buttonTransformer = new FormDefinitionTransformer(removeButtons, context);
@@ -146,14 +142,19 @@ export async function convertFullFormDefinition(source: string, destination?: st
 
   // For each form do a couple of steps
   const messages: string[] = [];
+  const foundSubforms: string[] = [];
+
   for (const formName of Object.keys(json.forms)) {
 
     try {
       console.log('Processing form: ', formName);
       const form = json.forms[formName];
 
-      // Step 0. Replace all subforms in the form definition tree
+      // Step 0. Replace all subforms in the form definition tree with some text that explains there was a subform there
+      const subformTransformerContext = { formDefinitionsExport: json, output: [] };
+      const subformTransformer = new FormDefinitionTransformer(replaceSubforms, subformTransformerContext);
       subformTransformer.transform(form);
+      foundSubforms.push(...subformTransformerContext.output);
 
       // Step 1. Replace all containers with fieldsets
       containerTransformer.transform(form);
@@ -168,12 +169,6 @@ export async function convertFullFormDefinition(source: string, destination?: st
 
       // Step 4. Fix HTML elements (as they do not work in OpenForms in the same way)
       contentTransformer.transform(form);
-
-      // Step 5. Add BRP prefill to form fields that need it.
-      if (options.convertPrefill) {
-        console.log('Experimental convert prefill enabled!');
-        prefillTransformer.transform(form);
-      }
 
       // Step 6. Remove all buttons (provided by OpenForms now)
       buttonTransformer.transform(form);
@@ -206,9 +201,15 @@ export async function convertFullFormDefinition(source: string, destination?: st
 
   }
 
+  // Log unique found subforms
+  const uniqueFoundSubforms = foundSubforms.filter((v, i, self) => self.findIndex(x => x == v) === i);
+  messages.push(`During conversion we've found the subforms: ${JSON.stringify(uniqueFoundSubforms)}`);
+
+  // Log the messages
   messages.forEach(x => console.log(x));
   console.log('Failed: ', messages.length);
 
+  // Log time information
   const time = Date.now() - start;
   console.log('Conversion took ', time / 1000, 's');
 }
@@ -217,16 +218,21 @@ export async function convertFullFormDefinition(source: string, destination?: st
 // BELOW ARE FUNCTIONS TO APPLY TO THE FORM DEFINITIONS //
 //////////////////////////////////////////////////////////
 
-export function replaceSubform(input: any, context: FormDefinitionTransformerContext) {
+export function replaceSubforms(input: any, context: FormDefinitionTransformerContext) {
   if (input?.type == 'form' && input?.form) {
     const key = input.form;
-    const form = context.formDefinitionsExport?.forms?.[key];
-    const components = form?.components;
-    if (!form || !components) {
-      throw Error(`Cannot find subform or components in subform for ${key}`);
-    }
-    const component = wrapInFieldSetComponent(components, input.label, input.key, input.id);
-    return [{ ...component, originalFormName: key }];
+    context.output.push(key);
+
+    const tempelement = {
+      html: `<p>Hier stond een ${key} embedded form</p>`,
+      label: `Content ${key}`,
+      refreshOnChange: false,
+      key: `content-${key}`,
+      type: 'content',
+      input: false,
+      tableView: false,
+    };
+    return [tempelement]; // Replace subform with the content element
   };
   // Do not modify this object
   return undefined;
@@ -292,26 +298,6 @@ export function convertHtmlContent(input: any) {
     const type = 'content';
     return [{ ...input, html, type }];
   }
-  return undefined;
-}
-
-export function addBrpPrefill(input: any) {
-
-  // If field does not yet have prefill add it (otherwise openforms interface breaks)
-  if (input?.type == 'textfield' && !input.prefill) {
-    // console.log('Adding empty prefill');
-    return [{ ...input, prefill: emptyPrefill }];
-  }
-
-  // For all Nonhiddenfields prefill add the corresponding BRP prefill config to its elements
-  if (input?.type == 'fieldset' && input?.originalFormName?.includes('nonhiddenfields')) {
-    const newComponents = input.components.map((component: any) => {
-      const prefill = HaalCentraalMapping.getPrefillConfiguration(component);
-      return { ...component, prefill };
-    });
-    // console.log('Adding actual prefill to former nonhiddenfields');
-    return [{ ...input, components: newComponents }];
-  };
   return undefined;
 }
 
