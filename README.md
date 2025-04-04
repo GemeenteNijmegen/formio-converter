@@ -3,7 +3,7 @@
 
 ## How to run?
 - First build
-- Then run like: `node lib/export.js convert --subform nonhiddenfieldsform1=0000-0000-0000-0000 <inputfile> <output-dir>`
+- Then run like: `node lib/export.js convert <inputfile> <output-dir>`
 
 Note: the input file must be a full fromio export containing all form definitions. This is required the tool replaces nested forms with the form definition of the references form.
 
@@ -16,7 +16,7 @@ Or for help
 
 ## What does the conversion do?
 - Aanpassen van de form definities
-  1. Replace all subforms that are mapped with a open-formulieren form step provided with --subform key=form-uuid-of-reusable-form
+  1. Replace all subforms with a content element indicating the form used a subform
   2. Replace all containers with fieldsets
   3. Remove hiddenfields (not important in OpenForms)
   4. Remove overzichts pages
