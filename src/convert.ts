@@ -139,6 +139,7 @@ export async function convertFullFormDefinition(source: string, destination?: st
   const overzichtsTransformer = new FormDefinitionTransformer(removeOverzichtsPannels, context);
   const buttonTransformer = new FormDefinitionTransformer(removeButtons, context);
   const containerTransformer = new FormDefinitionTransformer(convertContainers, context);
+  const defaultErrorTextTransformer = new FormDefinitionTransformer(addDefaultRequiredErrorText, context);
 
   // For each form do a couple of steps
   const messages: string[] = [];
@@ -172,6 +173,9 @@ export async function convertFullFormDefinition(source: string, destination?: st
 
       // Step 6. Remove all buttons (provided by OpenForms now)
       buttonTransformer.transform(form);
+
+      // Step 6b. Add default error text
+      defaultErrorTextTransformer.transform(form);
 
       // Step 7. Collect logic
       const logicScannerContext = { formDefinitionsExport: json, output: [] };
@@ -249,6 +253,56 @@ export function convertContainers(input: any) {
   // Do not modify this object
   return undefined;
 }
+
+
+export function addDefaultRequiredErrorText(input: any) {
+  const types = [
+    'textfield',
+    'radio',
+    'textarea',
+    'selectboxes',
+    'checkbox',
+    'select',
+    'currency',
+    'number',
+    'postcode',
+    'phoneNumber',
+    'time',
+    'datetime',
+    'date',
+    'email',
+    'iban',
+    'licenseplate',
+    'bsn',
+  ];
+
+  const translatedErrors = {
+    translatedErrors: {
+      en: {
+        maxLength: '',
+        pattern: '',
+        required: 'Fill out.',
+      },
+      nl: {
+        maxLength: '',
+        pattern: '',
+        required: 'Geef een antwoord.',
+      },
+    },
+  };
+
+  if (input?.type && types.includes(input.type)) {
+    console.log();
+    return [{
+      ...input,
+      ...translatedErrors,
+    }];
+  };
+
+  // Do not modify this object
+  return undefined;
+}
+
 
 export function removeHiddenFields(input: any, context: FormDefinitionTransformerContext) {
   if (input?.customClass
