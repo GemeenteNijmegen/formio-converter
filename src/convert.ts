@@ -365,17 +365,15 @@ export function collectLogicRules(input: any, context: FormDefinitionTransformer
     const logic = JSON.stringify(input?.customConditional);
     context.output.push(`${input.key} as custom conditional: ${logic}`);
   }
-
   if (input?.conditional?.show == true) {
     const logic = JSON.stringify(input.conditional);
     context.output.push(`${input.key} has conditional: ${logic}`);
-    return [{ ...input, conditional: undefined }]; // Remove the conditional
   }
-  if (input?.customConditional) {
-    const logic = JSON.stringify(input.conditional);
-    context.output.push(`${input.key} has conditional: ${logic}`);
-    return [{ ...input, customConditional: undefined }]; // Remove the customConditional
+
+  if (input?.customConditional || input?.conditional?.show == true) {
+    return [{ ...input, conditional: undefined, customConditional: undefined }]; // Remove the conditional
   }
 
   return undefined;
+
 }
