@@ -356,11 +356,7 @@ export function convertHtmlContent(input: any) {
 }
 
 export function collectLogicRules(input: any, context: FormDefinitionTransformerContext) {
-  if (input?.conditional?.show == true) {
-    const logic = JSON.stringify(input.conditional);
-    context.output.push(`${input.key} has conditional: ${logic}`);
-    return [{ ...input, conditional: undefined }]; // Remove the conditional
-  }
+
   if (input?.validate?.custom) {
     const logic = JSON.stringify(input?.validate);
     context.output.push(`${input.key} has custom validate: ${logic}`);
@@ -369,5 +365,17 @@ export function collectLogicRules(input: any, context: FormDefinitionTransformer
     const logic = JSON.stringify(input?.customConditional);
     context.output.push(`${input.key} as custom conditional: ${logic}`);
   }
+
+  if (input?.conditional?.show == true) {
+    const logic = JSON.stringify(input.conditional);
+    context.output.push(`${input.key} has conditional: ${logic}`);
+    return [{ ...input, conditional: undefined }]; // Remove the conditional
+  }
+  if (input?.customConditional) {
+    const logic = JSON.stringify(input.conditional);
+    context.output.push(`${input.key} has conditional: ${logic}`);
+    return [{ ...input, customConditional: undefined }]; // Remove the customConditional
+  }
+
   return undefined;
 }
