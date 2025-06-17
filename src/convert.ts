@@ -140,6 +140,7 @@ export async function convertFullFormDefinition(source: string, destination?: st
   const buttonTransformer = new FormDefinitionTransformer(removeButtons, context);
   const containerTransformer = new FormDefinitionTransformer(convertContainers, context);
   const defaultErrorTextTransformer = new FormDefinitionTransformer(addDefaultRequiredErrorText, context);
+  const datetimeTransformer = new FormDefinitionTransformer(replaceDateTime, context);
 
   // For each form do a couple of steps
   const messages: string[] = [];
@@ -156,6 +157,9 @@ export async function convertFullFormDefinition(source: string, destination?: st
       const subformTransformer = new FormDefinitionTransformer(replaceSubforms, subformTransformerContext);
       subformTransformer.transform(form);
       foundSubforms.push(...subformTransformerContext.output);
+
+      // Step 0a. Replace date time fields
+      datetimeTransformer.transform(form);
 
       // Step 1. Replace all containers with fieldsets
       containerTransformer.transform(form);
@@ -232,6 +236,25 @@ export function replaceSubforms(input: any, context: FormDefinitionTransformerCo
       label: `Content ${key}`,
       refreshOnChange: false,
       key: `content-${key}`,
+      type: 'content',
+      input: false,
+      tableView: false,
+    };
+    return [tempelement]; // Replace subform with the content element
+  };
+  // Do not modify this object
+  return undefined;
+}
+
+
+export function replaceDateTime(input: any) {
+  if (input?.type == 'datetime') {
+
+    const tempelement = {
+      html: '<p>Hier stond een datetime veld</p>',
+      label: input?.key ?? 'Hier stond een datetime veld',
+      refreshOnChange: false,
+      key: `content-${randomUUID()}`,
       type: 'content',
       input: false,
       tableView: false,
@@ -370,8 +393,9 @@ export function collectLogicRules(input: any, context: FormDefinitionTransformer
     context.output.push(`${input.key} has conditional: ${logic}`);
   }
 
+  const emptyConditional = { show: null, when: null, eq: '' };
   if (input?.customConditional || input?.conditional?.show == true) {
-    return [{ ...input, conditional: undefined, customConditional: undefined }]; // Remove the conditional
+    return [{ ...input, conditional: emptyConditional, customConditional: undefined }]; // Remove the conditional
   }
 
   return undefined;
